@@ -34,14 +34,14 @@ namespace DAL
             return listBill;
         }
 
-        public List<BillDTO> GetAllBill(int board_Id)
+        public List<BillDTO> GetAllBill(string bill_id)
         {
             List<BillDTO> listBill = new List<BillDTO>();
 
             this.ConnectToDatabase();
 
             MySqlCommand command = this.mySQLConnection.CreateCommand();
-            command.CommandText = "SELECT * FROM BILL where BOARD_ID = " + board_Id;
+            command.CommandText = "SELECT * FROM BILL where BILL_ID = " + bill_id;
 
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
@@ -58,7 +58,7 @@ namespace DAL
             return listBill;
         }
 
-        public BillDTO GetBill(int id)
+        public BillDTO GetBill(string id)
         {
             BillDTO bill;
 

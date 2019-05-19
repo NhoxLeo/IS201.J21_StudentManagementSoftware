@@ -3,10 +3,133 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+using DTO;
 
 namespace DAL
 {
-    class StudentDAL
+    public class StudentDAL : DatabaseAccess
     {
+        public List<StudentDTO> GetAllStudent()
+        {
+            List<StudentDTO> listStudent = new List<StudentDTO>();
+
+            this.ConnectToDatabase();
+
+            MySqlCommand command = this.mySQLConnection.CreateCommand();
+            command.CommandText = "SELECT * FROM STUDENT ";
+
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string studentId = reader.GetString(0);
+                string studentName = reader.GetString(1);
+                string studentAddress = reader.GetString(2);
+
+                StudentDTO student = new StudentDTO(studentId, studentName, studentAddress);
+                listStudent.Add(student);
+            }
+
+            reader.Close();
+            this.Close();
+            return listStudent;
+        }
+
+        public List<StudentDTO> GetAllStudent(string student_Id)
+        {
+            List<StudentDTO> listStudent = new List<StudentDTO>();
+
+            this.ConnectToDatabase();
+
+            MySqlCommand command = this.mySQLConnection.CreateCommand();
+            command.CommandText = "SELECT * FROM STUDENT where STUDENT_ID = " + student_Id;
+
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string studentId = reader.GetString(0);
+                string studentName = reader.GetString(1);
+                string studentAddress = reader.GetString(2);
+
+                StudentDTO student = new StudentDTO(studentId, studentName, studentAddress);
+                listStudent.Add(student);
+            }
+
+            reader.Close();
+            this.Close();
+            return listStudent;
+        }
+
+        public StudentDTO GetStudent(string id)
+        {
+            StudentDTO student;
+
+            this.ConnectToDatabase();
+
+            MySqlCommand command = this.mySQLConnection.CreateCommand();
+            command.CommandText = "SELECT * FROM STUDENT WHERE STUDENT_ID = " + id;
+
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string studentId = reader.GetString(0);
+                string studentName = reader.GetString(1);
+                string studentAddress = reader.GetString(2);
+
+                student = new StudentDTO(studentId, studentName, studentAddress);
+                return student;
+            }
+
+            reader.Close();
+            this.Close();
+            return null;
+        }
+
+        public bool InsertStudent(StudentDTO student)
+        {
+            this.ConnectToDatabase();
+
+            string Query = "insert into STUDENT values('" + student.StudentId + "','" + student.StudentName + "','" + student.StudentAddress + "');";
+
+            //This is command class which will handle the query and connection object.  
+            MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
+
+            command.ExecuteNonQuery();
+
+
+            this.Close();
+            return true;
+        }
+
+        public bool InsertStudent(string studentId, string studentName, string studentAddress)
+        {
+            this.ConnectToDatabase();
+
+            string Query = "insert into STUDENT(STUDENT_ID,STUDENT_NAME,STUDENT_ADDRESS) values('" + studentId + "','" + studentName + "','" + studentAddress + "');";
+
+            //This is command class which will handle the query and connection object.  
+            MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
+
+            command.ExecuteNonQuery();
+
+            this.Close();
+            return true;
+        }
+
+        public bool UpdateStudent(StudentDTO student)
+        {
+            this.ConnectToDatabase();
+
+            string Query = "update STUDENT set STUDENT_ID='" + student.StudentId + "',STUDENT_NAME = '" + student.StudentName + "',STUDENT_ADDRESS = '" + student.StudentAddress + "'";
+
+            //This is command class which will handle the query and connection object.  
+            MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
+
+            command.ExecuteNonQuery();
+
+
+            this.Close();
+            return true;
+        }
     }
 }
