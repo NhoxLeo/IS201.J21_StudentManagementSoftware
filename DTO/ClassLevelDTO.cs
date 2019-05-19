@@ -8,5 +8,16 @@ namespace DTO
 {
     class ClassLevelDTO
     {
+        string classlevelId;
+        string classlevelName;
+
+        public ClassLevelDTO(string classlevelId, string classlevelName)
+        {
+            this.classlevelId = classlevelId;
+            this.classlevelName = classlevelName;
+        }
+
+        public string ClassLevelId { get => classlevelId; set => classlevelId = value; }
+        public string ClassLevelName { get => classlevelName; set => classlevelName = value; }
     }
 }
