@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class CourseDTO
+    public class CourseDTO
     {
         string courseId;
         DateTime courseYear;

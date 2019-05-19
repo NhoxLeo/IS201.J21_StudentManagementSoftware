@@ -16,12 +16,12 @@ namespace BLL
             return bdal.GetAllBill();
         }
 
-        public List<BillDTO> GetAllBill(int board_Id)
+        public List<BillDTO> GetAllBill(string bill_id)
         {
             BillDAL bdal = new BillDAL();
-            return bdal.GetAllBill(board_Id);
+            return bdal.GetAllBill(bill_id);
         }
-        public BillDTO GetBill(int id)
+        public BillDTO GetBill(string id)
         {
             BillDAL bdal = new BillDAL();
             return bdal.GetBill(id);
