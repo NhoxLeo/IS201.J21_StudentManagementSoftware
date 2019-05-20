@@ -53,11 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddStudentForm.cs">
+    <Compile Include="AddPotentialStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddStudentForm.Designer.cs">
-      <DependentUpon>AddStudentForm.cs</DependentUpon>
+    <Compile Include="AddPotentialStudentForm.Designer.cs">
+      <DependentUpon>AddPotentialStudentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassInfoForm.cs">
       <SubType>Form</SubType>
@@ -71,17 +71,23 @@
     <Compile Include="CreateStudentForm.Designer.cs">
       <DependentUpon>CreateStudentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeletePotentialStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeletePotentialStudentForm.Designer.cs">
+      <DependentUpon>DeletePotentialStudentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeleteStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DeleteStudentForm.Designer.cs">
       <DependentUpon>DeleteStudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditStudentForm.cs">
+    <Compile Include="EditInforPotentialForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditStudentForm.Designer.cs">
-      <DependentUpon>EditStudentForm.cs</DependentUpon>
+    <Compile Include="EditInforPotentialForm.Designer.cs">
+      <DependentUpon>EditInforPotentialForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -94,6 +100,12 @@
     </Compile>
     <Compile Include="MenuForm.Designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PotentialStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PotentialStudentForm.Designer.cs">
+      <DependentUpon>PotentialStudentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -115,8 +127,23 @@
     <Compile Include="StudentListForm.Designer.cs">
       <DependentUpon>StudentListForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddPotentialStudentForm.resx">
+      <DependentUpon>AddPotentialStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeletePotentialStudentForm.resx">
+      <DependentUpon>DeletePotentialStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditInforPotentialForm.resx">
+      <DependentUpon>EditInforPotentialForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PotentialStudentForm.resx">
+      <DependentUpon>PotentialStudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -126,6 +153,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -149,6 +177,33 @@
       <Project>{9fc7a83d-9d24-47f0-99e9-92d30ac07770}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confirm.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
