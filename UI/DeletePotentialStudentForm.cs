@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace UI
 {
-    public partial class EditStudentForm : Form
+    public partial class DeletePotentialStudentForm : Form
     {
-        public EditStudentForm()
+        public DeletePotentialStudentForm()
         {
             InitializeComponent();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
