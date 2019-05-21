@@ -19,12 +19,26 @@ namespace UI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MenuForm f = new MenuForm();
-            this.Hide();
-            f.ShowDialog();
+     
             this.Show();
-        }
+            string userName = tbUsername.Text;
+            string passWord = tbPassword.Text;
+            if (Login(userName, passWord))
+            {
+                MenuForm f = new MenuForm();
+                this.Hide();
+                f.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu");
 
+            }
+        }
+        bool Login(string userName, string passWord)
+        {
+            return LoginDAL.Instance.Login(userName, passWord);
+        }
         private void button2_Click(object sender, EventArgs e)
         {
            this.Close();
