@@ -36,6 +36,7 @@ namespace DAL
                     return false;
 
                 string conStr = string.Format("Server=65.52.172.214; database={0}; UID={1}; password={2}", databaseName, userName, passWord);
+                string connectionStr = "Data Source=.\\sqlexpress;Initial Catalog=QUAN_LI_HOC_VIEN;Integrated Security=True";
                 mySQLConnection = new MySqlConnection(conStr);
                 mySQLConnection.Open();
             }
