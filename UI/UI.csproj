@@ -169,10 +169,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{7554c570-e3f9-4ae0-be73-09d544a9c7c9}</Project>
-      <Name>BLL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{9fc7a83d-9d24-47f0-99e9-92d30ac07770}</Project>
       <Name>DTO</Name>
