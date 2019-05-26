@@ -102,7 +102,7 @@ namespace DAL
         {
             this.ConnectToDatabase();
 
-            string Query = "insert into STUDENTRECORD(STUDENTRECORD_ID,STUDENTRECORD) values('" + studentrecordId + "','" + studentRecord + "');";
+            string Query = "insert into STUDENTRECORD(STUDENTRECORD_ID,STUDENTRECORDS) values('" + studentrecordId + "','" + studentRecord + "');";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
@@ -117,7 +117,7 @@ namespace DAL
         {
             this.ConnectToDatabase();
 
-            string Query = "update STUDENTRECORD set STUDENTRECORD_ID='" + studentrecord.StudentRecordId + "',STUDENTRECORD = '" + studentrecord.StudentRecord + "'";
+            string Query = "update STUDENTRECORD set STUDENTRECORD_ID='" + studentrecord.StudentRecordId + "',STUDENTRECORDS = '" + studentrecord.StudentRecord + "'";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);

@@ -6,15 +6,18 @@ using System.Threading.Tasks;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using DTO;
+using System.Data;
 
 namespace DAL
 {
     public class DatabaseAccess
     {
+        private string serverName;
         private string databaseName;
         private string userName;
         private string passWord;
 
+        public string ServerName { get => serverName; set => serverName = value; }
         public string DatabaseName { get => databaseName; set => databaseName = value; }
         public string UserName { get => userName; set => userName = value; }
         public string PassWord { get => passWord; set => passWord = value; }
@@ -23,9 +26,17 @@ namespace DAL
 
         public DatabaseAccess()
         {
-            this.databaseName = "ProjectManager";
-            this.userName = "projectmanager";
-            this.passWord = "projectmanager";
+            this.serverName = "remotemysql.com";
+            this.databaseName = "AGQbqYyMIL";
+            this.userName = "AGQbqYyMIL";
+            this.passWord = "nEc0CIMxB0";
+        }
+        public DatabaseAccess(string _servrName, string _databaseName, string _userName,string _passWord)
+        {
+            this.serverName = _servrName;
+            this.databaseName = _databaseName;
+            this.userName = _userName;
+            this.passWord = _passWord;
         }
 
         public bool ConnectToDatabase()
@@ -35,10 +46,15 @@ namespace DAL
                 if (String.IsNullOrEmpty(this.databaseName))
                     return false;
 
-                string conStr = string.Format("Server=65.52.172.214; database={0}; UID={1}; password={2}", databaseName, userName, passWord);
+                string conStr = string.Format("Server={0}; Port=3306; database={1}; UID={2}; password={3}", serverName, databaseName, userName, passWord);
                 string connectionStr = "Data Source=.\\sqlexpress;Initial Catalog=QUAN_LI_HOC_VIEN;Integrated Security=True";
                 mySQLConnection = new MySqlConnection(conStr);
                 mySQLConnection.Open();
+
+                if (mySQLConnection.State == ConnectionState.Open)
+                {
+                    return true;
+                }
             }
             return false;
         }
