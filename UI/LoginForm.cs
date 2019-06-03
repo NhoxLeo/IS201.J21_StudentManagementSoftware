@@ -37,7 +37,8 @@ namespace UI
         }
         bool Login(string userName, string passWord)
         {
-            return LoginDAL.Instance.Login(userName, passWord);
+            //return LoginDAL.Instance.Login(userName, passWord);
+            return true;
         }
         private void button2_Click(object sender, EventArgs e)
         {

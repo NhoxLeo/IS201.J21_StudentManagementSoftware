@@ -71,6 +71,12 @@
     <Compile Include="CreateStudentForm.Designer.cs">
       <DependentUpon>CreateStudentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DbTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DbTest.Designer.cs">
+      <DependentUpon>DbTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeletePotentialStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     <EmbeddedResource Include="AddPotentialStudentForm.resx">
       <DependentUpon>AddPotentialStudentForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DbTest.resx">
+      <DependentUpon>DbTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeletePotentialStudentForm.resx">
       <DependentUpon>DeletePotentialStudentForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +178,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{6a5739b6-e8a8-48d5-a83f-4ff3fc71553b}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{9fc7a83d-9d24-47f0-99e9-92d30ac07770}</Project>
       <Name>DTO</Name>
