@@ -10,21 +10,19 @@ using System.Windows.Forms;
 
 namespace UI
 {
-    public partial class DeletePotentialStudentForm : Form
+    public partial class OfficalStudentForm : Form
     {
-        public DeletePotentialStudentForm()
+        public OfficalStudentForm()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btAdd_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
+            AddOfficalStudentForm f = new AddOfficalStudentForm();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
         }
     }
 }

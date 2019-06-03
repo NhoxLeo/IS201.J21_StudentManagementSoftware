@@ -1,6 +1,6 @@
 ﻿namespace UI
 {
-    partial class PotentialStudentForm
+    partial class OfficalStudentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -47,13 +47,12 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Goldenrod;
+            this.panel1.BackColor = System.Drawing.Color.YellowGreen;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(934, 58);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.TabIndex = 3;
             // 
             // label1
             // 
@@ -61,20 +60,18 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(281, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(378, 37);
+            this.label1.Size = new System.Drawing.Size(399, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "HỌC VIÊN TIỀM NĂNG";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "HỌC VIÊN CHÍNH THỨC";
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dtgvListPotentialStudent);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(-1, 64);
+            this.panel2.Location = new System.Drawing.Point(0, 65);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(935, 302);
-            this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel2.TabIndex = 4;
             // 
             // dtgvListPotentialStudent
             // 
@@ -83,7 +80,6 @@
             this.dtgvListPotentialStudent.Name = "dtgvListPotentialStudent";
             this.dtgvListPotentialStudent.Size = new System.Drawing.Size(910, 262);
             this.dtgvListPotentialStudent.TabIndex = 4;
-            this.dtgvListPotentialStudent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvListPotentialStudent_CellContentClick);
             // 
             // label2
             // 
@@ -91,10 +87,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(13, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(270, 24);
+            this.label2.Size = new System.Drawing.Size(275, 24);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Danh sách học viên tiềm năng:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.Text = "Danh sách học viên chính thức:";
             // 
             // panel3
             // 
@@ -103,11 +98,10 @@
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.btnEdit);
             this.panel3.Controls.Add(this.btAdd);
-            this.panel3.Location = new System.Drawing.Point(0, 372);
+            this.panel3.Location = new System.Drawing.Point(1, 373);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(934, 87);
-            this.panel3.TabIndex = 2;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.panel3.TabIndex = 5;
             // 
             // button4
             // 
@@ -123,7 +117,6 @@
             this.button4.Text = "In ";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -139,7 +132,6 @@
             this.button3.Text = "Trở về";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -155,7 +147,6 @@
             this.button2.Text = "Xoá học viên";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnEdit
             // 
@@ -171,7 +162,6 @@
             this.btnEdit.Text = "Sửa thông tin học viên";
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btAdd
             // 
@@ -187,18 +177,18 @@
             this.btAdd.Text = "Thêm học viên";
             this.btAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btAdd.UseVisualStyleBackColor = false;
-            this.btAdd.Click += new System.EventHandler(this.button1_Click);
+            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
-            // PotentialStudentForm
+            // OfficalStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 461);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "PotentialStudentForm";
-            this.Text = "Học viên tiềm năng";
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
+            this.Name = "OfficalStudentForm";
+            this.Text = "OfficalStudentForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -214,13 +204,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dtgvListPotentialStudent;
-        private System.Windows.Forms.Button btAdd;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btAdd;
     }
 }

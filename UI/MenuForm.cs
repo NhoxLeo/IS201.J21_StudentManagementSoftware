@@ -54,5 +54,13 @@ namespace UI
         {
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OfficalStudentForm f = new OfficalStudentForm();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }
