@@ -24,9 +24,12 @@ namespace DAL
             {
                 string studentId = reader.GetString(0);
                 string studentName = reader.GetString(1);
-                string studentAddress = reader.GetString(2);
+                string studentMail = reader.GetString(2);
+                string studentAddress = reader.GetString(3);
+                string studentPhone = reader.GetString(4);
+                DateTime studentBirthDate = reader.GetDateTime(5);
 
-                StudentDTO student = new StudentDTO(studentId, studentName, studentAddress);
+                StudentDTO student = new StudentDTO(studentId, studentName, studentMail, studentAddress, studentPhone, studentBirthDate);
                 listStudent.Add(student);
             }
 
@@ -49,9 +52,12 @@ namespace DAL
             {
                 string studentId = reader.GetString(0);
                 string studentName = reader.GetString(1);
-                string studentAddress = reader.GetString(2);
+                string studentMail = reader.GetString(2);
+                string studentAddress = reader.GetString(3);
+                string studentPhone = reader.GetString(4);
+                DateTime studentBirthDate = reader.GetDateTime(5);
 
-                StudentDTO student = new StudentDTO(studentId, studentName, studentAddress);
+                StudentDTO student = new StudentDTO(studentId, studentName, studentMail, studentAddress, studentPhone, studentBirthDate);
                 listStudent.Add(student);
             }
 
@@ -74,9 +80,12 @@ namespace DAL
             {
                 string studentId = reader.GetString(0);
                 string studentName = reader.GetString(1);
-                string studentAddress = reader.GetString(2);
+                string studentMail = reader.GetString(2);
+                string studentAddress = reader.GetString(3);
+                string studentPhone = reader.GetString(4);
+                DateTime studentBirthDate = reader.GetDateTime(5);
 
-                student = new StudentDTO(studentId, studentName, studentAddress);
+                student = new StudentDTO(studentId, studentName, studentMail, studentAddress, studentPhone, studentBirthDate);
                 return student;
             }
 
@@ -89,7 +98,7 @@ namespace DAL
         {
             this.ConnectToDatabase();
 
-            string Query = "insert into STUDENT values('" + student.StudentId + "','" + student.StudentName + "','" + student.StudentAddress + "');";
+            string Query = "insert into STUDENT values('" + student.StudentId + "','" + student.StudentName + "','" + student.StudentMail + "','" + student.StudentAddress + "','" + student.StudentPhone + "','" + student.StudentBirthDate + "');";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
@@ -101,11 +110,11 @@ namespace DAL
             return true;
         }
 
-        public bool InsertStudent(string studentId, string studentName, string studentAddress)
+        public bool InsertStudent(string studentId, string studentName, string studentMail, string studentAddress, string studentPhone, string studentBirthDate)
         {
             this.ConnectToDatabase();
 
-            string Query = "insert into STUDENT(STUDENT_ID,STUDENT_NAME,STUDENT_ADDRESS) values('" + studentId + "','" + studentName + "','" + studentAddress + "');";
+            string Query = "insert into STUDENT(STUDENT_ID,STUDENT_NAME,STUDENT_MAIL,STUDENT_ADDRESS,STUDENT_PHONE,STUDENT_BIRTHDATE) values('" + studentId + "','" + studentName + "','" + studentMail + "','" + studentAddress + "','" + studentPhone + "','" + studentBirthDate + "');";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
@@ -120,7 +129,7 @@ namespace DAL
         {
             this.ConnectToDatabase();
 
-            string Query = "update STUDENT set STUDENT_ID='" + student.StudentId + "',STUDENT_NAME = '" + student.StudentName + "',STUDENT_ADDRESS = '" + student.StudentAddress + "'";
+            string Query = "update STUDENT set STUDENT_ID='" + student.StudentId + "',STUDENT_NAME = '" + student.StudentName + "',STUDENT_MAIL = '" + student.StudentMail + "',STUDENT_ADDRESS = '" + student.StudentAddress + "',STUDENT_PHONE = '" + student.StudentPhone + "',STUDENT_BIRTHDATE = '" + student.StudentBirthDate + "'";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);

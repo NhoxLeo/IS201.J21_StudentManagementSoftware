@@ -22,11 +22,15 @@ namespace DAL
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                string _classId = reader.GetString(0);
-                string _className = reader.GetString(1);
-                int _classCount = reader.GetInt32(2);
+                string classId = reader.GetString(0);
+                string className = reader.GetString(1);
+                string teacherId = reader.GetString(2);
+                string startHour = reader.GetString(3);
+                DateTime startDate = reader.GetDateTime(4);
+                DateTime endDate = reader.GetDateTime(5);
+                string programId = reader.GetString(6);
 
-                ClassDTO _class = new ClassDTO(_classId, _className, _classCount);
+                ClassDTO _class = new ClassDTO(classId,className, teacherId, startHour, startDate, endDate, programId);
                 listClass.Add(_class);
             }
 
@@ -47,11 +51,15 @@ namespace DAL
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                string _classId = reader.GetString(0);
-                string _className = reader.GetString(1);
-                int _classCount = reader.GetInt32(2);
+                string classId = reader.GetString(0);
+                string className = reader.GetString(1);
+                string teacherId = reader.GetString(2);
+                string startHour = reader.GetString(3);
+                DateTime startDate = reader.GetDateTime(4);
+                DateTime endDate = reader.GetDateTime(5);
+                string programId = reader.GetString(6);
 
-                ClassDTO _class = new ClassDTO(_classId, _className, _classCount);
+                ClassDTO _class = new ClassDTO(classId, className, teacherId, startHour, startDate, endDate, programId);
                 listClass.Add(_class);
             }
 
@@ -72,11 +80,15 @@ namespace DAL
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                string _classId = reader.GetString(0);
-                string _className = reader.GetString(1);
-                int _classCount = reader.GetInt32(2);
+                string classId = reader.GetString(0);
+                string className = reader.GetString(1);
+                string teacherId = reader.GetString(2);
+                string startHour = reader.GetString(3);
+                DateTime startDate = reader.GetDateTime(4);
+                DateTime endDate = reader.GetDateTime(5);
+                string programId = reader.GetString(6);
 
-                _class = new ClassDTO(_classId, _className, _classCount);
+                _class = new ClassDTO(classId, className, teacherId, startHour, startDate, endDate, programId);
                 return _class;
             }
 
@@ -89,7 +101,7 @@ namespace DAL
         {
             this.ConnectToDatabase();
 
-            string Query = "insert into CLASS values('" + _class.ClassId + "','" + _class.ClassName + "','" + _class.ClassCount + "');";
+            string Query = "insert into CLASS values('" + _class.ClassId + "','" + _class.ClassName + "','" + _class.TeacherId + "','" + _class.StartHour + "','" + _class.StartDate + "','" + _class.EndDate + "','" + _class.ProgramId + "');";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
@@ -101,11 +113,11 @@ namespace DAL
             return true;
         }
 
-        public bool InsertClass(string _classId, string _className, int _classCount)
+        public bool InsertClass(string classId, string className, string teacherId, string startHour, DateTime startDate, DateTime endDate, string programId)
         {
             this.ConnectToDatabase();
 
-            string Query = "insert into CLASS(CLASS_ID,CLASS_NAME,CLASS_COUNT) values('" + _classId + "','" + _className + "','" + _classCount + "');";
+            string Query = "insert into CLASS(CLASS_ID,CLASS_NAME,CLASS_COUNT) values('" + classId + "','" + className + "','" + teacherId + "','" + startHour + "','" + startDate + "','" + endDate + "','" + programId + "');";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
@@ -120,13 +132,12 @@ namespace DAL
         {
             this.ConnectToDatabase();
 
-            string Query = "update CLASS set CLASS_ID='" + _class.ClassId + "',CLASS_NAME = '" + _class.ClassName + "',CLASS_COUNT = '" + _class.ClassCount + "'";
+            string Query = "update CLASS set CLASS_ID='" + _class.ClassId + "',CLASS_NAME = '" + _class.ClassName + "',TEACHER_ID = '" + _class.TeacherId + "',START_HOUR = '" + _class.StartHour  +"',START_DATE = '" + _class.StartDate + "',END_DATE = '" + _class.EndDate + "',PROGRAM_ID = '" + _class.ProgramId + "'";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
 
             command.ExecuteNonQuery();
-
 
             this.Close();
             return true;
