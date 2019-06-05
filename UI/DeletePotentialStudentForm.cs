@@ -26,5 +26,10 @@ namespace UI
         {
 
         }
+
+        private void btConfim_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

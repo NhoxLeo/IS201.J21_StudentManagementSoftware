@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddClassForm.Designer.cs">
+      <DependentUpon>AddClassForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddOfficalStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,11 +71,23 @@
     <Compile Include="AddPotentialStudentForm.Designer.cs">
       <DependentUpon>AddPotentialStudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DbTest.cs">
+    <Compile Include="ClassForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DbTest.Designer.cs">
-      <DependentUpon>DbTest.cs</DependentUpon>
+    <Compile Include="ClassForm.Designer.cs">
+      <DependentUpon>ClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteClassForm.Designer.cs">
+      <DependentUpon>DeleteClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteOfficalStudenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteOfficalStudenForm.Designer.cs">
+      <DependentUpon>DeleteOfficalStudenForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DeletePotentialStudentForm.cs">
       <SubType>Form</SubType>
@@ -77,11 +95,23 @@
     <Compile Include="DeletePotentialStudentForm.Designer.cs">
       <DependentUpon>DeletePotentialStudentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditClassForm.Designer.cs">
+      <DependentUpon>EditClassForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditInforPotentialForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditInforPotentialForm.Designer.cs">
       <DependentUpon>EditInforPotentialForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditOfficalStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditOfficalStudentForm.Designer.cs">
+      <DependentUpon>EditOfficalStudentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -109,20 +139,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddClassForm.resx">
+      <DependentUpon>AddClassForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddOfficalStudentForm.resx">
       <DependentUpon>AddOfficalStudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddPotentialStudentForm.resx">
       <DependentUpon>AddPotentialStudentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DbTest.resx">
-      <DependentUpon>DbTest.cs</DependentUpon>
+    <EmbeddedResource Include="ClassForm.resx">
+      <DependentUpon>ClassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteClassForm.resx">
+      <DependentUpon>DeleteClassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteOfficalStudenForm.resx">
+      <DependentUpon>DeleteOfficalStudenForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeletePotentialStudentForm.resx">
       <DependentUpon>DeletePotentialStudentForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditClassForm.resx">
+      <DependentUpon>EditClassForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditInforPotentialForm.resx">
       <DependentUpon>EditInforPotentialForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditOfficalStudentForm.resx">
+      <DependentUpon>EditOfficalStudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -160,9 +205,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{6a5739b6-e8a8-48d5-a83f-4ff3fc71553b}</Project>
-      <Name>DAL</Name>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{7554c570-e3f9-4ae0-be73-09d544a9c7c9}</Project>
+      <Name>BLL</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{9fc7a83d-9d24-47f0-99e9-92d30ac07770}</Project>
