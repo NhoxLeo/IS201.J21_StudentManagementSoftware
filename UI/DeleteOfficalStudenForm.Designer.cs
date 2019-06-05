@@ -63,7 +63,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 80);
+            this.label2.Location = new System.Drawing.Point(1, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(275, 24);
             this.label2.TabIndex = 14;
@@ -72,9 +72,9 @@
             // dtgvListPotentialStudent
             // 
             this.dtgvListPotentialStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvListPotentialStudent.Location = new System.Drawing.Point(15, 107);
+            this.dtgvListPotentialStudent.Location = new System.Drawing.Point(5, 107);
             this.dtgvListPotentialStudent.Name = "dtgvListPotentialStudent";
-            this.dtgvListPotentialStudent.Size = new System.Drawing.Size(1049, 284);
+            this.dtgvListPotentialStudent.Size = new System.Drawing.Size(1044, 284);
             this.dtgvListPotentialStudent.TabIndex = 13;
             // 
             // panel3
@@ -83,7 +83,7 @@
             this.panel3.Controls.Add(this.btConfim);
             this.panel3.Location = new System.Drawing.Point(15, 397);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1061, 86);
+            this.panel3.Size = new System.Drawing.Size(1034, 86);
             this.panel3.TabIndex = 12;
             // 
             // button3
@@ -93,7 +93,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(896, 0);
+            this.button3.Location = new System.Drawing.Point(878, 0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(153, 80);
             this.button3.TabIndex = 5;
@@ -108,7 +108,7 @@
             this.btConfim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btConfim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btConfim.ForeColor = System.Drawing.Color.Black;
-            this.btConfim.Location = new System.Drawing.Point(0, 0);
+            this.btConfim.Location = new System.Drawing.Point(-10, 0);
             this.btConfim.Name = "btConfim";
             this.btConfim.Size = new System.Drawing.Size(153, 80);
             this.btConfim.TabIndex = 1;
