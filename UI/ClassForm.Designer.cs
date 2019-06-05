@@ -1,6 +1,6 @@
 ﻿namespace UI
 {
-    partial class OfficalStudentForm
+    partial class ClassForm
     {
         /// <summary>
         /// Required designer variable.
@@ -47,31 +47,31 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.OliveDrab;
+            this.panel1.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(1, 1);
+            this.panel1.Location = new System.Drawing.Point(1, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(934, 58);
-            this.panel1.TabIndex = 3;
+            this.panel1.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(281, 9);
+            this.label1.Location = new System.Drawing.Point(389, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(399, 37);
+            this.label1.Size = new System.Drawing.Size(168, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "HỌC VIÊN CHÍNH THỨC";
+            this.label1.Text = "LỚP HỌC";
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dtgvListPotentialStudent);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(0, 65);
+            this.panel2.Location = new System.Drawing.Point(0, 66);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(935, 302);
-            this.panel2.TabIndex = 4;
+            this.panel2.TabIndex = 7;
             // 
             // dtgvListPotentialStudent
             // 
@@ -87,9 +87,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(13, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(275, 24);
+            this.label2.Size = new System.Drawing.Size(173, 24);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Danh sách học viên chính thức:";
+            this.label2.Text = "Danh sách lớp học:";
             // 
             // panel3
             // 
@@ -98,10 +98,10 @@
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.btnEdit);
             this.panel3.Controls.Add(this.btAdd);
-            this.panel3.Location = new System.Drawing.Point(1, 373);
+            this.panel3.Location = new System.Drawing.Point(1, 374);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(934, 87);
-            this.panel3.TabIndex = 5;
+            this.panel3.TabIndex = 8;
             // 
             // button4
             // 
@@ -144,7 +144,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(171, 80);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Xoá học viên";
+            this.button2.Text = "Xoá lớp học";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -159,7 +159,7 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(179, 80);
             this.btnEdit.TabIndex = 1;
-            this.btnEdit.Text = "Sửa thông tin học viên";
+            this.btnEdit.Text = "Sửa thông tin lớp học";
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEdit.UseVisualStyleBackColor = false;
             // 
@@ -174,20 +174,20 @@
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(153, 80);
             this.btAdd.TabIndex = 0;
-            this.btAdd.Text = "Thêm học viên";
+            this.btAdd.Text = "Thêm lớp";
             this.btAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btAdd.UseVisualStyleBackColor = false;
             // 
-            // OfficalStudentForm
+            // ClassForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 461);
+            this.ClientSize = new System.Drawing.Size(934, 466);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
-            this.Name = "OfficalStudentForm";
-            this.Text = "OfficalStudentForm";
+            this.Name = "ClassForm";
+            this.Text = "ClassForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

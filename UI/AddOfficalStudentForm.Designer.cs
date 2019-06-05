@@ -49,17 +49,17 @@
             this.tbStatus = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.btConfim = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbMoney = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -69,9 +69,9 @@
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +81,7 @@
             this.panel3.Controls.Add(this.btConfim);
             this.panel3.Location = new System.Drawing.Point(-1, 372);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(880, 75);
+            this.panel3.Size = new System.Drawing.Size(880, 78);
             this.panel3.TabIndex = 5;
             // 
             // tbStudentID
@@ -270,25 +270,6 @@
             this.panel10.Size = new System.Drawing.Size(458, 53);
             this.panel10.TabIndex = 6;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 15);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(150, 25);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Ngày kết thúc:";
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.dateTimePicker2);
-            this.panel11.Controls.Add(this.label9);
-            this.panel11.Location = new System.Drawing.Point(470, 190);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(410, 53);
-            this.panel11.TabIndex = 7;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panel12);
@@ -311,9 +292,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(223, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(458, 33);
+            this.label1.Size = new System.Drawing.Size(467, 33);
             this.label1.TabIndex = 0;
-            this.label1.Text = "THÊM HỌC VIÊN CHÍNH THỨC";
+            this.label1.Text = "THÊM HỌC VIÊN CHÍNH THỨC:";
             // 
             // panel1
             // 
@@ -346,7 +327,7 @@
             this.btConfim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btConfim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btConfim.ForeColor = System.Drawing.Color.Black;
-            this.btConfim.Location = new System.Drawing.Point(144, -2);
+            this.btConfim.Location = new System.Drawing.Point(3, 0);
             this.btConfim.Name = "btConfim";
             this.btConfim.Size = new System.Drawing.Size(153, 80);
             this.btConfim.TabIndex = 1;
@@ -356,35 +337,54 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(159, 18);
+            this.dateTimePicker1.Location = new System.Drawing.Point(158, 20);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(242, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 1;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.dateTimePicker2);
+            this.panel11.Controls.Add(this.label9);
+            this.panel11.Location = new System.Drawing.Point(470, 190);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(410, 53);
+            this.panel11.TabIndex = 6;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(158, 16);
+            this.dateTimePicker2.Location = new System.Drawing.Point(158, 18);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(242, 20);
-            this.dateTimePicker2.TabIndex = 2;
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 1;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(3, 15);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(150, 25);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Ngày kết thúc:";
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.textBox1);
+            this.panel12.Controls.Add(this.tbMoney);
             this.panel12.Controls.Add(this.label10);
-            this.panel12.Location = new System.Drawing.Point(470, 246);
+            this.panel12.Location = new System.Drawing.Point(6, 243);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(410, 53);
-            this.panel12.TabIndex = 8;
+            this.panel12.Size = new System.Drawing.Size(461, 53);
+            this.panel12.TabIndex = 7;
             // 
-            // textBox1
+            // tbMoney
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(158, 15);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(243, 25);
-            this.textBox1.TabIndex = 1;
+            this.tbMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMoney.Location = new System.Drawing.Point(138, 15);
+            this.tbMoney.Multiline = true;
+            this.tbMoney.Name = "tbMoney";
+            this.tbMoney.Size = new System.Drawing.Size(243, 25);
+            this.tbMoney.TabIndex = 1;
             // 
             // label10
             // 
@@ -421,11 +421,11 @@
             this.panel9.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.ResumeLayout(false);
@@ -457,15 +457,15 @@
         private System.Windows.Forms.ComboBox tbStatus;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbMoney;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label label9;
     }
 }
