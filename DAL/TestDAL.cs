@@ -8,7 +8,7 @@ using DTO;
 
 namespace DAL
 {
-    public class TestDAL:DatabaseAccess
+    public class TestDAL : DatabaseAccess
     {
         public List<TestDTO> GetAllTest()
         {
@@ -23,9 +23,11 @@ namespace DAL
             while (reader.Read())
             {
                 string testId = reader.GetString(0);
-                DateTime testDate = reader.GetDateTime(1);
+                string classId = reader.GetString(1);
+                DateTime testDate = reader.GetDateTime(2);
+                string testHour = reader.GetString(3);
 
-                TestDTO test = new TestDTO(testId, testDate);
+                TestDTO test = new TestDTO(testId, classId, testDate, testHour);
                 listTest.Add(test);
             }
 
@@ -47,9 +49,11 @@ namespace DAL
             while (reader.Read())
             {
                 string testId = reader.GetString(0);
-                DateTime testDate = reader.GetDateTime(1);
+                string classId = reader.GetString(1);
+                DateTime testDate = reader.GetDateTime(2);
+                string testHour = reader.GetString(3);
 
-                TestDTO test = new TestDTO(testId, testDate);
+                TestDTO test = new TestDTO(testId, classId, testDate, testHour);
                 listTest.Add(test);
             }
 
@@ -71,10 +75,11 @@ namespace DAL
             while (reader.Read())
             {
                 string testId = reader.GetString(0);
-                DateTime testDate = reader.GetDateTime(1);
+                string classId = reader.GetString(1);
+                DateTime testDate = reader.GetDateTime(2);
+                string testHour = reader.GetString(3);
 
-
-                test = new TestDTO(testId, testDate);
+                test = new TestDTO(testId, classId, testDate, testHour);
                 return test;
             }
 
@@ -87,7 +92,7 @@ namespace DAL
         {
             this.ConnectToDatabase();
 
-            string Query = "insert into TEST values('" + test.TestId + "','" + test.TestDate + "');";
+            string Query = "insert into TEST values('" + test.TestId + "','" + test.ClassId + "','" + test.TestDate + "','" + test.TestHour + "');";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
@@ -99,11 +104,11 @@ namespace DAL
             return true;
         }
 
-        public bool InsertTest(string testId, DateTime testDate)
+        public bool InsertTest(string testId, string classId, DateTime testDate, string testHour)
         {
             this.ConnectToDatabase();
 
-            string Query = "insert into TEST(TEST_ID,TEST_DATE) values('" + testId + "','" + testDate + "');";
+            string Query = "insert into TEST(TEST_ID,TEST_DATE) values('" + testId + "','" + classId + "','" + testDate + "','" + testHour + "');";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
@@ -118,7 +123,7 @@ namespace DAL
         {
             this.ConnectToDatabase();
 
-            string Query = "update TEST set TEST_ID='" + test.TestId + "',TEST_DATE = '" + test.TestDate + "'";
+            string Query = "update TEST set TEST_ID='" + test.TestId + "',CLASS_ID = '" + test.TestDate + "',TEST_DATE = '" + test.TestDate + "',TEST_HOUR = '" + test.TestDate + "'";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
