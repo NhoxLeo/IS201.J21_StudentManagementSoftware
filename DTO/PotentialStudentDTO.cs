@@ -6,27 +6,27 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class ReserveStudentDTO
+    public class PotentialStudentDTO
     {
-        string reservestudentId;
-        string reservestudentName;
+        string potentialstudentId;
+        string potentialstudentName;
         float mark;
         string phone;
         int dateCount;
         string status;
 
-        public ReserveStudentDTO(string reservestudentId, string reservestudentName, float mark, string phone,int dateCount,string status)
+        public PotentialStudentDTO(string potentialstudentId, string potentialstudentName, float mark, string phone,int dateCount,string status)
         {
-            this.reservestudentId = reservestudentId;
-            this.reservestudentName = reservestudentName;
+            this.potentialstudentId = potentialstudentId;
+            this.potentialstudentName = potentialstudentName;
             this.mark = mark;
             this.phone = phone;
             this.dateCount = dateCount;
             this.status = status;
         }
 
-        public string ReserveStudentId { get => reservestudentId; set => reservestudentId = value; }
-        public string ReserveStudentName { get => reservestudentName; set => reservestudentName = value; }
+        public string PotentialStudentId { get => potentialstudentId; set => potentialstudentId = value; }
+        public string PotentialStudentName { get => potentialstudentName; set => potentialstudentName = value; }
         public float Mark { get => mark; set => mark = value; }
         public string Phone { get => phone; set => phone = value; }
         public int DateCount { get => dateCount; set => dateCount = value; }

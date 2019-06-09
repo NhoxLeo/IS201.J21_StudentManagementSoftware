@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
+using DAL;
 
 namespace UI
 {
@@ -16,6 +18,7 @@ namespace UI
         public PotentialStudentForm()
         {
             InitializeComponent();
+            InitPotentialStudentData();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -80,6 +83,15 @@ namespace UI
         private void dtgvListPotentialStudent_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        void InitPotentialStudentData()
+        {
+            PotentialStudentDAL potentialStudentDAL = new PotentialStudentDAL();
+            potentialStudentDAL.ConnectToDatabase();
+            //potentialStudentDAL.InsertPotentialStudent("RST1","Alex",8.0f,"0012295831",12,"Unpassed");
+            List<PotentialStudentDTO> potentialStudentDTOs = potentialStudentDAL.GetAllPotentialStudent();
+            dtgvListPotentialStudent.DataSource = potentialStudentDTOs;
         }
     }
 }

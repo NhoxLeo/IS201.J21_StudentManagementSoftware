@@ -105,5 +105,19 @@ namespace DAL
             this.Close();
             return true;
         }
+        public bool DeleteSignup()
+        {
+            this.ConnectToDatabase();
+
+            string Query = "delete from SIGNUP;";
+
+            //This is command class which will handle the query and connection object.  
+            MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
+
+            command.ExecuteNonQuery();
+
+            this.Close();
+            return true;
+        }
     }
 }

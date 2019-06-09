@@ -64,7 +64,7 @@
     <Compile Include="MarkDAL.cs" />
     <Compile Include="ProgramDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReserveStudentDAL.cs" />
+    <Compile Include="PotentialStudentDAL.cs" />
     <Compile Include="SignupDAL.cs" />
     <Compile Include="StudentDAL.cs" />
     <Compile Include="TestDAL.cs" />

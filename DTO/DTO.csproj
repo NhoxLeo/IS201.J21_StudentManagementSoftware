@@ -52,7 +52,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ReserveStudentDTO.cs" />
+    <Compile Include="PotentialStudentDTO.cs" />
     <Compile Include="SignupDTO.cs" />
     <Compile Include="StudentDTO.cs" />
     <Compile Include="TestDTO.cs" />
