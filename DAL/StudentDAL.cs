@@ -98,7 +98,7 @@ namespace DAL
         {
             this.ConnectToDatabase();
 
-            string Query = "insert into STUDENT values('" + student.StudentId + "','" + student.StudentName + "','" + student.StudentMail + "','" + student.StudentAddress + "','" + student.StudentPhone + "','" + student.StudentBirthDate + "');";
+            string Query = "insert into STUDENT values('" + student.StudentId + "','" + student.StudentName + "','" + student.StudentMail + "','" + student.StudentAddress + "','" + student.StudentPhone + "','" + student.StudentBirthDate.ToString("yyyy'-'MM'-'dd") + "');";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);

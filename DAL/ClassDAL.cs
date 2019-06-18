@@ -101,7 +101,7 @@ namespace DAL
         {
             this.ConnectToDatabase();
 
-            string Query = "insert into CLASS values('" + _class.ClassId + "','" + _class.ClassName + "','" + _class.TeacherId + "','" + _class.StartHour + "','" + _class.StartDate + "','" + _class.EndDate + "','" + _class.ProgramId + "');";
+            string Query = "insert into CLASS values('" + _class.ClassId + "','" + _class.ClassName + "','" + _class.TeacherId + "','" + _class.StartHour + "','" + _class.StartDate.ToString("yyyy'-'MM'-'dd") + "','" + _class.EndDate.ToString("yyyy'-'MM'-'dd") + "','" + _class.ProgramId + "');";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
@@ -117,7 +117,7 @@ namespace DAL
         {
             this.ConnectToDatabase();
 
-            string Query = "insert into CLASS(CLASS_ID,CLASS_NAME,CLASS_COUNT) values('" + classId + "','" + className + "','" + teacherId + "','" + startHour + "','" + startDate + "','" + endDate + "','" + programId + "');";
+            string Query = "insert into CLASS(CLASS_ID,CLASS_NAME,CLASS_COUNT) values('" + classId + "','" + className + "','" + teacherId + "','" + startHour + "','" + startDate.ToString("yyyy'-'MM'-'dd") + "','" + endDate.ToString("yyyy'-'MM'-'dd") + "','" + programId + "');";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
