@@ -77,5 +77,33 @@ namespace UI
             textBox4.Enabled = false;
             textBox5.Enabled = false;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string s = comboBox1.Text;
+            ReportDetailForm f = new ReportDetailForm();
+            switch (s)
+            {
+                case "":
+                    MessageBox.Show("Vui lòng chọn loại báo cáo và nhập thông tin!");
+                    break;
+                case "Báo cáo Thông tin Học viên":
+                    //                    
+                    f.Text = "Báo cáo Thông tin Học viên";
+                    f.ShowDialog();
+                    break;
+                case "Báo cáo Kế toán Lớp học":
+                    //
+                    f.Text = "Báo cáo Kế toán Lớp học";
+                    f.ShowDialog();
+                    break;
+                case "Báo cáo kết quả học tập":
+                    //
+                    f.Text = "Báo cáo kết quả học tập";
+                    f.ShowDialog();
+                    break;
+                default: break;
+            }
+        }
     }
 }
