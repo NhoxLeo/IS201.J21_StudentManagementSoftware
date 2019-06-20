@@ -62,5 +62,13 @@ namespace UI
             f.ShowDialog();
             this.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ReportForm f = new ReportForm();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }
