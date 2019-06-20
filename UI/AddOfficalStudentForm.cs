@@ -25,5 +25,6 @@ namespace UI
             studentDAL.ConnectToDatabase();
             studentDAL.InsertStudent(textboxStudentID.Text, textboxStudentName.Text, textboxStudentMail.Text, textboxStudentAddress.Text, textboxStudentPhoneNumber.Text, birthDateTimePicker.Value);
         }
+
     }
 }

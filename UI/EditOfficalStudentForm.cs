@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
+using DAL;
 
 namespace UI
 {
@@ -15,6 +17,14 @@ namespace UI
         public EditOfficalStudentForm()
         {
             InitializeComponent();
+        }
+
+        private void btConfim_Click(object sender, EventArgs e)
+        {
+            StudentDAL studentDAL = new StudentDAL();
+            studentDAL.ConnectToDatabase();
+            StudentDTO studentDTO = new StudentDTO(textboxStudentID.Text, textboxStudentName.Text, textboxStudentMail.Text, textboxStudentAddress.Text, textboxStudentPhoneNumber.Text, birthDateTimePicker.Value);
+            studentDAL.UpdateStudent(studentDTO);
         }
     }
 }

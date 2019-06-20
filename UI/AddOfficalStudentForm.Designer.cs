@@ -53,6 +53,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.birthDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.textboxStudentMail = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -61,9 +64,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.birthDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -73,10 +73,10 @@
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -329,6 +329,32 @@
             this.panel2.Size = new System.Drawing.Size(883, 299);
             this.panel2.TabIndex = 4;
             // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.birthDateTimePicker);
+            this.panel13.Controls.Add(this.label11);
+            this.panel13.Location = new System.Drawing.Point(470, 243);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(410, 53);
+            this.panel13.TabIndex = 7;
+            // 
+            // birthDateTimePicker
+            // 
+            this.birthDateTimePicker.Location = new System.Drawing.Point(158, 18);
+            this.birthDateTimePicker.Name = "birthDateTimePicker";
+            this.birthDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.birthDateTimePicker.TabIndex = 1;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(3, 15);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(103, 25);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Sinh nhật";
+            // 
             // panel12
             // 
             this.panel12.Controls.Add(this.textboxStudentMail);
@@ -402,32 +428,6 @@
             this.panel1.Size = new System.Drawing.Size(883, 68);
             this.panel1.TabIndex = 3;
             // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.birthDateTimePicker);
-            this.panel13.Controls.Add(this.label11);
-            this.panel13.Location = new System.Drawing.Point(470, 243);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(410, 53);
-            this.panel13.TabIndex = 7;
-            // 
-            // birthDateTimePicker
-            // 
-            this.birthDateTimePicker.Location = new System.Drawing.Point(158, 18);
-            this.birthDateTimePicker.Name = "birthDateTimePicker";
-            this.birthDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.birthDateTimePicker.TabIndex = 1;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(3, 15);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(103, 25);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Sinh nhật";
-            // 
             // AddOfficalStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -454,14 +454,14 @@
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
             this.ResumeLayout(false);
 
         }
