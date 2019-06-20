@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dtgvListPotentialStudent = new System.Windows.Forms.DataGridView();
+            this.dgvListStudent = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
@@ -41,7 +41,7 @@
             this.btAdd = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvListPotentialStudent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListStudent)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,20 +66,20 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dtgvListPotentialStudent);
+            this.panel2.Controls.Add(this.dgvListStudent);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(0, 65);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(935, 302);
             this.panel2.TabIndex = 4;
             // 
-            // dtgvListPotentialStudent
+            // dgvListStudent
             // 
-            this.dtgvListPotentialStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvListPotentialStudent.Location = new System.Drawing.Point(13, 37);
-            this.dtgvListPotentialStudent.Name = "dtgvListPotentialStudent";
-            this.dtgvListPotentialStudent.Size = new System.Drawing.Size(910, 262);
-            this.dtgvListPotentialStudent.TabIndex = 4;
+            this.dgvListStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListStudent.Location = new System.Drawing.Point(13, 37);
+            this.dgvListStudent.Name = "dgvListStudent";
+            this.dgvListStudent.Size = new System.Drawing.Size(910, 262);
+            this.dgvListStudent.TabIndex = 4;
             // 
             // label2
             // 
@@ -192,7 +192,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvListPotentialStudent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListStudent)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -203,7 +203,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dtgvListPotentialStudent;
+        private System.Windows.Forms.DataGridView dgvListStudent;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button4;

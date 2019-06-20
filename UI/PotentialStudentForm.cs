@@ -89,9 +89,8 @@ namespace UI
         {
             PotentialStudentDAL potentialStudentDAL = new PotentialStudentDAL();
             potentialStudentDAL.ConnectToDatabase();
-            //potentialStudentDAL.InsertPotentialStudent("RST1","Alex",8.0f,"0012295831",12,"Unpassed");
             List<PotentialStudentDTO> potentialStudentDTOs = potentialStudentDAL.GetAllPotentialStudent();
-            dtgvListPotentialStudent.DataSource = potentialStudentDTOs;
+            dgvListPotentialStudent.DataSource = potentialStudentDTOs;
         }
     }
 }
