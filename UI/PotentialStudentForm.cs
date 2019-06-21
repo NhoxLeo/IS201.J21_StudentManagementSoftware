@@ -21,11 +21,6 @@ namespace UI
             InitPotentialStudentData();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             AddPotentialStudentForm f = new AddPotentialStudentForm();
@@ -54,12 +49,6 @@ namespace UI
             f.ShowDialog();
             this.Show();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -77,7 +66,7 @@ namespace UI
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            //print
         }
 
         private void dtgvListPotentialStudent_CellContentClick(object sender, DataGridViewCellEventArgs e)

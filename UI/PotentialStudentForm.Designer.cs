@@ -34,11 +34,11 @@
             this.dgvListPotentialStudent = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.btAdd = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListPotentialStudent)).BeginInit();
@@ -64,7 +64,6 @@
             this.label1.Size = new System.Drawing.Size(378, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "HỌC VIÊN TIỀM NĂNG";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 
@@ -94,68 +93,67 @@
             this.label2.Size = new System.Drawing.Size(270, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "Danh sách học viên tiềm năng:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.btnPrint);
+            this.panel3.Controls.Add(this.btnClose);
+            this.panel3.Controls.Add(this.btnDelete);
             this.panel3.Controls.Add(this.btnEdit);
-            this.panel3.Controls.Add(this.btAdd);
+            this.panel3.Controls.Add(this.btnAdd);
             this.panel3.Location = new System.Drawing.Point(0, 372);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(934, 87);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // button4
+            // btnPrint
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = global::UI.Properties.Resources.printer;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(577, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(174, 80);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "In ";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnPrint.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrint.BackgroundImage = global::UI.Properties.Resources.printer;
+            this.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.ForeColor = System.Drawing.Color.Black;
+            this.btnPrint.Location = new System.Drawing.Point(577, 4);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(174, 80);
+            this.btnPrint.TabIndex = 3;
+            this.btnPrint.Text = "In ";
+            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // btnClose
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::UI.Properties.Resources.back;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(769, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(153, 80);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Trở về";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = global::UI.Properties.Resources.back;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.Location = new System.Drawing.Point(769, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(153, 80);
+            this.btnClose.TabIndex = 4;
+            this.btnClose.Text = "Trở về";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btnDelete
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::UI.Properties.Resources.delete;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(386, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(171, 80);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Xoá học viên";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BackgroundImage = global::UI.Properties.Resources.delete;
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.Black;
+            this.btnDelete.Location = new System.Drawing.Point(386, 4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(171, 80);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "Xoá học viên";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnEdit
             // 
@@ -173,21 +171,21 @@
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // btAdd
+            // btnAdd
             // 
-            this.btAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btAdd.BackgroundImage = global::UI.Properties.Resources.plus;
-            this.btAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAdd.ForeColor = System.Drawing.Color.Black;
-            this.btAdd.Location = new System.Drawing.Point(12, 4);
-            this.btAdd.Name = "btAdd";
-            this.btAdd.Size = new System.Drawing.Size(153, 80);
-            this.btAdd.TabIndex = 0;
-            this.btAdd.Text = "Thêm học viên";
-            this.btAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btAdd.UseVisualStyleBackColor = false;
-            this.btAdd.Click += new System.EventHandler(this.button1_Click);
+            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.BackgroundImage = global::UI.Properties.Resources.plus;
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.Black;
+            this.btnAdd.Location = new System.Drawing.Point(12, 4);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(153, 80);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "Thêm học viên";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.button1_Click);
             // 
             // PotentialStudentForm
             // 
@@ -217,10 +215,10 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvListPotentialStudent;
-        private System.Windows.Forms.Button btAdd;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnPrint;
     }
 }

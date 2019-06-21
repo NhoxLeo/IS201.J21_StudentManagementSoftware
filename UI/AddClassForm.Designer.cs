@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btConfim = new System.Windows.Forms.Button();
+            this.btnConfim = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.endDate = new System.Windows.Forms.DateTimePicker();
@@ -40,7 +40,7 @@
             this.startDate = new System.Windows.Forms.DateTimePicker();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.textboxTeacher = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -71,21 +71,21 @@
             this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btConfim
+            // btnConfim
             // 
-            this.btConfim.BackColor = System.Drawing.Color.Transparent;
-            this.btConfim.BackgroundImage = global::UI.Properties.Resources.confirm;
-            this.btConfim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btConfim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btConfim.ForeColor = System.Drawing.Color.Black;
-            this.btConfim.Location = new System.Drawing.Point(0, 5);
-            this.btConfim.Name = "btConfim";
-            this.btConfim.Size = new System.Drawing.Size(153, 80);
-            this.btConfim.TabIndex = 1;
-            this.btConfim.Text = "Xác nhận";
-            this.btConfim.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btConfim.UseVisualStyleBackColor = false;
-            this.btConfim.Click += new System.EventHandler(this.btConfim_Click);
+            this.btnConfim.BackColor = System.Drawing.Color.Transparent;
+            this.btnConfim.BackgroundImage = global::UI.Properties.Resources.confirm;
+            this.btnConfim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConfim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfim.ForeColor = System.Drawing.Color.Black;
+            this.btnConfim.Location = new System.Drawing.Point(0, 5);
+            this.btnConfim.Name = "btnConfim";
+            this.btnConfim.Size = new System.Drawing.Size(153, 80);
+            this.btnConfim.TabIndex = 1;
+            this.btnConfim.Text = "Xác nhận";
+            this.btnConfim.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnConfim.UseVisualStyleBackColor = false;
+            this.btnConfim.Click += new System.EventHandler(this.btConfim_Click);
             // 
             // panel1
             // 
@@ -186,20 +186,20 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Ngày bắt đầu:";
             // 
-            // button3
+            // btnClose
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::UI.Properties.Resources.back;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(727, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(153, 80);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Trở về";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = global::UI.Properties.Resources.back;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.Location = new System.Drawing.Point(727, 5);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(153, 80);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.Text = "Trở về";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // panel7
             // 
@@ -315,8 +315,8 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.btConfim);
+            this.panel3.Controls.Add(this.btnClose);
+            this.panel3.Controls.Add(this.btnConfim);
             this.panel3.Location = new System.Drawing.Point(0, 372);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(880, 85);
@@ -401,7 +401,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btConfim;
+        private System.Windows.Forms.Button btnConfim;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker endDate;
@@ -413,7 +413,7 @@
         private System.Windows.Forms.DateTimePicker startDate;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox textboxTeacher;
         private System.Windows.Forms.Label label5;

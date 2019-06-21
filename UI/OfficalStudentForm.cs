@@ -26,5 +26,42 @@ namespace UI
             List<StudentDTO> studentDTOs = studentDAL.GetAllStudent();
             dgvListStudent.DataSource = studentDTOs;
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            AddOfficalStudentForm f = new AddOfficalStudentForm();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            EditOfficalStudentForm f = new EditOfficalStudentForm();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DeleteOfficalStudenForm f = new DeleteOfficalStudenForm();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            //AddOfficalStudentForm f = new AddOfficalStudentForm();
+            //this.Hide();
+            //f.ShowDialog();
+            //this.Show();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

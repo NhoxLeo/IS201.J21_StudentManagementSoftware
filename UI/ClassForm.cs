@@ -34,5 +34,34 @@ namespace UI
             f.ShowDialog();
             this.Show();
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            EditClassForm f = new EditClassForm();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DeleteClassForm f = new DeleteClassForm();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            //EditClassForm f = new EditClassForm();
+            //this.Hide();
+            //f.ShowDialog();
+            //this.Show();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
