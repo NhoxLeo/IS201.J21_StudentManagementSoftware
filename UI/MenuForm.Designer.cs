@@ -31,12 +31,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
+            this.buttonReport = new System.Windows.Forms.Button();
+            this.buttonPrograms = new System.Windows.Forms.Button();
+            this.buttonClass = new System.Windows.Forms.Button();
+            this.buttonOfficialStudent = new System.Windows.Forms.Button();
+            this.buttonPotentialStudent = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -45,10 +45,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(295, 12);
+            this.label1.Location = new System.Drawing.Point(332, 15);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(583, 51);
+            this.label1.Size = new System.Drawing.Size(696, 61);
             this.label1.TabIndex = 0;
             this.label1.Text = "TRUNG TÂM ANH NGỮ AZ";
             // 
@@ -57,105 +57,107 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1205, 97);
+            this.panel1.Size = new System.Drawing.Size(1356, 121);
             this.panel1.TabIndex = 1;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(-1, 103);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Controls.Add(this.buttonClose);
+            this.panel2.Controls.Add(this.buttonReport);
+            this.panel2.Controls.Add(this.buttonPrograms);
+            this.panel2.Controls.Add(this.buttonClass);
+            this.panel2.Controls.Add(this.buttonOfficialStudent);
+            this.panel2.Controls.Add(this.buttonPotentialStudent);
+            this.panel2.Location = new System.Drawing.Point(-1, 129);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1205, 421);
+            this.panel2.Size = new System.Drawing.Size(1356, 526);
             this.panel2.TabIndex = 2;
             // 
-            // button7
+            // buttonClose
             // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.BackgroundImage = global::UI.Properties.Resources.back;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(997, 319);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(204, 98);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Đăng Xuất";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.buttonClose.BackColor = System.Drawing.Color.Transparent;
+            this.buttonClose.BackgroundImage = global::UI.Properties.Resources.back;
+            this.buttonClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClose.ForeColor = System.Drawing.Color.Black;
+            this.buttonClose.Location = new System.Drawing.Point(1122, 399);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(230, 122);
+            this.buttonClose.TabIndex = 6;
+            this.buttonClose.Text = "Đăng Xuất";
+            this.buttonClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
-            // button5
+            // buttonReport
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(983, 6);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(223, 101);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Báo cáo";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.buttonReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonReport.Location = new System.Drawing.Point(1106, 8);
+            this.buttonReport.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonReport.Name = "buttonReport";
+            this.buttonReport.Size = new System.Drawing.Size(251, 126);
+            this.buttonReport.TabIndex = 4;
+            this.buttonReport.Text = "Báo cáo";
+            this.buttonReport.UseVisualStyleBackColor = true;
+            this.buttonReport.Click += new System.EventHandler(this.buttonReport_Click);
             // 
-            // button4
+            // buttonPrograms
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(728, 4);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(247, 105);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Chương trình học";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonPrograms.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrograms.Location = new System.Drawing.Point(819, 5);
+            this.buttonPrograms.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonPrograms.Name = "buttonPrograms";
+            this.buttonPrograms.Size = new System.Drawing.Size(278, 131);
+            this.buttonPrograms.TabIndex = 3;
+            this.buttonPrograms.Text = "Chương trình học";
+            this.buttonPrograms.UseVisualStyleBackColor = true;
+            this.buttonPrograms.Click += new System.EventHandler(this.buttonProgram_Click);
             // 
-            // button3
+            // buttonClass
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(493, 4);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(227, 105);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Lớp học";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClass.Location = new System.Drawing.Point(555, 5);
+            this.buttonClass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonClass.Name = "buttonClass";
+            this.buttonClass.Size = new System.Drawing.Size(255, 131);
+            this.buttonClass.TabIndex = 2;
+            this.buttonClass.Text = "Lớp học";
+            this.buttonClass.UseVisualStyleBackColor = true;
+            this.buttonClass.Click += new System.EventHandler(this.buttonClass_Click);
             // 
-            // button2
+            // buttonOfficialStudent
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(261, 4);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(224, 105);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Học viên chính thức";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonOfficialStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOfficialStudent.Location = new System.Drawing.Point(294, 5);
+            this.buttonOfficialStudent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonOfficialStudent.Name = "buttonOfficialStudent";
+            this.buttonOfficialStudent.Size = new System.Drawing.Size(252, 131);
+            this.buttonOfficialStudent.TabIndex = 1;
+            this.buttonOfficialStudent.Text = "Học viên chính thức";
+            this.buttonOfficialStudent.UseVisualStyleBackColor = true;
+            this.buttonOfficialStudent.Click += new System.EventHandler(this.buttonOfficialStudent_Click);
             // 
-            // button1
+            // buttonPotentialStudent
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(4, 1);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(249, 105);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Học viên tiềm năng";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonPotentialStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPotentialStudent.Location = new System.Drawing.Point(4, 1);
+            this.buttonPotentialStudent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonPotentialStudent.Name = "buttonPotentialStudent";
+            this.buttonPotentialStudent.Size = new System.Drawing.Size(280, 131);
+            this.buttonPotentialStudent.TabIndex = 0;
+            this.buttonPotentialStudent.Text = "Học viên tiềm năng";
+            this.buttonPotentialStudent.UseVisualStyleBackColor = true;
+            this.buttonPotentialStudent.Click += new System.EventHandler(this.buttonPotentialStudent_Click);
             // 
             // MenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1203, 526);
+            this.ClientSize = new System.Drawing.Size(1353, 658);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -173,12 +175,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button buttonReport;
+        private System.Windows.Forms.Button buttonPrograms;
+        private System.Windows.Forms.Button buttonClass;
+        private System.Windows.Forms.Button buttonOfficialStudent;
+        private System.Windows.Forms.Button buttonPotentialStudent;
+        private System.Windows.Forms.Button buttonClose;
     }
 }
 

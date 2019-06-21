@@ -26,5 +26,13 @@ namespace UI
             List<ClassDTO> classDTOs = classDAL.GetAllClass();
             dgvListClass.DataSource = classDTOs;
         }
+
+        private void btAddClass_Click(object sender, EventArgs e)
+        {
+            AddClassForm f = new AddClassForm();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }
