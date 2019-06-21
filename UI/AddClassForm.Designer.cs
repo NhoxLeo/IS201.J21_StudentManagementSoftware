@@ -45,7 +45,6 @@
             this.textboxTeacher = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textboxProgram = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.textboxClassName = new System.Windows.Forms.TextBox();
@@ -58,6 +57,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.textboxStartingHour = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.comboBoxProgram = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -231,21 +231,12 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.textboxProgram);
+            this.panel6.Controls.Add(this.comboBoxProgram);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Location = new System.Drawing.Point(3, 72);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(464, 53);
             this.panel6.TabIndex = 2;
-            // 
-            // textboxProgram
-            // 
-            this.textboxProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textboxProgram.Location = new System.Drawing.Point(157, 15);
-            this.textboxProgram.Multiline = true;
-            this.textboxProgram.Name = "textboxProgram";
-            this.textboxProgram.Size = new System.Drawing.Size(279, 25);
-            this.textboxProgram.TabIndex = 1;
             // 
             // label4
             // 
@@ -253,9 +244,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 15);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 25);
+            this.label4.Size = new System.Drawing.Size(95, 25);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Trình độ:";
+            this.label4.Text = "Môn học";
             // 
             // panel5
             // 
@@ -365,6 +356,14 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Thời gian học:";
             // 
+            // comboBoxProgram
+            // 
+            this.comboBoxProgram.FormattingEnabled = true;
+            this.comboBoxProgram.Location = new System.Drawing.Point(157, 17);
+            this.comboBoxProgram.Name = "comboBoxProgram";
+            this.comboBoxProgram.Size = new System.Drawing.Size(279, 21);
+            this.comboBoxProgram.TabIndex = 1;
+            // 
             // AddClassForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -418,7 +417,6 @@
         private System.Windows.Forms.TextBox textboxTeacher;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textboxProgram;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox textboxClassName;
@@ -431,5 +429,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox textboxStartingHour;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBoxProgram;
     }
 }

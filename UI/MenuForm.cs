@@ -20,7 +20,10 @@ namespace UI
 
         private void buttonProgram_Click(object sender, EventArgs e)
         {
-
+            ProgramForm f = new ProgramForm();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
         }
 
         private void buttonPotentialStudent_Click(object sender, EventArgs e)

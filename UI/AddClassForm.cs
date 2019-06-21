@@ -17,13 +17,22 @@ namespace UI
         public AddClassForm()
         {
             InitializeComponent();
+            LoadComboBoxProgram();
         }
-
+        void LoadComboBoxProgram()
+        {
+            ProgramDAL programDAL = new ProgramDAL();
+            programDAL.ConnectToDatabase();
+            List<ProgramDTO> programDTOs = programDAL.GetAllProgram();
+            comboBoxProgram.DataSource = programDTOs;
+            comboBoxProgram.DisplayMember = "ProgramName";
+            comboBoxProgram.ValueMember = "ProgramId";
+        }
         private void btConfim_Click(object sender, EventArgs e)
         {
             ClassDAL classDAL = new ClassDAL();
             classDAL.ConnectToDatabase();
-            classDAL.InsertClass(textboxClassID.Text, textboxClassName.Text, textboxTeacher.Text, textboxStartingHour.Text, startDate.Value,endDate.Value,textboxProgram.Text);
+            classDAL.InsertClass(textboxClassID.Text, textboxClassName.Text, textboxTeacher.Text, textboxStartingHour.Text, startDate.Value, endDate.Value, ((ProgramDTO)comboBoxProgram.SelectedItem).ProgramId.ToString());
         }
     }
 }

@@ -117,7 +117,7 @@ namespace DAL
         {
             this.ConnectToDatabase();
 
-            string Query = "insert into CLASS(CLASS_ID,CLASS_NAME,CLASS_COUNT) values('" + classId + "','" + className + "','" + teacherId + "','" + startHour + "','" + startDate.ToString("yyyy'-'MM'-'dd") + "','" + endDate.ToString("yyyy'-'MM'-'dd") + "','" + programId + "');";
+            string Query = "insert into CLASS(CLASS_ID,CLASS_NAME,TEACHER_ID,START_HOUR,START_DATE,END_DATE,PROGRAM_ID) values('" + classId + "','" + className + "','" + teacherId + "','" + startHour + "','" + startDate.ToString("yyyy'-'MM'-'dd") + "','" + endDate.ToString("yyyy'-'MM'-'dd") + "','" + programId + "');";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
