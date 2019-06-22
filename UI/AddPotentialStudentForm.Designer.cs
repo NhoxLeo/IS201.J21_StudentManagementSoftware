@@ -32,32 +32,32 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.tbAppointmentNumber = new System.Windows.Forms.TextBox();
+            this.textboxPotentialStudentAppointmentCount = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.tbStatus = new System.Windows.Forms.ComboBox();
+            this.dropboxStatus = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.tbInputScore = new System.Windows.Forms.TextBox();
+            this.textboxPotentialStudentInputScore = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.tbStudentGender = new System.Windows.Forms.ComboBox();
+            this.dropboxPotentialStudentGender = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.tbStudentPhoneNumber = new System.Windows.Forms.TextBox();
+            this.textboxPotentialStudentPhoneNumber = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.tbStudentAddress = new System.Windows.Forms.TextBox();
+            this.textboxPotentialStudentAddress = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.tbStudentName = new System.Windows.Forms.TextBox();
+            this.textboxPotentialStudentName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.tbStudentID = new System.Windows.Forms.TextBox();
+            this.textboxPotentialStudentID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btConfim = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnConfirm = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -107,21 +107,21 @@
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.tbAppointmentNumber);
+            this.panel11.Controls.Add(this.textboxPotentialStudentAppointmentCount);
             this.panel11.Controls.Add(this.label9);
             this.panel11.Location = new System.Drawing.Point(470, 190);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(410, 53);
             this.panel11.TabIndex = 7;
             // 
-            // tbAppointmentNumber
+            // textboxPotentialStudentAppointmentCount
             // 
-            this.tbAppointmentNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAppointmentNumber.Location = new System.Drawing.Point(158, 15);
-            this.tbAppointmentNumber.Multiline = true;
-            this.tbAppointmentNumber.Name = "tbAppointmentNumber";
-            this.tbAppointmentNumber.Size = new System.Drawing.Size(243, 25);
-            this.tbAppointmentNumber.TabIndex = 1;
+            this.textboxPotentialStudentAppointmentCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxPotentialStudentAppointmentCount.Location = new System.Drawing.Point(158, 15);
+            this.textboxPotentialStudentAppointmentCount.Multiline = true;
+            this.textboxPotentialStudentAppointmentCount.Name = "textboxPotentialStudentAppointmentCount";
+            this.textboxPotentialStudentAppointmentCount.Size = new System.Drawing.Size(243, 25);
+            this.textboxPotentialStudentAppointmentCount.TabIndex = 1;
             // 
             // label9
             // 
@@ -135,21 +135,21 @@
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.tbStatus);
+            this.panel10.Controls.Add(this.dropboxStatus);
             this.panel10.Controls.Add(this.label8);
             this.panel10.Location = new System.Drawing.Point(9, 190);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(458, 53);
             this.panel10.TabIndex = 6;
             // 
-            // tbStatus
+            // dropboxStatus
             // 
-            this.tbStatus.FormattingEnabled = true;
-            this.tbStatus.Location = new System.Drawing.Point(135, 15);
-            this.tbStatus.Name = "tbStatus";
-            this.tbStatus.Size = new System.Drawing.Size(121, 21);
-            this.tbStatus.TabIndex = 1;
-            this.tbStatus.SelectedIndexChanged += new System.EventHandler(this.tbStatus_SelectedIndexChanged);
+            this.dropboxStatus.FormattingEnabled = true;
+            this.dropboxStatus.Location = new System.Drawing.Point(135, 15);
+            this.dropboxStatus.Name = "dropboxStatus";
+            this.dropboxStatus.Size = new System.Drawing.Size(121, 21);
+            this.dropboxStatus.TabIndex = 1;
+            this.dropboxStatus.SelectedIndexChanged += new System.EventHandler(this.tbStatus_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -163,21 +163,21 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.tbInputScore);
+            this.panel9.Controls.Add(this.textboxPotentialStudentInputScore);
             this.panel9.Controls.Add(this.label7);
             this.panel9.Location = new System.Drawing.Point(470, 131);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(410, 53);
             this.panel9.TabIndex = 5;
             // 
-            // tbInputScore
+            // textboxPotentialStudentInputScore
             // 
-            this.tbInputScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbInputScore.Location = new System.Drawing.Point(158, 15);
-            this.tbInputScore.Multiline = true;
-            this.tbInputScore.Name = "tbInputScore";
-            this.tbInputScore.Size = new System.Drawing.Size(243, 25);
-            this.tbInputScore.TabIndex = 1;
+            this.textboxPotentialStudentInputScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxPotentialStudentInputScore.Location = new System.Drawing.Point(158, 15);
+            this.textboxPotentialStudentInputScore.Multiline = true;
+            this.textboxPotentialStudentInputScore.Name = "textboxPotentialStudentInputScore";
+            this.textboxPotentialStudentInputScore.Size = new System.Drawing.Size(243, 25);
+            this.textboxPotentialStudentInputScore.TabIndex = 1;
             // 
             // label7
             // 
@@ -191,20 +191,20 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.tbStudentGender);
+            this.panel8.Controls.Add(this.dropboxPotentialStudentGender);
             this.panel8.Controls.Add(this.label6);
             this.panel8.Location = new System.Drawing.Point(6, 131);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(461, 53);
             this.panel8.TabIndex = 4;
             // 
-            // tbStudentGender
+            // dropboxPotentialStudentGender
             // 
-            this.tbStudentGender.FormattingEnabled = true;
-            this.tbStudentGender.Location = new System.Drawing.Point(138, 15);
-            this.tbStudentGender.Name = "tbStudentGender";
-            this.tbStudentGender.Size = new System.Drawing.Size(121, 21);
-            this.tbStudentGender.TabIndex = 1;
+            this.dropboxPotentialStudentGender.FormattingEnabled = true;
+            this.dropboxPotentialStudentGender.Location = new System.Drawing.Point(138, 15);
+            this.dropboxPotentialStudentGender.Name = "dropboxPotentialStudentGender";
+            this.dropboxPotentialStudentGender.Size = new System.Drawing.Size(121, 21);
+            this.dropboxPotentialStudentGender.TabIndex = 1;
             // 
             // label6
             // 
@@ -218,21 +218,21 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.tbStudentPhoneNumber);
+            this.panel7.Controls.Add(this.textboxPotentialStudentPhoneNumber);
             this.panel7.Controls.Add(this.label5);
             this.panel7.Location = new System.Drawing.Point(470, 72);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(410, 53);
             this.panel7.TabIndex = 3;
             // 
-            // tbStudentPhoneNumber
+            // textboxPotentialStudentPhoneNumber
             // 
-            this.tbStudentPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbStudentPhoneNumber.Location = new System.Drawing.Point(158, 15);
-            this.tbStudentPhoneNumber.Multiline = true;
-            this.tbStudentPhoneNumber.Name = "tbStudentPhoneNumber";
-            this.tbStudentPhoneNumber.Size = new System.Drawing.Size(243, 25);
-            this.tbStudentPhoneNumber.TabIndex = 1;
+            this.textboxPotentialStudentPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxPotentialStudentPhoneNumber.Location = new System.Drawing.Point(158, 15);
+            this.textboxPotentialStudentPhoneNumber.Multiline = true;
+            this.textboxPotentialStudentPhoneNumber.Name = "textboxPotentialStudentPhoneNumber";
+            this.textboxPotentialStudentPhoneNumber.Size = new System.Drawing.Size(243, 25);
+            this.textboxPotentialStudentPhoneNumber.TabIndex = 1;
             // 
             // label5
             // 
@@ -246,21 +246,21 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.tbStudentAddress);
+            this.panel6.Controls.Add(this.textboxPotentialStudentAddress);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Location = new System.Drawing.Point(3, 72);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(464, 53);
             this.panel6.TabIndex = 2;
             // 
-            // tbStudentAddress
+            // textboxPotentialStudentAddress
             // 
-            this.tbStudentAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbStudentAddress.Location = new System.Drawing.Point(141, 15);
-            this.tbStudentAddress.Multiline = true;
-            this.tbStudentAddress.Name = "tbStudentAddress";
-            this.tbStudentAddress.Size = new System.Drawing.Size(284, 25);
-            this.tbStudentAddress.TabIndex = 1;
+            this.textboxPotentialStudentAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxPotentialStudentAddress.Location = new System.Drawing.Point(141, 15);
+            this.textboxPotentialStudentAddress.Multiline = true;
+            this.textboxPotentialStudentAddress.Name = "textboxPotentialStudentAddress";
+            this.textboxPotentialStudentAddress.Size = new System.Drawing.Size(284, 25);
+            this.textboxPotentialStudentAddress.TabIndex = 1;
             // 
             // label4
             // 
@@ -274,21 +274,21 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.tbStudentName);
+            this.panel5.Controls.Add(this.textboxPotentialStudentName);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Location = new System.Drawing.Point(470, 8);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(413, 53);
             this.panel5.TabIndex = 1;
             // 
-            // tbStudentName
+            // textboxPotentialStudentName
             // 
-            this.tbStudentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbStudentName.Location = new System.Drawing.Point(158, 15);
-            this.tbStudentName.Multiline = true;
-            this.tbStudentName.Name = "tbStudentName";
-            this.tbStudentName.Size = new System.Drawing.Size(243, 25);
-            this.tbStudentName.TabIndex = 1;
+            this.textboxPotentialStudentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxPotentialStudentName.Location = new System.Drawing.Point(158, 15);
+            this.textboxPotentialStudentName.Multiline = true;
+            this.textboxPotentialStudentName.Name = "textboxPotentialStudentName";
+            this.textboxPotentialStudentName.Size = new System.Drawing.Size(243, 25);
+            this.textboxPotentialStudentName.TabIndex = 1;
             // 
             // label3
             // 
@@ -302,22 +302,22 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.tbStudentID);
+            this.panel4.Controls.Add(this.textboxPotentialStudentID);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Location = new System.Drawing.Point(0, 8);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(467, 53);
             this.panel4.TabIndex = 0;
             // 
-            // tbStudentID
+            // textboxPotentialStudentID
             // 
-            this.tbStudentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbStudentID.Location = new System.Drawing.Point(144, 15);
-            this.tbStudentID.Multiline = true;
-            this.tbStudentID.Name = "tbStudentID";
-            this.tbStudentID.ReadOnly = true;
-            this.tbStudentID.Size = new System.Drawing.Size(284, 25);
-            this.tbStudentID.TabIndex = 1;
+            this.textboxPotentialStudentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxPotentialStudentID.Location = new System.Drawing.Point(144, 15);
+            this.textboxPotentialStudentID.Multiline = true;
+            this.textboxPotentialStudentID.Name = "textboxPotentialStudentID";
+            this.textboxPotentialStudentID.ReadOnly = true;
+            this.textboxPotentialStudentID.Size = new System.Drawing.Size(284, 25);
+            this.textboxPotentialStudentID.TabIndex = 1;
             // 
             // label2
             // 
@@ -331,43 +331,44 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.btConfim);
+            this.panel3.Controls.Add(this.btnClose);
+            this.panel3.Controls.Add(this.btnConfirm);
             this.panel3.Location = new System.Drawing.Point(0, 371);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(880, 78);
             this.panel3.TabIndex = 2;
             // 
-            // button3
+            // btnClose
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::UI.Properties.Resources.back;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(727, -2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(153, 80);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Trở về";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = global::UI.Properties.Resources.back;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.Location = new System.Drawing.Point(727, -2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(153, 80);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.Text = "Trở về";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.button3_Click);
             // 
-            // btConfim
+            // btnConfirm
             // 
-            this.btConfim.BackColor = System.Drawing.Color.Transparent;
-            this.btConfim.BackgroundImage = global::UI.Properties.Resources.confirm;
-            this.btConfim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btConfim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btConfim.ForeColor = System.Drawing.Color.Black;
-            this.btConfim.Location = new System.Drawing.Point(3, 0);
-            this.btConfim.Name = "btConfim";
-            this.btConfim.Size = new System.Drawing.Size(153, 80);
-            this.btConfim.TabIndex = 1;
-            this.btConfim.Text = "Xác nhận";
-            this.btConfim.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btConfim.UseVisualStyleBackColor = false;
+            this.btnConfirm.BackColor = System.Drawing.Color.Transparent;
+            this.btnConfirm.BackgroundImage = global::UI.Properties.Resources.confirm;
+            this.btnConfirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirm.ForeColor = System.Drawing.Color.Black;
+            this.btnConfirm.Location = new System.Drawing.Point(3, 0);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(153, 80);
+            this.btnConfirm.TabIndex = 1;
+            this.btnConfirm.Text = "Xác nhận";
+            this.btnConfirm.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btConfim_Click);
             // 
             // AddPotentialStudentForm
             // 
@@ -409,31 +410,31 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.ComboBox tbStudentGender;
+        private System.Windows.Forms.ComboBox dropboxPotentialStudentGender;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox tbStudentPhoneNumber;
+        private System.Windows.Forms.TextBox textboxPotentialStudentPhoneNumber;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox tbStudentAddress;
+        private System.Windows.Forms.TextBox textboxPotentialStudentAddress;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox tbStudentName;
+        private System.Windows.Forms.TextBox textboxPotentialStudentName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox tbStudentID;
+        private System.Windows.Forms.TextBox textboxPotentialStudentID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox tbAppointmentNumber;
+        private System.Windows.Forms.TextBox textboxPotentialStudentAppointmentCount;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.ComboBox tbStatus;
+        private System.Windows.Forms.ComboBox dropboxStatus;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox tbInputScore;
+        private System.Windows.Forms.TextBox textboxPotentialStudentInputScore;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btConfim;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Button btnClose;
     }
 }

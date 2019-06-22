@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
+using DAL;
 
 namespace UI
 {
@@ -16,11 +18,7 @@ namespace UI
         public PotentialStudentForm()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            InitPotentialStudentData();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -38,7 +36,8 @@ namespace UI
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            EditInforPotentialForm f = new EditInforPotentialForm();
+            PotentialStudentDTO currentObject = (PotentialStudentDTO)dgvListPotentialStudent.CurrentRow.DataBoundItem;
+            EditInforPotentialForm f = new EditInforPotentialForm(currentObject);
             this.Hide();
             f.ShowDialog();
             this.Show();
@@ -51,12 +50,6 @@ namespace UI
             f.ShowDialog();
             this.Show();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -74,12 +67,20 @@ namespace UI
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            //print
         }
 
         private void dtgvListPotentialStudent_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        void InitPotentialStudentData()
+        {
+            PotentialStudentDAL potentialStudentDAL = new PotentialStudentDAL();
+            potentialStudentDAL.ConnectToDatabase();
+            List<PotentialStudentDTO> potentialStudentDTOs = potentialStudentDAL.GetAllPotentialStudent();
+            dgvListPotentialStudent.DataSource = potentialStudentDTOs;
         }
     }
 }

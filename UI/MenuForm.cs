@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DTO;
 
 namespace UI
 {
@@ -19,30 +18,15 @@ namespace UI
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void buttonProgram_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnHocVienTiemNang_Click(object sender, EventArgs e)
-        {
-            PotentialStudentForm f = new PotentialStudentForm();
-            this.Close();
+            ProgramForm f = new ProgramForm();
+            this.Hide();
             f.ShowDialog();
             this.Show();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonPotentialStudent_Click(object sender, EventArgs e)
         {
             PotentialStudentForm f = new PotentialStudentForm();
             this.Hide();
@@ -50,12 +34,15 @@ namespace UI
             this.Show();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void buttonReport_Click(object sender, EventArgs e)
         {
-            this.Close();
+            ReportForm f = new ReportForm();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonOfficialStudent_Click(object sender, EventArgs e)
         {
             OfficalStudentForm f = new OfficalStudentForm();
             this.Hide();
@@ -63,12 +50,17 @@ namespace UI
             this.Show();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void buttonClass_Click(object sender, EventArgs e)
         {
-            ReportForm f = new ReportForm();
+            ClassForm f = new ClassForm();
             this.Hide();
             f.ShowDialog();
             this.Show();
         }
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

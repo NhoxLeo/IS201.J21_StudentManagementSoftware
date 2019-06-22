@@ -138,6 +138,12 @@
       <DependentUpon>PotentialStudentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProgramForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramForm.Designer.cs">
+      <DependentUpon>ProgramForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportDetailForm.cs">
       <SubType>Form</SubType>
@@ -193,6 +199,9 @@
     <EmbeddedResource Include="PotentialStudentForm.resx">
       <DependentUpon>PotentialStudentForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProgramForm.resx">
+      <DependentUpon>ProgramForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -226,6 +235,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{7554c570-e3f9-4ae0-be73-09d544a9c7c9}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{6a5739b6-e8a8-48d5-a83f-4ff3fc71553b}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{9fc7a83d-9d24-47f0-99e9-92d30ac07770}</Project>

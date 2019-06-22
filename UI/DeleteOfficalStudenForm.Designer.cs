@@ -31,12 +31,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtgvListPotentialStudent = new System.Windows.Forms.DataGridView();
+            this.dgvListStudent = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btConfim = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnConfirm = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvListPotentialStudent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListStudent)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,52 +69,54 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Danh sách học viên chính thức:";
             // 
-            // dtgvListPotentialStudent
+            // dgvListStudent
             // 
-            this.dtgvListPotentialStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvListPotentialStudent.Location = new System.Drawing.Point(5, 107);
-            this.dtgvListPotentialStudent.Name = "dtgvListPotentialStudent";
-            this.dtgvListPotentialStudent.Size = new System.Drawing.Size(1044, 284);
-            this.dtgvListPotentialStudent.TabIndex = 13;
+            this.dgvListStudent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListStudent.Location = new System.Drawing.Point(5, 107);
+            this.dgvListStudent.Name = "dgvListStudent";
+            this.dgvListStudent.Size = new System.Drawing.Size(1044, 284);
+            this.dgvListStudent.TabIndex = 13;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.btConfim);
+            this.panel3.Controls.Add(this.btnClose);
+            this.panel3.Controls.Add(this.btnConfirm);
             this.panel3.Location = new System.Drawing.Point(15, 397);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1034, 86);
             this.panel3.TabIndex = 12;
             // 
-            // button3
+            // btnClose
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::UI.Properties.Resources.back;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(878, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(153, 80);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Trở về";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = global::UI.Properties.Resources.back;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.Location = new System.Drawing.Point(878, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(153, 80);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.Text = "Trở về";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
-            // btConfim
+            // btnConfirm
             // 
-            this.btConfim.BackColor = System.Drawing.Color.Transparent;
-            this.btConfim.BackgroundImage = global::UI.Properties.Resources.confirm;
-            this.btConfim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btConfim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btConfim.ForeColor = System.Drawing.Color.Black;
-            this.btConfim.Location = new System.Drawing.Point(-10, 0);
-            this.btConfim.Name = "btConfim";
-            this.btConfim.Size = new System.Drawing.Size(153, 80);
-            this.btConfim.TabIndex = 1;
-            this.btConfim.Text = "Xác nhận";
-            this.btConfim.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btConfim.UseVisualStyleBackColor = false;
+            this.btnConfirm.BackColor = System.Drawing.Color.Transparent;
+            this.btnConfirm.BackgroundImage = global::UI.Properties.Resources.confirm;
+            this.btnConfirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirm.ForeColor = System.Drawing.Color.Black;
+            this.btnConfirm.Location = new System.Drawing.Point(-10, 0);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(153, 80);
+            this.btnConfirm.TabIndex = 1;
+            this.btnConfirm.Text = "Xác nhận";
+            this.btnConfirm.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // DeleteOfficalStudenForm
             // 
@@ -123,13 +125,13 @@
             this.ClientSize = new System.Drawing.Size(1051, 479);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dtgvListPotentialStudent);
+            this.Controls.Add(this.dgvListStudent);
             this.Controls.Add(this.panel3);
             this.Name = "DeleteOfficalStudenForm";
             this.Text = "DeleteOfficalStudenForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvListPotentialStudent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListStudent)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -141,9 +143,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dtgvListPotentialStudent;
+        private System.Windows.Forms.DataGridView dgvListStudent;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btConfim;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnConfirm;
     }
 }

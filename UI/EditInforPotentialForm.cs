@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAL;
+using DTO;
 
 namespace DTO
 {
@@ -16,10 +18,23 @@ namespace DTO
         {
             InitializeComponent();
         }
+        public EditInforPotentialForm(PotentialStudentDTO _potentialStudentDTO)
+        {
+            InitializeComponent();
+            textboxPotentialStudentID.Text = _potentialStudentDTO.PotentialStudentId;
+        }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btConfim_Click(object sender, EventArgs e)
+        {
+            PotentialStudentDAL potentialStudentDAL = new PotentialStudentDAL();
+            potentialStudentDAL.ConnectToDatabase();
+            PotentialStudentDTO potentialStudentDTO = new PotentialStudentDTO(textboxPotentialStudentID.Text, textboxPotentialStudentName.Text, int.Parse(textboxPotentialStudentInputScore.Text), textboxPotentialStudentPhoneNumber.Text, int.Parse(textboxPotentialStudentAppointmentCount.Text), dropboxStatus.ValueMember);
+            potentialStudentDAL.UpdatePotentialStudent(potentialStudentDTO);
         }
     }
 }

@@ -45,7 +45,7 @@ namespace DAL
             this.ConnectToDatabase();
 
             MySqlCommand command = this.mySQLConnection.CreateCommand();
-            command.CommandText = "SELECT * FROM STUDENT where STUDENT_ID = " + student_Id;
+            command.CommandText = "SELECT * FROM STUDENT where STUDENT_ID = '" + student_Id + "'";
 
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
@@ -98,7 +98,7 @@ namespace DAL
         {
             this.ConnectToDatabase();
 
-            string Query = "insert into STUDENT values('" + student.StudentId + "','" + student.StudentName + "','" + student.StudentMail + "','" + student.StudentAddress + "','" + student.StudentPhone + "','" + student.StudentBirthDate + "');";
+            string Query = "insert into STUDENT values('" + student.StudentId + "','" + student.StudentName + "','" + student.StudentMail + "','" + student.StudentAddress + "','" + student.StudentPhone + "','" + student.StudentBirthDate.ToString("yyyy'-'MM'-'dd") + "');";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
@@ -110,11 +110,10 @@ namespace DAL
             return true;
         }
 
-        public bool InsertStudent(string studentId, string studentName, string studentMail, string studentAddress, string studentPhone, string studentBirthDate)
+        public bool InsertStudent(string studentId, string studentName, string studentMail, string studentAddress, string studentPhone, DateTime studentBirthDate)
         {
             this.ConnectToDatabase();
-
-            string Query = "insert into STUDENT(STUDENT_ID,STUDENT_NAME,STUDENT_MAIL,STUDENT_ADDRESS,STUDENT_PHONE,STUDENT_BIRTHDATE) values('" + studentId + "','" + studentName + "','" + studentMail + "','" + studentAddress + "','" + studentPhone + "','" + studentBirthDate + "');";
+            string Query = "insert into STUDENT(STUDENT_ID,STUDENT_NAME,MAIL,ADDRESS,PHONE,BIRTHDATE) values('" + studentId + "','" + studentName + "','" + studentMail + "','" + studentAddress + "','" + studentPhone + "','" + studentBirthDate.ToString("yyyy'-'MM'-'dd") + "');";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
@@ -129,13 +128,27 @@ namespace DAL
         {
             this.ConnectToDatabase();
 
-            string Query = "update STUDENT set STUDENT_ID='" + student.StudentId + "',STUDENT_NAME = '" + student.StudentName + "',STUDENT_MAIL = '" + student.StudentMail + "',STUDENT_ADDRESS = '" + student.StudentAddress + "',STUDENT_PHONE = '" + student.StudentPhone + "',STUDENT_BIRTHDATE = '" + student.StudentBirthDate + "'";
+            string Query = "update STUDENT set STUDENT_ID='" + student.StudentId + "',STUDENT_NAME = '" + student.StudentName + "',MAIL = '" + student.StudentMail + "',ADDRESS = '" + student.StudentAddress + "',PHONE = '" + student.StudentPhone + "',BIRTHDATE = '" + student.StudentBirthDate + "'";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
 
             command.ExecuteNonQuery();
 
+
+            this.Close();
+            return true;
+        }
+        public bool DeleteStudent(string id)
+        {
+            this.ConnectToDatabase();
+
+            string Query = "DELETE FROM STUDENT WHERE STUDENT_ID='" + id + "'";
+
+            //This is command class which will handle the query and connection object.  
+            MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
+
+            command.ExecuteNonQuery();
 
             this.Close();
             return true;

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAL;
+using DTO;
 
 namespace UI
 {
@@ -25,6 +27,13 @@ namespace UI
         private void tbStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btConfim_Click(object sender, EventArgs e)
+        {
+            PotentialStudentDAL potentialStudentDAL = new PotentialStudentDAL();
+            potentialStudentDAL.ConnectToDatabase();
+            potentialStudentDAL.InsertPotentialStudent(textboxPotentialStudentID.Text, textboxPotentialStudentName.Text,int.Parse(textboxPotentialStudentInputScore.Text),textboxPotentialStudentPhoneNumber.Text, int.Parse(textboxPotentialStudentAppointmentCount.Text), dropboxStatus.ValueMember);
         }
     }
 }
