@@ -277,9 +277,9 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.BaocaoTTHV);
             this.Controls.Add(this.BaocaoKQHT);
             this.Controls.Add(this.BaocaoKTLH);
+            this.Controls.Add(this.BaocaoTTHV);
             this.Name = "ReportForm";
             this.Text = "Báo Cáo";
             this.Load += new System.EventHandler(this.ReportForm_Load);
