@@ -45,10 +45,24 @@ namespace UI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DeletePotentialStudentForm f = new DeletePotentialStudentForm();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            if (this.dgvListPotentialStudent.SelectedRows.Count > 0)
+            {
+                PotentialStudentDAL potentialStudentDAL = new PotentialStudentDAL();
+                potentialStudentDAL.ConnectToDatabase();
+                PotentialStudentDTO currentObject = (PotentialStudentDTO)dgvListPotentialStudent.CurrentRow.DataBoundItem;
+                if (potentialStudentDAL.DeletePotentialStudent(currentObject.PotentialStudentId))
+                {
+                    potentialStudentDAL = new PotentialStudentDAL();
+                    potentialStudentDAL.ConnectToDatabase();
+                    dgvListPotentialStudent.DataSource = potentialStudentDAL.GetAllPotentialStudent();
+                    dgvListPotentialStudent.Update();
+                    dgvListPotentialStudent.Refresh();
+                }
+            }
+            //DeletePotentialStudentForm f = new DeletePotentialStudentForm();
+            //this.Hide();
+            //f.ShowDialog();
+            //this.Show();
         }
         private void panel2_Paint(object sender, PaintEventArgs e)
         {

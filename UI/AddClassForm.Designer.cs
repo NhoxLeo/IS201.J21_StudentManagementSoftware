@@ -34,9 +34,6 @@
             this.endDate = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.textboxFee = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
             this.startDate = new System.Windows.Forms.DateTimePicker();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -45,6 +42,7 @@
             this.textboxTeacher = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.comboBoxProgram = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.textboxClassName = new System.Windows.Forms.TextBox();
@@ -57,10 +55,8 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.textboxStartingHour = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBoxProgram = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel11.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -131,34 +127,6 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(410, 53);
             this.panel11.TabIndex = 6;
-            // 
-            // textboxFee
-            // 
-            this.textboxFee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textboxFee.Location = new System.Drawing.Point(154, 13);
-            this.textboxFee.Multiline = true;
-            this.textboxFee.Name = "textboxFee";
-            this.textboxFee.Size = new System.Drawing.Size(279, 25);
-            this.textboxFee.TabIndex = 1;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(3, 15);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 25);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Học phí:";
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.textboxFee);
-            this.panel12.Controls.Add(this.label10);
-            this.panel12.Location = new System.Drawing.Point(6, 190);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(461, 53);
-            this.panel12.TabIndex = 7;
             // 
             // startDate
             // 
@@ -238,6 +206,15 @@
             this.panel6.Size = new System.Drawing.Size(464, 53);
             this.panel6.TabIndex = 2;
             // 
+            // comboBoxProgram
+            // 
+            this.comboBoxProgram.FormattingEnabled = true;
+            this.comboBoxProgram.Location = new System.Drawing.Point(157, 17);
+            this.comboBoxProgram.Name = "comboBoxProgram";
+            this.comboBoxProgram.Size = new System.Drawing.Size(279, 21);
+            this.comboBoxProgram.TabIndex = 1;
+            this.comboBoxProgram.SelectedIndexChanged += new System.EventHandler(this.comboBoxProgram_SelectedIndexChanged);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -316,7 +293,6 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.panel8);
-            this.panel2.Controls.Add(this.panel12);
             this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Controls.Add(this.panel7);
@@ -356,14 +332,6 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Thời gian học:";
             // 
-            // comboBoxProgram
-            // 
-            this.comboBoxProgram.FormattingEnabled = true;
-            this.comboBoxProgram.Location = new System.Drawing.Point(157, 17);
-            this.comboBoxProgram.Name = "comboBoxProgram";
-            this.comboBoxProgram.Size = new System.Drawing.Size(279, 21);
-            this.comboBoxProgram.TabIndex = 1;
-            // 
             // AddClassForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -378,8 +346,6 @@
             this.panel1.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -406,9 +372,6 @@
         private System.Windows.Forms.DateTimePicker endDate;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox textboxFee;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.DateTimePicker startDate;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label7;

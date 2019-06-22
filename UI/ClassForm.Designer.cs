@@ -39,6 +39,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btAddClass = new System.Windows.Forms.Button();
+            this.btnAddStudentToClass = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListClass)).BeginInit();
@@ -66,6 +67,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnAddStudentToClass);
             this.panel2.Controls.Add(this.dgvListClass);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(0, 66);
@@ -184,6 +186,16 @@
             this.btAddClass.UseVisualStyleBackColor = false;
             this.btAddClass.Click += new System.EventHandler(this.btAddClass_Click);
             // 
+            // btnAddStudentToClass
+            // 
+            this.btnAddStudentToClass.Location = new System.Drawing.Point(839, 10);
+            this.btnAddStudentToClass.Name = "btnAddStudentToClass";
+            this.btnAddStudentToClass.Size = new System.Drawing.Size(75, 23);
+            this.btnAddStudentToClass.TabIndex = 5;
+            this.btnAddStudentToClass.Text = "Thêm học viên vào lớp";
+            this.btnAddStudentToClass.UseVisualStyleBackColor = true;
+            this.btnAddStudentToClass.Click += new System.EventHandler(this.btnAddStudentToClass_Click);
+            // 
             // ClassForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,6 +206,7 @@
             this.Controls.Add(this.panel3);
             this.Name = "ClassForm";
             this.Text = "ClassForm";
+            this.Shown += new System.EventHandler(this.ClassForm_Shown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -217,5 +230,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btAddClass;
+        private System.Windows.Forms.Button btnAddStudentToClass;
     }
 }

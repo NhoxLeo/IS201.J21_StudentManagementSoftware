@@ -14,10 +14,16 @@ namespace UI
 {
     public partial class AddClassForm : Form
     {
+        string ID_CHAR = "CL";
+        int ID_NUMBER;
         public AddClassForm()
         {
             InitializeComponent();
             LoadComboBoxProgram();
+            ClassDAL classDAL = new ClassDAL();
+            classDAL.ConnectToDatabase();
+            ID_NUMBER = classDAL.GetAllClass().Count + 1;
+            textboxClassID.Text = ID_CHAR + (ID_NUMBER).ToString();
         }
         void LoadComboBoxProgram()
         {
@@ -32,7 +38,18 @@ namespace UI
         {
             ClassDAL classDAL = new ClassDAL();
             classDAL.ConnectToDatabase();
-            classDAL.InsertClass(textboxClassID.Text, textboxClassName.Text, textboxTeacher.Text, textboxStartingHour.Text, startDate.Value, endDate.Value, ((ProgramDTO)comboBoxProgram.SelectedItem).ProgramId.ToString());
+
+            if(classDAL.InsertClass(textboxClassID.Text, textboxClassName.Text, textboxTeacher.Text, textboxStartingHour.Text, startDate.Value, endDate.Value, ((ProgramDTO)comboBoxProgram.SelectedItem).ProgramId.ToString()))
+            {
+                MessageBox.Show("Success");
+                this.Close();
+            }
+        }
+
+        private void comboBoxProgram_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ID_CHAR = ((ProgramDTO)comboBoxProgram.SelectedItem).ProgramId.ToString();
+            textboxClassID.Text = ID_CHAR + (ID_NUMBER).ToString();
         }
     }
 }

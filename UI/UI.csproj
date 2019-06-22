@@ -71,6 +71,12 @@
     <Compile Include="AddPotentialStudentForm.Designer.cs">
       <DependentUpon>AddPotentialStudentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddStudentToClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudentToClassForm.Designer.cs">
+      <DependentUpon>AddStudentToClassForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClassForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddPotentialStudentForm.resx">
       <DependentUpon>AddPotentialStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStudentToClassForm.resx">
+      <DependentUpon>AddStudentToClassForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClassForm.resx">
       <DependentUpon>ClassForm.cs</DependentUpon>
