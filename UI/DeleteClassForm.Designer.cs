@@ -34,10 +34,10 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtgvListPotentialStudent = new System.Windows.Forms.DataGridView();
+            this.dgvListClass = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvListPotentialStudent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListClass)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -97,6 +97,7 @@
             this.btnConfirm.Text = "Xác nhận";
             this.btnConfirm.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // label2
             // 
@@ -108,13 +109,14 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Danh sách lớp học:";
             // 
-            // dtgvListPotentialStudent
+            // dgvListClass
             // 
-            this.dtgvListPotentialStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvListPotentialStudent.Location = new System.Drawing.Point(3, 113);
-            this.dtgvListPotentialStudent.Name = "dtgvListPotentialStudent";
-            this.dtgvListPotentialStudent.Size = new System.Drawing.Size(1049, 284);
-            this.dtgvListPotentialStudent.TabIndex = 13;
+            this.dgvListClass.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListClass.Location = new System.Drawing.Point(3, 113);
+            this.dgvListClass.Name = "dgvListClass";
+            this.dgvListClass.Size = new System.Drawing.Size(1049, 284);
+            this.dgvListClass.TabIndex = 13;
             // 
             // DeleteClassForm
             // 
@@ -124,13 +126,13 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dtgvListPotentialStudent);
+            this.Controls.Add(this.dgvListClass);
             this.Name = "DeleteClassForm";
             this.Text = "DeleteClassForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvListPotentialStudent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListClass)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,6 +146,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dtgvListPotentialStudent;
+        private System.Windows.Forms.DataGridView dgvListClass;
     }
 }

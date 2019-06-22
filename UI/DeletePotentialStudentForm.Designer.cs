@@ -33,11 +33,11 @@
             this.btnConfirm = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.dtgvListPotentialStudent = new System.Windows.Forms.DataGridView();
+            this.dgvListPotentialStudent = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvListPotentialStudent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListPotentialStudent)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -100,13 +100,14 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.button3_Click);
             // 
-            // dtgvListPotentialStudent
+            // dgvListPotentialStudent
             // 
-            this.dtgvListPotentialStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvListPotentialStudent.Location = new System.Drawing.Point(-1, 108);
-            this.dtgvListPotentialStudent.Name = "dtgvListPotentialStudent";
-            this.dtgvListPotentialStudent.Size = new System.Drawing.Size(1049, 284);
-            this.dtgvListPotentialStudent.TabIndex = 9;
+            this.dgvListPotentialStudent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListPotentialStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListPotentialStudent.Location = new System.Drawing.Point(-1, 108);
+            this.dgvListPotentialStudent.Name = "dgvListPotentialStudent";
+            this.dgvListPotentialStudent.Size = new System.Drawing.Size(1049, 284);
+            this.dgvListPotentialStudent.TabIndex = 9;
             // 
             // label2
             // 
@@ -124,7 +125,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1051, 479);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dtgvListPotentialStudent);
+            this.Controls.Add(this.dgvListPotentialStudent);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Name = "DeletePotentialStudentForm";
@@ -132,7 +133,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvListPotentialStudent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListPotentialStudent)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,7 +146,7 @@
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.DataGridView dtgvListPotentialStudent;
+        private System.Windows.Forms.DataGridView dgvListPotentialStudent;
         private System.Windows.Forms.Label label2;
     }
 }

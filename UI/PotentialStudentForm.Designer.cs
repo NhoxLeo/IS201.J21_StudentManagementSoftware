@@ -77,6 +77,7 @@
             // 
             // dgvListPotentialStudent
             // 
+            this.dgvListPotentialStudent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListPotentialStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListPotentialStudent.Location = new System.Drawing.Point(13, 37);
             this.dgvListPotentialStudent.Name = "dgvListPotentialStudent";

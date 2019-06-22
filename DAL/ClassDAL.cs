@@ -142,5 +142,19 @@ namespace DAL
             this.Close();
             return true;
         }
+        public bool DeleteClass(string classId)
+        {
+            this.ConnectToDatabase();
+
+            string Query = "DELETE FROM CLASS WHERE CLASS_ID='" + classId + "'";
+
+            //This is command class which will handle the query and connection object.  
+            MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
+
+            command.ExecuteNonQuery();
+
+            this.Close();
+            return true;
+        }
     }
 }

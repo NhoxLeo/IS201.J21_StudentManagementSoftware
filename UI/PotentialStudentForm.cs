@@ -36,7 +36,8 @@ namespace UI
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            EditInforPotentialForm f = new EditInforPotentialForm();
+            PotentialStudentDTO currentObject = (PotentialStudentDTO)dgvListPotentialStudent.CurrentRow.DataBoundItem;
+            EditInforPotentialForm f = new EditInforPotentialForm(currentObject);
             this.Hide();
             f.ShowDialog();
             this.Show();

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.dgvListProgram = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListProgram)).BeginInit();
@@ -46,15 +46,6 @@
             this.panel1.Size = new System.Drawing.Size(776, 93);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dgvListProgram);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(12, 111);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(776, 327);
-            this.panel2.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -64,6 +55,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dgvListProgram);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(12, 111);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(776, 327);
+            this.panel2.TabIndex = 1;
+            // 
+            // dgvListProgram
+            // 
+            this.dgvListProgram.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListProgram.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListProgram.Location = new System.Drawing.Point(6, 46);
+            this.dgvListProgram.Name = "dgvListProgram";
+            this.dgvListProgram.Size = new System.Drawing.Size(767, 278);
+            this.dgvListProgram.TabIndex = 1;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -72,14 +81,6 @@
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "label2";
-            // 
-            // dgvListProgram
-            // 
-            this.dgvListProgram.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListProgram.Location = new System.Drawing.Point(6, 46);
-            this.dgvListProgram.Name = "dgvListProgram";
-            this.dgvListProgram.Size = new System.Drawing.Size(767, 278);
-            this.dgvListProgram.TabIndex = 1;
             // 
             // ProgramForm
             // 

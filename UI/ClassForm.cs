@@ -37,7 +37,8 @@ namespace UI
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            EditClassForm f = new EditClassForm();
+            ClassDTO currentObject = (ClassDTO)dgvListClass.CurrentRow.DataBoundItem;
+            EditClassForm f = new EditClassForm(currentObject);
             this.Hide();
             f.ShowDialog();
             this.Show();

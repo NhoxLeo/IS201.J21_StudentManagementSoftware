@@ -37,7 +37,8 @@ namespace UI
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            EditOfficalStudentForm f = new EditOfficalStudentForm();
+            StudentDTO currentObject = (StudentDTO)dgvListStudent.CurrentRow.DataBoundItem;
+            EditOfficalStudentForm f = new EditOfficalStudentForm(currentObject);
             this.Hide();
             f.ShowDialog();
             this.Show();
