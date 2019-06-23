@@ -18,6 +18,11 @@ namespace DTO
         {
             InitializeComponent();
         }
+        public EditInforPotentialForm(PotentialStudentDTO _potentialStudentDTO)
+        {
+            InitializeComponent();
+            textboxPotentialStudentID.Text = _potentialStudentDTO.PotentialStudentId;
+        }
 
         private void button3_Click(object sender, EventArgs e)
         {

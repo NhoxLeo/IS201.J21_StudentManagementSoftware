@@ -21,11 +21,6 @@ namespace UI
             InitPotentialStudentData();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             AddPotentialStudentForm f = new AddPotentialStudentForm();
@@ -41,7 +36,8 @@ namespace UI
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            EditInforPotentialForm f = new EditInforPotentialForm();
+            PotentialStudentDTO currentObject = (PotentialStudentDTO)dgvListPotentialStudent.CurrentRow.DataBoundItem;
+            EditInforPotentialForm f = new EditInforPotentialForm(currentObject);
             this.Hide();
             f.ShowDialog();
             this.Show();
@@ -49,17 +45,25 @@ namespace UI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DeletePotentialStudentForm f = new DeletePotentialStudentForm();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            if (this.dgvListPotentialStudent.SelectedRows.Count > 0)
+            {
+                PotentialStudentDAL potentialStudentDAL = new PotentialStudentDAL();
+                potentialStudentDAL.ConnectToDatabase();
+                PotentialStudentDTO currentObject = (PotentialStudentDTO)dgvListPotentialStudent.CurrentRow.DataBoundItem;
+                if (potentialStudentDAL.DeletePotentialStudent(currentObject.PotentialStudentId))
+                {
+                    potentialStudentDAL = new PotentialStudentDAL();
+                    potentialStudentDAL.ConnectToDatabase();
+                    dgvListPotentialStudent.DataSource = potentialStudentDAL.GetAllPotentialStudent();
+                    dgvListPotentialStudent.Update();
+                    dgvListPotentialStudent.Refresh();
+                }
+            }
+            //DeletePotentialStudentForm f = new DeletePotentialStudentForm();
+            //this.Hide();
+            //f.ShowDialog();
+            //this.Show();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -77,7 +81,7 @@ namespace UI
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            //print
         }
 
         private void dtgvListPotentialStudent_CellContentClick(object sender, DataGridViewCellEventArgs e)

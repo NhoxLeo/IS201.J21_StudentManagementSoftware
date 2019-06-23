@@ -45,7 +45,7 @@ namespace DAL
             this.ConnectToDatabase();
 
             MySqlCommand command = this.mySQLConnection.CreateCommand();
-            command.CommandText = "SELECT * FROM POTENTIAL_STUDENT where POTENTIAL_STUDENT_ID = " + potentialstudent_Id;
+            command.CommandText = "SELECT * FROM POTENTIAL_STUDENT where POTENTIAL_STUDENT_ID = '" + potentialstudent_Id + "'";
 
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
@@ -73,7 +73,7 @@ namespace DAL
             this.ConnectToDatabase();
 
             MySqlCommand command = this.mySQLConnection.CreateCommand();
-            command.CommandText = "SELECT * FROM POTENTIAL_STUDENT WHERE POTENTIAL_STUDENT_ID = " + id;
+            command.CommandText = "SELECT * FROM POTENTIAL_STUDENT where POTENTIAL_STUDENT_ID = '" + id + "'";
 
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
@@ -136,6 +136,20 @@ namespace DAL
 
             command.ExecuteNonQuery();
 
+
+            this.Close();
+            return true;
+        }
+        public bool DeletePotentialStudent(string id)
+        {
+            this.ConnectToDatabase();
+
+            string Query = "DELETE FROM POTENTIAL_STUDENT WHERE POTENTIAL_STUDENT_ID='" + id + "'";
+
+            //This is command class which will handle the query and connection object.  
+            MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
+
+            command.ExecuteNonQuery();
 
             this.Close();
             return true;

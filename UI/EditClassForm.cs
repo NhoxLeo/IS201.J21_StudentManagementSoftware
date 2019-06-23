@@ -18,6 +18,11 @@ namespace UI
         {
             InitializeComponent();
         }
+        public EditClassForm(ClassDTO classDTO)
+        {
+            InitializeComponent();
+            textboxClassID.Text = classDTO.ClassId;
+        }
 
         private void btConfim_Click(object sender, EventArgs e)
         {

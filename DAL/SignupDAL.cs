@@ -99,11 +99,11 @@ namespace DAL
             return true;
         }
 
-        public bool InsertSignup(string studentId, string testId, string status)
+        public bool InsertSignup(string studentId, string classId, string status)
         {
             this.ConnectToDatabase();
 
-            string Query = "insert into SIGNUP(STUDENT_ID,CLASS_ID,STATUS) values('" + studentId + "','" + testId + "','" + status + "');";
+            string Query = "insert into SIGNUP(STUDENT_ID,CLASS_ID,STATUS) values('" + studentId + "','" + classId + "','" + status + "');";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);

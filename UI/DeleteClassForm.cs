@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
+using DAL;
 
 namespace UI
 {
@@ -15,6 +17,22 @@ namespace UI
         public DeleteClassForm()
         {
             InitializeComponent();
+            InitClassData();
+        }
+        void InitClassData()
+        {
+            ClassDAL classDAL = new ClassDAL();
+            classDAL.ConnectToDatabase();
+            List<ClassDTO> classDTOs = classDAL.GetAllClass();
+            dgvListClass.DataSource = classDTOs;
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            ClassDTO currentObject = (ClassDTO)dgvListClass.CurrentRow.DataBoundItem;
+            ClassDAL classDAL = new ClassDAL();
+            classDAL.ConnectToDatabase();
+            classDAL.DeleteClass(currentObject.ClassId);
         }
     }
 }
