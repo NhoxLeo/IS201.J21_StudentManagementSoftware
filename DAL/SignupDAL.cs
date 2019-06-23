@@ -35,7 +35,7 @@ namespace DAL
             return listSignup;
         }
 
-        public List<SignupDTO> GetAllSignup(string _studentId)
+        public List<SignupDTO> GetAllSignupWithStudentID(string _studentId)
         {
             List<SignupDTO> listSignup = new List<SignupDTO>();
 
@@ -43,6 +43,30 @@ namespace DAL
 
             MySqlCommand command = this.mySQLConnection.CreateCommand();
             command.CommandText = "SELECT * FROM SIGNUP where STUDENT_ID = " + _studentId;
+
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string studentId = reader.GetString(0);
+                string classId = reader.GetString(1);
+                string status = reader.GetString(2);
+
+                SignupDTO signup = new SignupDTO(studentId, classId, status);
+                listSignup.Add(signup);
+            }
+
+            reader.Close();
+            this.Close();
+            return listSignup;
+        }
+        public List<SignupDTO> GetAllSignupWithClassID(string _classId)
+        {
+            List<SignupDTO> listSignup = new List<SignupDTO>();
+
+            this.ConnectToDatabase();
+
+            MySqlCommand command = this.mySQLConnection.CreateCommand();
+            command.CommandText = "SELECT * FROM SIGNUP where CLASS_ID = " + _classId;
 
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
