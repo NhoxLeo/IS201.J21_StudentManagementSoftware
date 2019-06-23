@@ -28,7 +28,7 @@ namespace UI
         }
         void InitOfficialStudentData()
         {
-            StudentDAL studentDAL = new StudentDAL();
+            PontentialStudentDAL studentDAL = new PontentialStudentDAL();
             studentDAL.ConnectToDatabase();
             List<StudentDTO> studentDTOs = studentDAL.GetAllStudent();
             dgvListStudent.DataSource = studentDTOs;

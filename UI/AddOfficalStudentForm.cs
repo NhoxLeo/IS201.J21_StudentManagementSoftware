@@ -18,14 +18,14 @@ namespace UI
         public AddOfficalStudentForm()
         {
             InitializeComponent();
-            StudentDAL studentDAL = new StudentDAL();
+            PontentialStudentDAL studentDAL = new PontentialStudentDAL();
             studentDAL.ConnectToDatabase();
             textboxStudentID.Text = ID_CHAR + (studentDAL.GetAllStudent().Count + 1).ToString();
         }
 
         private void btConfim_Click(object sender, EventArgs e)
         {
-            StudentDAL studentDAL = new StudentDAL();
+            PontentialStudentDAL studentDAL = new PontentialStudentDAL();
             studentDAL.ConnectToDatabase();
             if(studentDAL.InsertStudent(textboxStudentID.Text, textboxStudentName.Text, textboxStudentMail.Text, textboxStudentAddress.Text, textboxStudentPhoneNumber.Text, birthDateTimePicker.Value))
             {
@@ -34,5 +34,9 @@ namespace UI
             }
         }
 
+        private void textboxStudentID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
