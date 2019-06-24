@@ -38,18 +38,36 @@ namespace UI
         {
             ClassDAL classDAL = new ClassDAL();
             classDAL.ConnectToDatabase();
-
-            if(classDAL.InsertClass(textboxClassID.Text, textboxClassName.Text, textboxTeacher.Text, textboxStartingHour.Text, startDate.Value, endDate.Value, ((ProgramDTO)comboBoxProgram.SelectedItem).ProgramId.ToString()))
+            try
             {
-                MessageBox.Show("Success");
-                this.Close();
+                
+                if (textboxClassID.Text!="" &&textboxClassName.Text  != "" && textboxTeacher.Text != ""&& textboxStartingHour.Text != "")
+                {
+                    if (classDAL.InsertClass(textboxClassID.Text, textboxClassName.Text, textboxTeacher.Text, textboxStartingHour.Text, startDate.Value, endDate.Value, ((ProgramDTO)comboBoxProgram.SelectedItem).ProgramId.ToString()))
+                    {
+                        MessageBox.Show("Thêm lớp thành công!!!");
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Thêm lớp không thành công, vui lòng nhập đủ thông tin!");
+                }
             }
-        }
-
+            catch(Exception)
+            {
+                MessageBox.Show("Thêm lớp không thành công!!!");
+            }
+}
         private void comboBoxProgram_SelectedIndexChanged(object sender, EventArgs e)
         {
             ID_CHAR = ((ProgramDTO)comboBoxProgram.SelectedItem).ProgramId.ToString();
             textboxClassID.Text = ID_CHAR + (ID_NUMBER).ToString();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

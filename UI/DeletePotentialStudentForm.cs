@@ -34,7 +34,10 @@ namespace UI
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+          
+            PotentialStudentForm f = new PotentialStudentForm();
+            f.Show();
         }
 
         private void btConfim_Click(object sender, EventArgs e)
@@ -42,7 +45,23 @@ namespace UI
             PotentialStudentDTO currentObject = (PotentialStudentDTO)dgvListPotentialStudent.CurrentRow.DataBoundItem;
             PotentialStudentDAL potentialStudentDAL = new PotentialStudentDAL();
             potentialStudentDAL.ConnectToDatabase();
-            potentialStudentDAL.DeletePotentialStudent(currentObject.PotentialStudentId);
+            // string idd = currentObject.PotentialStudentId;
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc xoá học viên:" + currentObject.PotentialStudentId,"",MessageBoxButtons.YesNo);
+            if(dialogResult==DialogResult.Yes)
+                {
+                
+                potentialStudentDAL.DeletePotentialStudent(currentObject.PotentialStudentId);
+                
+                MessageBox.Show("Xoá học viên thành công!!!");
+                this.Close();
+                DeletePotentialStudentForm f = new DeletePotentialStudentForm();
+                f.Show();
+
+            }
+            else if(dialogResult==DialogResult.No)
+            {
+
+            }
         }
     }
 }
