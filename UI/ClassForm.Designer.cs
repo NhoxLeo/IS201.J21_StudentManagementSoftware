@@ -41,6 +41,7 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btAddClass = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.btnRemoveStudent = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListClass)).BeginInit();
@@ -68,6 +69,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnRemoveStudent);
             this.panel2.Controls.Add(this.btnAddStudentToClass);
             this.panel2.Controls.Add(this.dgvListClass);
             this.panel2.Controls.Add(this.label2);
@@ -201,6 +203,16 @@
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
+            // btnRemoveStudent
+            // 
+            this.btnRemoveStudent.Location = new System.Drawing.Point(578, 10);
+            this.btnRemoveStudent.Name = "btnRemoveStudent";
+            this.btnRemoveStudent.Size = new System.Drawing.Size(158, 23);
+            this.btnRemoveStudent.TabIndex = 6;
+            this.btnRemoveStudent.Text = "Xoá học viên khỏi lớp";
+            this.btnRemoveStudent.UseVisualStyleBackColor = true;
+            this.btnRemoveStudent.Click += new System.EventHandler(this.btnRemoveStudent_Click);
+            // 
             // ClassForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,5 +249,6 @@
         private System.Windows.Forms.Button btAddClass;
         private System.Windows.Forms.Button btnAddStudentToClass;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Button btnRemoveStudent;
     }
 }

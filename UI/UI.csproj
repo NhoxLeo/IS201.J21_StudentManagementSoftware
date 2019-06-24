@@ -151,6 +151,12 @@
       <DependentUpon>ProgramForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DeleteStudentClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteStudentClassForm.Designer.cs">
+      <DependentUpon>DeleteStudentClassForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DeletePotentialStudentForm.resx">
       <DependentUpon>DeletePotentialStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteStudentClassForm.resx">
+      <DependentUpon>DeleteStudentClassForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditClassForm.resx">
       <DependentUpon>EditClassForm.cs</DependentUpon>

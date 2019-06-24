@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DAL;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,20 +9,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DTO;
-using DAL;
 
 namespace UI
 {
-    public partial class AddStudentToClassForm : Form
+    public partial class DeleteStudentClassForm : Form
     {
         string classId;
-        public AddStudentToClassForm()
+        public DeleteStudentClassForm()
         {
             InitializeComponent();
             InitOfficialStudentData();
         }
-        public AddStudentToClassForm(string _classId)
+        public DeleteStudentClassForm(string _classId)
         {
             InitializeComponent();
             InitOfficialStudentData();
@@ -28,19 +28,22 @@ namespace UI
         }
         void InitOfficialStudentData()
         {
-            PontentialStudentDAL studentDAL = new PontentialStudentDAL();
-            studentDAL.ConnectToDatabase();
-            List<StudentDTO> studentDTOs = studentDAL.GetAllStudent();
-            dgvListStudent.DataSource = studentDTOs;
-            DataGridViewCheckBoxColumn addConfirm = new DataGridViewCheckBoxColumn() { HeaderText = "Add"};
-            dgvListStudent.Columns.Add(addConfirm);
             ClassForm f = new ClassForm();
-            label3.Text = f.getNameClass();
-           
+            SignupDAL studentDAL = new SignupDAL();
+            studentDAL.ConnectToDatabase();
+            List<SignupDTO> studentDTOs = studentDAL.GetAllSignupClass("LS1");
+            dgvListStudent.DataSource = studentDTOs;
+            DataGridViewCheckBoxColumn deleteConfirm = new DataGridViewCheckBoxColumn() { HeaderText = "Delete" };
+            dgvListStudent.Columns.Add(deleteConfirm);
+            label3.Text = f.getNameClass(); 
         }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
-        private void btnConfirm_Click_1(object sender, EventArgs e)
+        private void btnConfirm_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow item in dgvListStudent.Rows)
             {
@@ -49,20 +52,13 @@ namespace UI
                     string studentId = item.Cells[1].Value.ToString();
                     SignupDAL signupDAL = new SignupDAL();
                     signupDAL.ConnectToDatabase();
-                    if (signupDAL.InsertSignup(studentId, classId, "Joined"))
+                    if (signupDAL.DeleteSignup(studentId, classId, "Joined"))
                     {
-                        MessageBox.Show("Success");
+                        MessageBox.Show(" Xoá thành công!!!");
                         this.Close();
                     }
                 }
             }
         }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-       
     }
 }

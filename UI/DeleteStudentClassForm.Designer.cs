@@ -1,6 +1,6 @@
 ﻿namespace UI
 {
-    partial class AddStudentToClassForm
+    partial class DeleteStudentClassForm
     {
         /// <summary>
         /// Required designer variable.
@@ -49,31 +49,31 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.YellowGreen;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-16, 1);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(839, 55);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(257, 8);
+            this.label1.Location = new System.Drawing.Point(237, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(355, 31);
+            this.label1.Size = new System.Drawing.Size(345, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "THÊM HỌC VIÊN VÀO LỚP";
+            this.label1.Text = "XOÁ HỌC VIÊN KHỎI LỚP";
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.dgvListStudent);
-            this.panel2.Location = new System.Drawing.Point(12, 106);
+            this.panel2.Location = new System.Drawing.Point(3, 108);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(776, 386);
-            this.panel2.TabIndex = 1;
+            this.panel2.Size = new System.Drawing.Size(804, 362);
+            this.panel2.TabIndex = 4;
             // 
             // panel3
             // 
@@ -89,7 +89,7 @@
             this.panel4.Controls.Add(this.btnConfirm);
             this.panel4.Location = new System.Drawing.Point(-55, -22);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(822, 113);
+            this.panel4.Size = new System.Drawing.Size(856, 115);
             this.panel4.TabIndex = 12;
             // 
             // btnClose
@@ -99,7 +99,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.Black;
-            this.btnClose.Location = new System.Drawing.Point(665, 30);
+            this.btnClose.Location = new System.Drawing.Point(672, 22);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(153, 80);
             this.btnClose.TabIndex = 5;
@@ -122,7 +122,7 @@
             this.btnConfirm.Text = "Xác nhận";
             this.btnConfirm.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnConfirm.UseVisualStyleBackColor = false;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click_1);
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // dgvListStudent
             // 
@@ -130,17 +130,17 @@
             this.dgvListStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListStudent.Location = new System.Drawing.Point(3, 3);
             this.dgvListStudent.Name = "dgvListStudent";
-            this.dgvListStudent.Size = new System.Drawing.Size(773, 270);
+            this.dgvListStudent.Size = new System.Drawing.Size(798, 270);
             this.dgvListStudent.TabIndex = 0;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label2);
-            this.panel5.Location = new System.Drawing.Point(-16, 52);
+            this.panel5.Location = new System.Drawing.Point(3, 54);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(822, 54);
-            this.panel5.TabIndex = 2;
+            this.panel5.TabIndex = 5;
             // 
             // label2
             // 
@@ -154,23 +154,23 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(65, 14);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(44, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 37);
+            this.label3.Size = new System.Drawing.Size(76, 25);
             this.label3.TabIndex = 1;
             this.label3.Text = "label3";
             // 
-            // AddStudentToClassForm
+            // DeleteStudentClassForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 477);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(807, 471);
             this.Controls.Add(this.panel1);
-            this.Name = "AddStudentToClassForm";
-            this.Text = "AddStudentToClassForm";
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel5);
+            this.Name = "DeleteStudentClassForm";
+            this.Text = "RemoveStudentClassForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -186,13 +186,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dgvListStudent;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.DataGridView dgvListStudent;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

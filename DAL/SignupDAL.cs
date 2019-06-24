@@ -59,6 +59,30 @@ namespace DAL
             this.Close();
             return listSignup;
         }
+        public List<SignupDTO> GetAllSignupClass(string _classId)
+        {
+            List<SignupDTO> listSignup = new List<SignupDTO>();
+
+            this.ConnectToDatabase();
+
+            MySqlCommand command = this.mySQLConnection.CreateCommand();
+            command.CommandText = "SELECT * FROM SIGNUP where CLASS_ID = " + "'"+_classId+"'";
+
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string studentId = reader.GetString(0);
+                string classId = reader.GetString(1);
+                string status = reader.GetString(2);
+
+                SignupDTO signup = new SignupDTO(studentId, classId, status);
+                listSignup.Add(signup);
+            }
+
+            reader.Close();
+            this.Close();
+            return listSignup;
+        }
 
         public bool InsertSignup(SignupDTO signup)
         {
@@ -105,11 +129,11 @@ namespace DAL
             this.Close();
             return true;
         }
-        public bool DeleteSignup()
+        public bool DeleteSignup(string studentId,string classId, string status)
         {
             this.ConnectToDatabase();
 
-            string Query = "delete from SIGNUP;";
+            string Query = "delete from SIGNUP where STUDENT_ID='"+studentId+"' AND CLASS_ID='"+classId+"' AND STATUS='"+status+"'";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
