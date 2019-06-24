@@ -38,33 +38,33 @@ namespace UI
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            //sửa thôn tin học viên
             PotentialStudentDTO currentObject = (PotentialStudentDTO)dgvListPotentialStudent.CurrentRow.DataBoundItem;
             EditInforPotentialForm f = new EditInforPotentialForm(currentObject);
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            this.Close();
+            f.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (this.dgvListPotentialStudent.SelectedRows.Count > 0)
-            {
-                PotentialStudentDAL potentialStudentDAL = new PotentialStudentDAL();
-                potentialStudentDAL.ConnectToDatabase();
-                PotentialStudentDTO currentObject = (PotentialStudentDTO)dgvListPotentialStudent.CurrentRow.DataBoundItem;
-                if (potentialStudentDAL.DeletePotentialStudent(currentObject.PotentialStudentId))
-                {
-                    potentialStudentDAL = new PotentialStudentDAL();
-                    potentialStudentDAL.ConnectToDatabase();
-                    dgvListPotentialStudent.DataSource = potentialStudentDAL.GetAllPotentialStudent();
-                    dgvListPotentialStudent.Update();
-                    dgvListPotentialStudent.Refresh();
-                }
-            }
-            //DeletePotentialStudentForm f = new DeletePotentialStudentForm();
-            //this.Hide();
-            //f.ShowDialog();
-            //this.Show();
+            //xoá học viên
+            //if (this.dgvListPotentialStudent.SelectedRows.Count > 0)
+            //{
+            //    PotentialStudentDAL potentialStudentDAL = new PotentialStudentDAL();
+            //    potentialStudentDAL.ConnectToDatabase();
+            //    PotentialStudentDTO currentObject = (PotentialStudentDTO)dgvListPotentialStudent.CurrentRow.DataBoundItem;
+            //    if (potentialStudentDAL.DeletePotentialStudent(currentObject.PotentialStudentId))
+            //    {
+            //        potentialStudentDAL = new PotentialStudentDAL();
+            //        potentialStudentDAL.ConnectToDatabase();
+            //        dgvListPotentialStudent.DataSource = potentialStudentDAL.GetAllPotentialStudent();
+            //        dgvListPotentialStudent.Update();
+            //        dgvListPotentialStudent.Refresh();
+            //    }
+            //}
+            DeletePotentialStudentForm f = new DeletePotentialStudentForm();
+            this.Close();
+            f.Show();
         }
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
