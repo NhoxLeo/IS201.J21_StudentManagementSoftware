@@ -26,7 +26,7 @@ namespace UI
 
         private void btConfim_Click(object sender, EventArgs e)
         {
-            PontentialStudentDAL studentDAL = new PontentialStudentDAL();
+            StudentDAL studentDAL = new StudentDAL();
             studentDAL.ConnectToDatabase();
             StudentDTO studentDTO = new StudentDTO(textboxStudentID.Text, textboxStudentName.Text, textboxStudentMail.Text, textboxStudentAddress.Text, textboxStudentPhoneNumber.Text, birthDateTimePicker.Value);
             studentDAL.UpdateStudent(studentDTO);

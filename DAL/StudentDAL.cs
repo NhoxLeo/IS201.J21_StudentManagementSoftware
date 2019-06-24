@@ -8,7 +8,7 @@ using DTO;
 
 namespace DAL
 {
-    public class PontentialStudentDAL : DatabaseAccess
+    public class StudentDAL : DatabaseAccess
     {
         public List<StudentDTO> GetAllStudent()
         {

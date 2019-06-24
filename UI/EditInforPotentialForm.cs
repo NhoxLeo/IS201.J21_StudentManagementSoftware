@@ -33,7 +33,7 @@ namespace DTO
         {
             PotentialStudentDAL potentialStudentDAL = new PotentialStudentDAL();
             potentialStudentDAL.ConnectToDatabase();
-            PotentialStudentDTO potentialStudentDTO = new PotentialStudentDTO(textboxPotentialStudentID.Text, textboxPotentialStudentName.Text, int.Parse(textboxPotentialStudentInputScore.Text), textboxPotentialStudentPhoneNumber.Text, int.Parse(textboxPotentialStudentAppointmentCount.Text), dropboxStatus.Text,);
+            PotentialStudentDTO potentialStudentDTO = new PotentialStudentDTO(textboxPotentialStudentID.Text, textboxPotentialStudentName.Text, int.Parse(textboxPotentialStudentInputScore.Text), textboxPotentialStudentPhoneNumber.Text, int.Parse(textboxPotentialStudentAppointmentCount.Text), dropboxStatus.ValueMember);
             potentialStudentDAL.UpdatePotentialStudent(potentialStudentDTO);
         }
     }

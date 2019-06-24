@@ -145,9 +145,6 @@
             // dropboxStatus
             // 
             this.dropboxStatus.FormattingEnabled = true;
-            this.dropboxStatus.Items.AddRange(new object[] {
-            "Đã xác nhận",
-            "Chưa xác nhận"});
             this.dropboxStatus.Location = new System.Drawing.Point(135, 15);
             this.dropboxStatus.Name = "dropboxStatus";
             this.dropboxStatus.Size = new System.Drawing.Size(121, 21);
@@ -204,9 +201,6 @@
             // dropboxPotentialStudentGender
             // 
             this.dropboxPotentialStudentGender.FormattingEnabled = true;
-            this.dropboxPotentialStudentGender.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
             this.dropboxPotentialStudentGender.Location = new System.Drawing.Point(138, 15);
             this.dropboxPotentialStudentGender.Name = "dropboxPotentialStudentGender";
             this.dropboxPotentialStudentGender.Size = new System.Drawing.Size(121, 21);
@@ -324,7 +318,6 @@
             this.textboxPotentialStudentID.ReadOnly = true;
             this.textboxPotentialStudentID.Size = new System.Drawing.Size(284, 25);
             this.textboxPotentialStudentID.TabIndex = 1;
-            this.textboxPotentialStudentID.TextChanged += new System.EventHandler(this.textboxPotentialStudentID_TextChanged);
             // 
             // label2
             // 
@@ -342,7 +335,7 @@
             this.panel3.Controls.Add(this.btnConfirm);
             this.panel3.Location = new System.Drawing.Point(0, 371);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(880, 92);
+            this.panel3.Size = new System.Drawing.Size(880, 78);
             this.panel3.TabIndex = 2;
             // 
             // btnClose
@@ -354,7 +347,7 @@
             this.btnClose.ForeColor = System.Drawing.Color.Black;
             this.btnClose.Location = new System.Drawing.Point(727, -2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(153, 91);
+            this.btnClose.Size = new System.Drawing.Size(153, 80);
             this.btnClose.TabIndex = 5;
             this.btnClose.Text = "Trở về";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -370,7 +363,7 @@
             this.btnConfirm.ForeColor = System.Drawing.Color.Black;
             this.btnConfirm.Location = new System.Drawing.Point(3, 0);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(153, 89);
+            this.btnConfirm.Size = new System.Drawing.Size(153, 80);
             this.btnConfirm.TabIndex = 1;
             this.btnConfirm.Text = "Xác nhận";
             this.btnConfirm.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -381,7 +374,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 464);
+            this.ClientSize = new System.Drawing.Size(881, 450);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
