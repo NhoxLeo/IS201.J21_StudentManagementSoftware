@@ -25,7 +25,7 @@ namespace UI
             classDAL.ConnectToDatabase();
             List<ClassDTO> classDTOs = classDAL.GetAllClass();
             dgvListClass.DataSource = classDTOs;
-            DataGridViewButtonColumn addConfirm = new DataGridViewButtonColumn() { HeaderText = "Add Student",Text = "Add" };
+            DataGridViewButtonColumn addConfirm = new DataGridViewButtonColumn() { HeaderText = "Thông tin lớp",Text = "Add" };
             dgvListClass.Columns.Add(addConfirm);
         }
         void MyButtonHandler(object sender, EventArgs e)
@@ -38,7 +38,7 @@ namespace UI
             f.ShowDialog();
             this.Show();
         }
-
+        
         private void btnEdit_Click(object sender, EventArgs e)
         {
             ClassDTO currentObject = (ClassDTO)dgvListClass.CurrentRow.DataBoundItem;
@@ -103,6 +103,21 @@ namespace UI
             this.Hide();
             f.ShowDialog();
             this.Show();
+        }
+        public string className;
+
+        private void dgvListClass_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvListClass.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dgvListClass.SelectedCells[0].RowIndex;
+
+                DataGridViewRow selectedRow = dgvListClass.Rows[selectedrowindex];
+
+                string a = Convert.ToString(selectedRow.Cells["you have to mention you cell  corresponding column name"].Value);
+                MessageBox.Show(a);
+
+            }
         }
     }
 }

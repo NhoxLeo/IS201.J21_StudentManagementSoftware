@@ -23,11 +23,12 @@ namespace UI
             this.Show();
             string userName = tbUsername.Text;
             string passWord = tbPassword.Text;
-            if (Login(userName, passWord))
+            if (userName=="admin"&&passWord=="admin")
             {
                 MenuForm f = new MenuForm();
                 this.Hide();
                 f.ShowDialog();
+              
             }
             else
             {
@@ -35,11 +36,7 @@ namespace UI
 
             }
         }
-        bool Login(string userName, string passWord)
-        {
-            //return LoginDAL.Instance.Login(userName, passWord);
-            return true;
-        }
+      
         private void button2_Click(object sender, EventArgs e)
         {
            this.Close();

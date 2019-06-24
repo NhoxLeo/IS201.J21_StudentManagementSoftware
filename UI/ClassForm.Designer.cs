@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAddStudentToClass = new System.Windows.Forms.Button();
             this.dgvListClass = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -39,7 +40,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btAddClass = new System.Windows.Forms.Button();
-            this.btnAddStudentToClass = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListClass)).BeginInit();
@@ -75,6 +75,16 @@
             this.panel2.Size = new System.Drawing.Size(935, 302);
             this.panel2.TabIndex = 7;
             // 
+            // btnAddStudentToClass
+            // 
+            this.btnAddStudentToClass.Location = new System.Drawing.Point(756, 10);
+            this.btnAddStudentToClass.Name = "btnAddStudentToClass";
+            this.btnAddStudentToClass.Size = new System.Drawing.Size(158, 23);
+            this.btnAddStudentToClass.TabIndex = 5;
+            this.btnAddStudentToClass.Text = "Thêm học viên vào lớp";
+            this.btnAddStudentToClass.UseVisualStyleBackColor = true;
+            this.btnAddStudentToClass.Click += new System.EventHandler(this.btnAddStudentToClass_Click);
+            // 
             // dgvListClass
             // 
             this.dgvListClass.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -83,6 +93,7 @@
             this.dgvListClass.Name = "dgvListClass";
             this.dgvListClass.Size = new System.Drawing.Size(910, 262);
             this.dgvListClass.TabIndex = 4;
+            this.dgvListClass.SelectionChanged += new System.EventHandler(this.dgvListClass_SelectionChanged);
             // 
             // label2
             // 
@@ -185,16 +196,6 @@
             this.btAddClass.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btAddClass.UseVisualStyleBackColor = false;
             this.btAddClass.Click += new System.EventHandler(this.btAddClass_Click);
-            // 
-            // btnAddStudentToClass
-            // 
-            this.btnAddStudentToClass.Location = new System.Drawing.Point(839, 10);
-            this.btnAddStudentToClass.Name = "btnAddStudentToClass";
-            this.btnAddStudentToClass.Size = new System.Drawing.Size(75, 23);
-            this.btnAddStudentToClass.TabIndex = 5;
-            this.btnAddStudentToClass.Text = "Thêm học viên vào lớp";
-            this.btnAddStudentToClass.UseVisualStyleBackColor = true;
-            this.btnAddStudentToClass.Click += new System.EventHandler(this.btnAddStudentToClass_Click);
             // 
             // ClassForm
             // 
