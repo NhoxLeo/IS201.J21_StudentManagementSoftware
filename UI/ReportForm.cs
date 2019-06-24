@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAL;
+using DTO;
 
 namespace UI
 {
@@ -15,6 +17,15 @@ namespace UI
         public ReportForm()
         {
             InitializeComponent();
+        }
+        void LoadComboBoxClass()
+        {
+            ClassDAL classDAL = new ClassDAL();
+            classDAL.ConnectToDatabase();
+            List<ClassDTO> classDTOs = classDAL.GetAllClass();
+            comboBoxListClassIDs.DataSource = classDTOs;
+            comboBoxListClassIDs.DisplayMember = "ClassName";
+            comboBoxListClassIDs.ValueMember = "ClassId";
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -43,6 +54,7 @@ namespace UI
                     BaocaoKQHT.Hide();
                     break;
                 case "Báo cáo Kế toán Lớp học":
+                    LoadComboBoxClass();
                     BaocaoTTHV.Hide();
                     BaocaoKTLH.Show();
                     BaocaoKQHT.Hide();
@@ -95,7 +107,7 @@ namespace UI
                     break;
                 case "Báo cáo Kế toán Lớp học":
                     //
-                    f = new ReportDetailForm();
+                    f = new ReportDetailForm(((ClassDTO)comboBoxListClassIDs.SelectedItem).ClassId.ToString());
                     f.Text = "Báo cáo Kế toán Lớp học";
                     f.ShowDialog();
                     break;

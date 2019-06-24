@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace UI
 {
-    public partial class ReportDetailForm : Form
+    public partial class MarkForm : Form
     {
-        public ReportDetailForm()
+        public MarkForm()
         {
             InitializeComponent();
-        }
-        public ReportDetailForm(string _classId)
-        {
-            InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
