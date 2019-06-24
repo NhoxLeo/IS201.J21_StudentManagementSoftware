@@ -28,8 +28,9 @@ namespace DAL
                 string phone = reader.GetString(3);
                 int dateCount = reader.GetInt32(4);
                 string status = reader.GetString(5);
-
-                PotentialStudentDTO potentialstudent = new PotentialStudentDTO(potentialstudentId, potentialstudentName, mark, phone, dateCount, status);
+                string address = reader.GetString(6);
+                string gender = reader.GetString(7);
+                PotentialStudentDTO potentialstudent = new PotentialStudentDTO(potentialstudentId, potentialstudentName, mark, phone, dateCount, status,address,gender);
                 listPotentialStudent.Add(potentialstudent);
             }
 
@@ -56,8 +57,9 @@ namespace DAL
                 string phone = reader.GetString(3);
                 int dateCount = reader.GetInt32(4);
                 string status = reader.GetString(5);
-
-                PotentialStudentDTO potentialstudent = new PotentialStudentDTO(potentialstudentId, potentialstudentName, mark, phone, dateCount, status);
+                string address = reader.GetString(6);
+                string gender = reader.GetString(7);
+                PotentialStudentDTO potentialstudent = new PotentialStudentDTO(potentialstudentId, potentialstudentName, mark, phone, dateCount, status,address,gender);
                 listPotentialStudent.Add(potentialstudent);
             }
 
@@ -84,8 +86,9 @@ namespace DAL
                 string phone = reader.GetString(3);
                 int dateCount = reader.GetInt32(4);
                 string status = reader.GetString(5);
-
-                potentialstudent = new PotentialStudentDTO(potentialstudentId, potentialstudentName, mark, phone, dateCount, status);
+                string address = reader.GetString(6);
+                string gender = reader.GetString(7);
+                potentialstudent = new PotentialStudentDTO(potentialstudentId, potentialstudentName, mark, phone, dateCount, status,address,gender);
                 return potentialstudent;
             }
 
@@ -98,7 +101,9 @@ namespace DAL
         {
             this.ConnectToDatabase();
 
-            string Query = "insert into POTENTIAL_STUDENT values('" + potentialstudent.PotentialStudentId + "','" + potentialstudent.PotentialStudentName + "','" + potentialstudent.Mark + "','" + potentialstudent.Phone + "','" + potentialstudent.DateCount + "','" + potentialstudent.Status + "');";
+            string Query = "insert into POTENTIAL_STUDENT values('" + potentialstudent.PotentialStudentId + "','" 
+                + potentialstudent.PotentialStudentName + "','" + potentialstudent.Mark + "','" + potentialstudent.Phone 
+                + "','" + potentialstudent.DateCount + "','" + potentialstudent.Status + "','" + potentialstudent.Address + "','" + potentialstudent.Gender + "');";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
@@ -110,11 +115,11 @@ namespace DAL
             return true;
         }
 
-        public bool InsertPotentialStudent(string potentialstudentId, string potentialstudentName, float mark, string phone, int dateCount, string status)
+        public bool InsertPotentialStudent(string potentialstudentId, string potentialstudentName, float mark, string phone, int dateCount, string status,string address, string gender)
         {
             this.ConnectToDatabase();
 
-            string Query = "insert into POTENTIAL_STUDENT(POTENTIAL_STUDENT_ID,POTENTIAL_STUDENT_NAME,MARK,PHONE,DATE_COUNT,STATUS) values('" + potentialstudentId + "','" + potentialstudentName + "','" + mark + "','" + phone + "','" + dateCount + "','" + status + "');";
+            string Query = "insert into POTENTIAL_STUDENT(POTENTIAL_STUDENT_ID,POTENTIAL_STUDENT_NAME,MARK,PHONE,DATE_COUNT,STATUS,ADDRESS,GENDER) values('" + potentialstudentId + "','" + potentialstudentName + "','" + mark + "','" + phone + "','" + dateCount + "','" + status + "','" + address+"','" + gender+ "');";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
@@ -129,7 +134,10 @@ namespace DAL
         {
             this.ConnectToDatabase();
 
-            string Query = "update POTENTIAL_STUDENT set POTENTIAL_STUDENT_ID='" + potentialstudent.PotentialStudentId + "',POTENTIAL_STUDENT_NAME = '" + potentialstudent.PotentialStudentName + "',MARK = '" + potentialstudent.Mark + "',PHONE = '" + potentialstudent.Phone + "',DATE_COUNT = '" + potentialstudent.DateCount + "',STATUS = '" + potentialstudent.Status + "'";
+            string Query = "update POTENTIAL_STUDENT set POTENTIAL_STUDENT_NAME = '" 
+                + potentialstudent.PotentialStudentName + "',MARK = '" + potentialstudent.Mark + "',PHONE = '" + potentialstudent.Phone
+                + "',DATE_COUNT = '" + potentialstudent.DateCount + "',STATUS = '" + potentialstudent.Status +"',ADDRESS ='"+potentialstudent.Address+"',GENDER='"+potentialstudent.Gender+  "'" 
+                + " WHERE POTENTIAL_STUDENT_ID='"+potentialstudent.PotentialStudentId+"'";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);

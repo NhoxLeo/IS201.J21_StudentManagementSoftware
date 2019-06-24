@@ -62,6 +62,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackgroundImage = global::UI.Properties.Resources.english_Calss;
             this.panel2.Controls.Add(this.btnClose);
             this.panel2.Controls.Add(this.btnReport);
             this.panel2.Controls.Add(this.btnPrograms);

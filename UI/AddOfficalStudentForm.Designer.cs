@@ -128,6 +128,7 @@
             this.textboxStudentID.ReadOnly = true;
             this.textboxStudentID.Size = new System.Drawing.Size(284, 25);
             this.textboxStudentID.TabIndex = 1;
+            this.textboxStudentID.TextChanged += new System.EventHandler(this.textboxStudentID_TextChanged);
             // 
             // label2
             // 

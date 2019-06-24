@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAddStudentToClass = new System.Windows.Forms.Button();
             this.dgvListClass = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -66,12 +67,23 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnAddStudentToClass);
             this.panel2.Controls.Add(this.dgvListClass);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(0, 66);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(935, 302);
             this.panel2.TabIndex = 7;
+            // 
+            // btnAddStudentToClass
+            // 
+            this.btnAddStudentToClass.Location = new System.Drawing.Point(756, 10);
+            this.btnAddStudentToClass.Name = "btnAddStudentToClass";
+            this.btnAddStudentToClass.Size = new System.Drawing.Size(158, 23);
+            this.btnAddStudentToClass.TabIndex = 5;
+            this.btnAddStudentToClass.Text = "Thêm học viên vào lớp";
+            this.btnAddStudentToClass.UseVisualStyleBackColor = true;
+            this.btnAddStudentToClass.Click += new System.EventHandler(this.btnAddStudentToClass_Click);
             // 
             // dgvListClass
             // 
@@ -81,6 +93,7 @@
             this.dgvListClass.Name = "dgvListClass";
             this.dgvListClass.Size = new System.Drawing.Size(910, 262);
             this.dgvListClass.TabIndex = 4;
+            this.dgvListClass.SelectionChanged += new System.EventHandler(this.dgvListClass_SelectionChanged);
             // 
             // label2
             // 
@@ -194,6 +207,7 @@
             this.Controls.Add(this.panel3);
             this.Name = "ClassForm";
             this.Text = "ClassForm";
+            this.Shown += new System.EventHandler(this.ClassForm_Shown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -217,5 +231,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btAddClass;
+        private System.Windows.Forms.Button btnAddStudentToClass;
     }
 }

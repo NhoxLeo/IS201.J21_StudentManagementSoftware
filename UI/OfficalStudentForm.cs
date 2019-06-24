@@ -21,7 +21,7 @@ namespace UI
         }
         void InitOfficialStudentData()
         {
-            StudentDAL studentDAL = new StudentDAL();
+            PontentialStudentDAL studentDAL = new PontentialStudentDAL();
             studentDAL.ConnectToDatabase();
             List<StudentDTO> studentDTOs = studentDAL.GetAllStudent();
             dgvListStudent.DataSource = studentDTOs;
@@ -46,10 +46,24 @@ namespace UI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DeleteOfficalStudenForm f = new DeleteOfficalStudenForm();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            if (this.dgvListStudent.SelectedRows.Count > 0)
+            {
+                PontentialStudentDAL potentialStudentDAL = new PontentialStudentDAL();
+                potentialStudentDAL.ConnectToDatabase();
+                StudentDTO currentObject = (StudentDTO)dgvListStudent.CurrentRow.DataBoundItem;
+                if (potentialStudentDAL.DeleteStudent(currentObject.StudentId))
+                {
+                    potentialStudentDAL = new PontentialStudentDAL();
+                    potentialStudentDAL.ConnectToDatabase();
+                    dgvListStudent.DataSource = potentialStudentDAL.GetAllStudent();
+                    dgvListStudent.Update();
+                    dgvListStudent.Refresh();
+                }
+            }
+            //DeleteOfficalStudenForm f = new DeleteOfficalStudenForm();
+            //this.Hide();
+            //f.ShowDialog();
+            //this.Show();
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
