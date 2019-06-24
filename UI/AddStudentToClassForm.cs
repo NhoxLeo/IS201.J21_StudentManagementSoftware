@@ -34,10 +34,11 @@ namespace UI
             dgvListStudent.DataSource = studentDTOs;
             DataGridViewCheckBoxColumn addConfirm = new DataGridViewCheckBoxColumn() { HeaderText = "Add"};
             dgvListStudent.Columns.Add(addConfirm);
-            //label2.Text = className;
+            label2.Text = "Lớp" ;
+            ClassForm f = new ClassForm();
+          //  f.getNameClass().ToString();
         }
 
-       
 
         private void btnConfirm_Click_1(object sender, EventArgs e)
         {
