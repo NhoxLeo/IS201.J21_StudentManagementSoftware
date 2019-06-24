@@ -40,7 +40,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btAddClass = new System.Windows.Forms.Button();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListClass)).BeginInit();
@@ -94,6 +93,7 @@
             this.dgvListClass.Name = "dgvListClass";
             this.dgvListClass.Size = new System.Drawing.Size(910, 262);
             this.dgvListClass.TabIndex = 4;
+            this.dgvListClass.SelectionChanged += new System.EventHandler(this.dgvListClass_SelectionChanged);
             // 
             // label2
             // 
@@ -197,10 +197,6 @@
             this.btAddClass.UseVisualStyleBackColor = false;
             this.btAddClass.Click += new System.EventHandler(this.btAddClass_Click);
             // 
-            // printDocument1
-            // 
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
-            // 
             // ClassForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,6 +232,5 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btAddClass;
         private System.Windows.Forms.Button btnAddStudentToClass;
-        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

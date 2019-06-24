@@ -12,17 +12,13 @@ using DAL;
 
 namespace UI
 {
-   
     public partial class ClassForm : Form
     {
-        public string nameClass;
         public ClassForm()
         {
             InitializeComponent();
             InitClassData();
-            
         }
-        
         void InitClassData()
         {
             ClassDAL classDAL = new ClassDAL();
@@ -31,7 +27,6 @@ namespace UI
             dgvListClass.DataSource = classDTOs;
             DataGridViewButtonColumn addConfirm = new DataGridViewButtonColumn() { HeaderText = "Thông tin lớp",Text = "Add" };
             dgvListClass.Columns.Add(addConfirm);
-           
         }
         void MyButtonHandler(object sender, EventArgs e)
         {
@@ -77,8 +72,10 @@ namespace UI
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            printDocument1.Print();
-            MessageBox.Show("In thành công");
+            //EditClassForm f = new EditClassForm();
+            //this.Hide();
+            //f.ShowDialog();
+            //this.Show();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -103,23 +100,24 @@ namespace UI
             classDAL.ConnectToDatabase();
             ClassDTO currentObject = (ClassDTO)dgvListClass.CurrentRow.DataBoundItem;
             AddStudentToClassForm f = new AddStudentToClassForm(currentObject.ClassId);
-            nameClass = currentObject.ClassId.ToUpperInvariant();
-            DialogResult dialogRe = MessageBox.Show("Bạn muốn thêm học sinh vào lớp: " + nameClass, "Thông báo", MessageBoxButtons.YesNo);
-                if (dialogRe == DialogResult.Yes)
-            {
-                this.Hide();
-                f.ShowDialog();
-                this.Show();
-            }
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
         }
+        public string className;
 
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        private void dgvListClass_SelectionChanged(object sender, EventArgs e)
         {
-            Bitmap bmp = new Bitmap(this.dgvListClass.Height + 750, this.dgvListClass.Width + 650);
-            dgvListClass.DrawToBitmap(bmp, new Rectangle(0, 0, dgvListClass.Width, dgvListClass.Height));
-            e.Graphics.DrawImage(bmp, 0, 120);
-            e.Graphics.DrawString("TRUNG TÂM ANH NGỮ A&Z", new Font("Verdana", 25, FontStyle.Bold), Brushes.Red, new Point(150, 30));
-            e.Graphics.DrawString("DANH SÁCH LỚP HỌC CỦA TRUNG TÂM", new Font("Verdana", 20, FontStyle.Bold), Brushes.Black, new Point(120, 70));
+            if (dgvListClass.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dgvListClass.SelectedCells[0].RowIndex;
+
+                DataGridViewRow selectedRow = dgvListClass.Rows[selectedrowindex];
+
+                string a = Convert.ToString(selectedRow.Cells["you have to mention you cell  corresponding column name"].Value);
+                MessageBox.Show(a);
+
+            }
         }
     }
 }
