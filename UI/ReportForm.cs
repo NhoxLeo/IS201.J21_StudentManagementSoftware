@@ -107,7 +107,8 @@ namespace UI
                     break;
                 case "Báo cáo Kế toán Lớp học":
                     //
-                    f = new ReportDetailForm(((ClassDTO)comboBoxListClassIDs.SelectedItem).ClassId.ToString());
+                    f = new ReportDetailForm((ClassDTO)comboBoxListClassIDs.SelectedItem);
+                    //f = new ReportDetailForm();
                     f.Text = "Báo cáo Kế toán Lớp học";
                     f.ShowDialog();
                     break;

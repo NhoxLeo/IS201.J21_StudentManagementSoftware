@@ -19,7 +19,7 @@ namespace UI
         {
             string time=DateTime.Now.ToString("yyMMddhmmsstt");
             InitializeComponent();
-            PontentialStudentDAL studentDAL = new PontentialStudentDAL();
+            StudentDAL studentDAL = new StudentDAL();
             studentDAL.ConnectToDatabase();
             textboxPotentialStudentID.Text = ID_CHAR+ time ;
         }

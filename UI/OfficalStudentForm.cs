@@ -21,7 +21,7 @@ namespace UI
         }
         void InitOfficialStudentData()
         {
-            PontentialStudentDAL studentDAL = new PontentialStudentDAL();
+            StudentDAL studentDAL = new StudentDAL();
             studentDAL.ConnectToDatabase();
             List<StudentDTO> studentDTOs = studentDAL.GetAllStudent();
             dgvListStudent.DataSource = studentDTOs;
@@ -48,12 +48,12 @@ namespace UI
         {
             if (this.dgvListStudent.SelectedRows.Count > 0)
             {
-                PontentialStudentDAL potentialStudentDAL = new PontentialStudentDAL();
+                StudentDAL potentialStudentDAL = new StudentDAL();
                 potentialStudentDAL.ConnectToDatabase();
                 StudentDTO currentObject = (StudentDTO)dgvListStudent.CurrentRow.DataBoundItem;
                 if (potentialStudentDAL.DeleteStudent(currentObject.StudentId))
                 {
-                    potentialStudentDAL = new PontentialStudentDAL();
+                    potentialStudentDAL = new StudentDAL();
                     potentialStudentDAL.ConnectToDatabase();
                     dgvListStudent.DataSource = potentialStudentDAL.GetAllStudent();
                     dgvListStudent.Update();

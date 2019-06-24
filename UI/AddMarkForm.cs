@@ -20,12 +20,13 @@ namespace UI
         }
         void LoadComboBoxStudentAndClass()
         {
-            ClassDAL classDAL = new ClassDAL();
-            classDAL.ConnectToDatabase();
-            List<ClassDTO> classDTOs = classDAL.GetAllClass();
-            comboBoxListClassId.DataSource = classDTOs;
-            comboBoxListClassId.DisplayMember = "ClassName";
-            comboBoxListClassId.ValueMember = "ClassId";
+
+            TestDAL testDAL = new TestDAL();
+            testDAL.ConnectToDatabase();
+            List<TestDTO> testDTOs = testDAL.GetAllTest();
+            comboBoxListClassId.DataSource = testDTOs;
+            comboBoxListClassId.DisplayMember = "TestName";
+            comboBoxListClassId.ValueMember = "TestId";
 
             StudentDAL studentDAL = new StudentDAL();
             studentDAL.ConnectToDatabase();
@@ -33,6 +34,23 @@ namespace UI
             comboBoxListDtudentId.DataSource = studentDTOs;
             comboBoxListDtudentId.DisplayMember = "StudentName";
             comboBoxListDtudentId.ValueMember = "StudentId";
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            MarkDAL markDAL = new MarkDAL();
+            markDAL.ConnectToDatabase();
+            markDAL.InsertMark(((StudentDTO)comboBoxListDtudentId.SelectedItem).StudentId,((TestDTO)comboBoxListClassId.SelectedItem).ClassId,float.Parse(textBoxMark.Text));
+        }
+
+        private void comboBoxListDtudentId_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxListClassId_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

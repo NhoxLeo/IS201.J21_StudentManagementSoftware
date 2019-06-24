@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAL;
+using DTO;
 
 namespace UI
 {
@@ -16,9 +18,16 @@ namespace UI
         {
             InitializeComponent();
         }
-        public ReportDetailForm(string _classId)
+        public ReportDetailForm(ClassDTO _class)
         {
             InitializeComponent();
+            SignupDAL signupDAL = new SignupDAL();
+            signupDAL.ConnectToDatabase();
+            List<SignupDTO> signupDTOs = signupDAL.GetAllSignupWithClassID(_class.ClassId);
+            dgvReport.DataSource = signupDTOs;
+            ProgramDAL programDAL = new ProgramDAL();
+            programDAL.ConnectToDatabase();
+            int totalFee = programDAL.GetProgram(_class.ProgramId).Fee * signupDTOs.Count;
         }
 
         private void button2_Click(object sender, EventArgs e)
