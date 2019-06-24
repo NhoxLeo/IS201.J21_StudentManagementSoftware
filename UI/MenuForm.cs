@@ -30,8 +30,8 @@ namespace UI
         {
             PotentialStudentForm f = new PotentialStudentForm();
             this.Hide();
-            f.ShowDialog();
-            this.Show();
+            f.Show();
+            //this.Show();
         }
 
         private void buttonReport_Click(object sender, EventArgs e)

@@ -21,7 +21,7 @@ namespace UI
         }
         void InitStudentData()
         {
-            StudentDAL studentDAL = new StudentDAL();
+            PontentialStudentDAL studentDAL = new PontentialStudentDAL();
             studentDAL.ConnectToDatabase();
             List<StudentDTO> studentDTOs = studentDAL.GetAllStudent();
             dgvListStudent.DataSource = studentDTOs;
@@ -30,7 +30,7 @@ namespace UI
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             StudentDTO currentObject = (StudentDTO)dgvListStudent.CurrentRow.DataBoundItem;
-            StudentDAL potentialStudentDAL = new StudentDAL();
+            PontentialStudentDAL potentialStudentDAL = new PontentialStudentDAL();
             potentialStudentDAL.ConnectToDatabase();
             potentialStudentDAL.DeleteStudent(currentObject.StudentId);
         }

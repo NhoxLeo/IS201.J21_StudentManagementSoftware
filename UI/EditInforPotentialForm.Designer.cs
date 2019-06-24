@@ -186,6 +186,9 @@
             // dropboxStatus
             // 
             this.dropboxStatus.FormattingEnabled = true;
+            this.dropboxStatus.Items.AddRange(new object[] {
+            "Đã xác nhận",
+            "Chưa xác nhận"});
             this.dropboxStatus.Location = new System.Drawing.Point(135, 15);
             this.dropboxStatus.Name = "dropboxStatus";
             this.dropboxStatus.Size = new System.Drawing.Size(121, 21);
@@ -241,6 +244,9 @@
             // dropboxPotentialStudentGender
             // 
             this.dropboxPotentialStudentGender.FormattingEnabled = true;
+            this.dropboxPotentialStudentGender.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
             this.dropboxPotentialStudentGender.Location = new System.Drawing.Point(138, 15);
             this.dropboxPotentialStudentGender.Name = "dropboxPotentialStudentGender";
             this.dropboxPotentialStudentGender.Size = new System.Drawing.Size(121, 21);

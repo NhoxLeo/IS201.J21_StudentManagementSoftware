@@ -14,9 +14,14 @@ namespace UI
 {
     public partial class AddPotentialStudentForm : Form
     {
+        string ID_CHAR = "TN";
         public AddPotentialStudentForm()
         {
+            string time=DateTime.Now.ToString("yyMMddhmmsstt");
             InitializeComponent();
+            PontentialStudentDAL studentDAL = new PontentialStudentDAL();
+            studentDAL.ConnectToDatabase();
+            textboxPotentialStudentID.Text = ID_CHAR+ time ;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -31,9 +36,29 @@ namespace UI
 
         private void btConfim_Click(object sender, EventArgs e)
         {
+           
             PotentialStudentDAL potentialStudentDAL = new PotentialStudentDAL();
             potentialStudentDAL.ConnectToDatabase();
-            potentialStudentDAL.InsertPotentialStudent(textboxPotentialStudentID.Text, textboxPotentialStudentName.Text,int.Parse(textboxPotentialStudentInputScore.Text),textboxPotentialStudentPhoneNumber.Text, int.Parse(textboxPotentialStudentAppointmentCount.Text), dropboxStatus.ValueMember);
+            try
+            {
+                if (potentialStudentDAL.InsertPotentialStudent(textboxPotentialStudentID.Text, textboxPotentialStudentName.Text, int.Parse(textboxPotentialStudentInputScore.Text), textboxPotentialStudentPhoneNumber.Text, int.Parse(textboxPotentialStudentAppointmentCount.Text), dropboxStatus.Text,textboxPotentialStudentAddress.Text,dropboxPotentialStudentGender.Text))
+                {
+                    MessageBox.Show("Thêm học viên thành công!!!");
+                    this.Hide();
+                    PotentialStudentForm f = new PotentialStudentForm();
+                    f.Show();
+                   
+                }
+            }
+            catch (Exception) {
+                MessageBox.Show("Thất bại, Kiểm tra lại dữ liệu nhập vào!!!");
+                    };
+           
+        }
+
+        private void textboxPotentialStudentID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
