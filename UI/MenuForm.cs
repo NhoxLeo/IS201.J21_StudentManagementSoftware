@@ -54,8 +54,8 @@ namespace UI
         {
             ClassForm f = new ClassForm();
             this.Hide();
-            f.ShowDialog();
-            this.Show();
+            f.Show();
+          
         }
         private void buttonClose_Click(object sender, EventArgs e)
         {

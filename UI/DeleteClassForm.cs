@@ -32,7 +32,18 @@ namespace UI
             ClassDTO currentObject = (ClassDTO)dgvListClass.CurrentRow.DataBoundItem;
             ClassDAL classDAL = new ClassDAL();
             classDAL.ConnectToDatabase();
-            classDAL.DeleteClass(currentObject.ClassId);
+            try
+            {
+
+                if(classDAL.DeleteClass(currentObject.ClassId))
+                {
+                    MessageBox.Show("Xoá lớp thành công!!!");
+                }
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Xoá lớp thất bại!!!");
+            }
         }
     }
 }

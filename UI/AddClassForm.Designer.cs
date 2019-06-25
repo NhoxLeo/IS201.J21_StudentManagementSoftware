@@ -210,9 +210,9 @@
             // comboBoxProgram
             // 
             this.comboBoxProgram.FormattingEnabled = true;
-            this.comboBoxProgram.Location = new System.Drawing.Point(157, 17);
+            this.comboBoxProgram.Location = new System.Drawing.Point(185, 17);
             this.comboBoxProgram.Name = "comboBoxProgram";
-            this.comboBoxProgram.Size = new System.Drawing.Size(279, 21);
+            this.comboBoxProgram.Size = new System.Drawing.Size(251, 21);
             this.comboBoxProgram.TabIndex = 1;
             this.comboBoxProgram.SelectedIndexChanged += new System.EventHandler(this.comboBoxProgram_SelectedIndexChanged);
             // 
@@ -222,9 +222,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 15);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 25);
+            this.label4.Size = new System.Drawing.Size(182, 25);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Môn học";
+            this.label4.Text = "Chương trình học:";
             // 
             // panel5
             // 
@@ -266,10 +266,10 @@
             // textboxClassID
             // 
             this.textboxClassID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textboxClassID.Location = new System.Drawing.Point(160, 15);
+            this.textboxClassID.Location = new System.Drawing.Point(188, 15);
             this.textboxClassID.Multiline = true;
             this.textboxClassID.Name = "textboxClassID";
-            this.textboxClassID.Size = new System.Drawing.Size(279, 25);
+            this.textboxClassID.Size = new System.Drawing.Size(251, 25);
             this.textboxClassID.TabIndex = 1;
             // 
             // label2
@@ -317,10 +317,10 @@
             // textboxStartingHour
             // 
             this.textboxStartingHour.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textboxStartingHour.Location = new System.Drawing.Point(157, 15);
+            this.textboxStartingHour.Location = new System.Drawing.Point(185, 15);
             this.textboxStartingHour.Multiline = true;
             this.textboxStartingHour.Name = "textboxStartingHour";
-            this.textboxStartingHour.Size = new System.Drawing.Size(279, 25);
+            this.textboxStartingHour.Size = new System.Drawing.Size(251, 25);
             this.textboxStartingHour.TabIndex = 1;
             // 
             // label6

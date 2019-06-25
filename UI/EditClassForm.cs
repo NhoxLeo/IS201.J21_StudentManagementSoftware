@@ -29,13 +29,29 @@ namespace UI
             ClassDAL classDAL = new ClassDAL();
             classDAL.ConnectToDatabase();
             ClassDTO classDTO = new ClassDTO(textboxClassID.Text, textboxClassName.Text, textboxTeacher.Text, textboxStartingHour.Text, startDate.Value, endDate.Value, textboxProgram.Text);
-            classDAL.UpdateClass(classDTO);
+            try
+            {
+                if (classDAL.UpdateClass(classDTO))
+                {
+                    MessageBox.Show("Đổi lớp thành công!!!");
+                    this.Close();
+                    ClassForm f = new ClassForm();
+                    f.Show();
+                }
+            }
+            catch(Exception)
+
+            {
+                MessageBox.Show("Thay đổi thất bại!!!");
+            }
 
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            ClassForm f = new ClassForm();
+            f.Show();
         }
     }
 }

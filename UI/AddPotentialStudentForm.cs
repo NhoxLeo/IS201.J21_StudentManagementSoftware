@@ -27,6 +27,8 @@ namespace UI
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+            PotentialStudentForm f = new PotentialStudentForm();
+            f.Show();
         }
 
         private void tbStatus_SelectedIndexChanged(object sender, EventArgs e)

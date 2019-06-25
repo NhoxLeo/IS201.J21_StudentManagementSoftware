@@ -48,31 +48,50 @@ namespace UI
         {
             ClassDTO currentObject = (ClassDTO)dgvListClass.CurrentRow.DataBoundItem;
             EditClassForm f = new EditClassForm(currentObject);
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            this.Close();
+            f.Show();
+            
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (this.dgvListClass.SelectedRows.Count > 0)
-            {
-                ClassDAL classDAL = new ClassDAL();
-                classDAL.ConnectToDatabase();
-                ClassDTO currentObject = (ClassDTO)dgvListClass.CurrentRow.DataBoundItem;
-                if(classDAL.DeleteClass(currentObject.ClassId))
-                {
-                    classDAL = new ClassDAL();
-                    classDAL.ConnectToDatabase();
-                    dgvListClass.DataSource = classDAL.GetAllClass();
-                    dgvListClass.Update();
-                    dgvListClass.Refresh();
-                }
-            }
+            //xoa lop hoc
+            //if (this.dgvListClass.SelectedRows.Count > 0)
+            //{
+            //    ClassDAL classDAL = new ClassDAL();
+            //    classDAL.ConnectToDatabase();
+            //    ClassDTO currentObject = (ClassDTO)dgvListClass.CurrentRow.DataBoundItem;
+            //    if(classDAL.DeleteClass(currentObject.ClassId))
+            //    {
+            //        classDAL = new ClassDAL();
+            //        classDAL.ConnectToDatabase();
+            //        dgvListClass.DataSource = classDAL.GetAllClass();
+            //        dgvListClass.Update();
+            //        dgvListClass.Refresh();
+            //    }
+            //}
             //DeleteClassForm f = new DeleteClassForm();
             //this.Hide();
             //f.ShowDialog();
             //this.Show();
+            ClassDAL classDAL = new ClassDAL();
+            SignupDAL signupDAL = new SignupDAL();
+            classDAL.ConnectToDatabase();
+            ClassDTO currentObject = (ClassDTO)dgvListClass.CurrentRow.DataBoundItem;
+            nameClass = currentObject.ClassId.ToUpperInvariant();
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc xoá lớp học: " + nameClass ,"Thông báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                signupDAL.DeleteSignup(nameClass);
+                classDAL.DeleteClass(nameClass);
+                MessageBox.Show("Xoá lớp học thành công!!!");
+                this.Close();
+                ClassForm f = new ClassForm();
+                f.Show();
+
+            }
+            
+          ;
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
@@ -84,6 +103,8 @@ namespace UI
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            MenuForm f = new MenuForm();
+            f.Show();
         }
 
         private void dgvListClass_CellContentClick(object sender, DataGridViewCellEventArgs e)
