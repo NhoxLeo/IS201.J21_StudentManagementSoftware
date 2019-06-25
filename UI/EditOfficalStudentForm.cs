@@ -22,6 +22,11 @@ namespace UI
         {
             InitializeComponent();
             textboxStudentID.Text = _studentDTO.StudentId;
+            textboxStudentAddress.Text = _studentDTO.StudentAddress;
+            textboxStudentMail.Text = _studentDTO.StudentMail;
+            textboxStudentName.Text = _studentDTO.StudentName;
+            textboxStudentPhoneNumber.Text = _studentDTO.StudentPhone;
+            birthDateTimePicker.Value = _studentDTO.StudentBirthDate;
         }
 
         private void btConfim_Click(object sender, EventArgs e)

@@ -128,7 +128,7 @@ namespace DAL
         {
             this.ConnectToDatabase();
 
-            string Query = "update STUDENT set STUDENT_ID='" + student.StudentId + "',STUDENT_NAME = '" + student.StudentName + "',MAIL = '" + student.StudentMail + "',ADDRESS = '" + student.StudentAddress + "',PHONE = '" + student.StudentPhone + "',BIRTHDATE = '" + student.StudentBirthDate + "'";
+            string Query = "update STUDENT set STUDENT_ID='" + student.StudentId + "',STUDENT_NAME = '" + student.StudentName + "',MAIL = '" + student.StudentMail + "',ADDRESS = '" + student.StudentAddress + "',PHONE = '" + student.StudentPhone + "',BIRTHDATE = '" + student.StudentBirthDate.ToString("yyyy'-'MM'-'dd") + "'";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
