@@ -37,5 +37,12 @@ namespace UI
             AddProgramForm f = new AddProgramForm();
             f.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ProgramDTO currentObject = (ProgramDTO)dgvListProgram.CurrentRow.DataBoundItem;
+            EditProgramForm f = new EditProgramForm(currentObject);
+            f.ShowDialog();
+        }
     }
 }

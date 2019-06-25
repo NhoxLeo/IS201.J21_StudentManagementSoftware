@@ -26,7 +26,7 @@ namespace UI
             programDAL.ConnectToDatabase();
             int level = Int32.Parse(Level.Text);
             int fee = Int32.Parse(Fee.Text);
-            ProgramDTO programDTO = new ProgramDTO(ID.Text, Name.Text, level, fee);
+            ProgramDTO programDTO = new ProgramDTO(ID.Text, name.Text, level, fee);
             programDAL.UpdateProgram(programDTO);
         }
 

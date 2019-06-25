@@ -30,7 +30,7 @@
         {
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.Name = new System.Windows.Forms.TextBox();
+            this.name = new System.Windows.Forms.TextBox();
             this.Level = new System.Windows.Forms.TextBox();
             this.Fee = new System.Windows.Forms.TextBox();
             this.ID = new System.Windows.Forms.TextBox();
@@ -64,11 +64,11 @@
             // 
             // Name
             // 
-            this.Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name.Location = new System.Drawing.Point(263, 117);
-            this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(318, 34);
-            this.Name.TabIndex = 17;
+            this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.Location = new System.Drawing.Point(263, 117);
+            this.name.Name = "Name";
+            this.name.Size = new System.Drawing.Size(318, 34);
+            this.name.TabIndex = 17;
             // 
             // Level
             // 
@@ -91,6 +91,7 @@
             this.ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID.Location = new System.Drawing.Point(263, 53);
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             this.ID.Size = new System.Drawing.Size(318, 34);
             this.ID.TabIndex = 14;
             // 
@@ -141,7 +142,7 @@
             this.ClientSize = new System.Drawing.Size(643, 434);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.Name);
+            this.Controls.Add(this.name);
             this.Controls.Add(this.Level);
             this.Controls.Add(this.Fee);
             this.Controls.Add(this.ID);
@@ -160,7 +161,7 @@
 
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox Name;
+        private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.TextBox Level;
         private System.Windows.Forms.TextBox Fee;
         private System.Windows.Forms.TextBox ID;

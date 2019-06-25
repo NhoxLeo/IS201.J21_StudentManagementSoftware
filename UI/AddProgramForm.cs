@@ -31,9 +31,9 @@ namespace UI
                 ProgramDAL programDAL = new ProgramDAL();
                 int level = Int32.Parse(Level.Text);
                 int fee = Int32.Parse(Fee.Text);
-                if (ID.Text != "" && Name.Text != "" && Level.Text != "" && Fee.Text != "")
+                if (ID.Text != "" && name.Text != "" && Level.Text != "" && Fee.Text != "")
                 {
-                    if (programDAL.InsertProgram(ID.Text, Name.Text, level, fee))
+                    if (programDAL.InsertProgram(ID.Text, name.Text, level, fee))
                     {
                         MessageBox.Show("Thêm chương trình học thành công!!!");
                         this.Close();
