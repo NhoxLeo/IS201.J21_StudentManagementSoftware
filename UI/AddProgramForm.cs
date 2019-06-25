@@ -40,7 +40,7 @@ namespace UI
                     }
                 }
             }
-            catch
+            catch(Exception)
             {
                 MessageBox.Show("Thêm chương trình học không thành công, vui lòng nhập đủ thông tin!");
             }

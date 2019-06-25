@@ -22,12 +22,23 @@ namespace UI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ProgramDAL programDAL = new ProgramDAL();
-            programDAL.ConnectToDatabase();
-            int level = Int32.Parse(Level.Text);
-            int fee = Int32.Parse(Fee.Text);
-            ProgramDTO programDTO = new ProgramDTO(ID.Text, name.Text, level, fee);
-            programDAL.UpdateProgram(programDTO);
+            try
+            {
+                ProgramDAL programDAL = new ProgramDAL();
+                programDAL.ConnectToDatabase();
+                int level = Int32.Parse(Level.Text);
+                int fee = Int32.Parse(Fee.Text);
+                ProgramDTO programDTO = new ProgramDTO(ID.Text, name.Text, level, fee);
+                if (programDAL.UpdateProgram(programDTO))
+                {
+                    MessageBox.Show("Cập nhật Chương trình học thành công!!!");
+                    this.Close();
+                }
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Lỗi, cập nhật Chương trình học không thành công!");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
