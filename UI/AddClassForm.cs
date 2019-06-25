@@ -47,6 +47,8 @@ namespace UI
                     {
                         MessageBox.Show("Thêm lớp thành công!!!");
                         this.Close();
+                        ClassForm f = new ClassForm();
+                        f.Show();
                     }
                 }
                 else
@@ -68,6 +70,8 @@ namespace UI
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            ClassForm f = new ClassForm();
+            f.Show();
         }
     }
 }
