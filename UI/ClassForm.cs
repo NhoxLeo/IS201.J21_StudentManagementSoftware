@@ -20,7 +20,7 @@ namespace UI
         {
             InitializeComponent();
             InitClassData();
-            
+            getNameClass();
         }
         
         void InitClassData()
@@ -112,7 +112,10 @@ namespace UI
                 this.Show();
             }
         }
-
+          public string getNameClass()
+          {
+             return nameClass;
+          }
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             Bitmap bmp = new Bitmap(this.dgvListClass.Height + 750, this.dgvListClass.Width + 650);
@@ -120,6 +123,22 @@ namespace UI
             e.Graphics.DrawImage(bmp, 0, 120);
             e.Graphics.DrawString("TRUNG TÂM ANH NGỮ A&Z", new Font("Verdana", 25, FontStyle.Bold), Brushes.Red, new Point(150, 30));
             e.Graphics.DrawString("DANH SÁCH LỚP HỌC CỦA TRUNG TÂM", new Font("Verdana", 20, FontStyle.Bold), Brushes.Black, new Point(120, 70));
+        }
+
+        private void btnRemoveStudent_Click(object sender, EventArgs e)
+        {
+            ClassDAL classDAL = new ClassDAL();
+            classDAL.ConnectToDatabase();
+            ClassDTO currentObject = (ClassDTO)dgvListClass.CurrentRow.DataBoundItem;
+            DeleteStudentClassForm f = new DeleteStudentClassForm(currentObject.ClassId);
+            nameClass = currentObject.ClassId.ToUpperInvariant();
+            DialogResult dialogRe = MessageBox.Show("Bạn muốn xoá học viên khỏi lớp: " + nameClass, "Thông báo", MessageBoxButtons.YesNo);
+            if (dialogRe == DialogResult.Yes)
+            {
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+            }
         }
     }
 }
