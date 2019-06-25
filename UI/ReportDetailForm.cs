@@ -23,7 +23,7 @@ namespace UI
             InitializeComponent();
             SignupDAL signupDAL = new SignupDAL();
             signupDAL.ConnectToDatabase();
-            List<SignupDTO> signupDTOs = signupDAL.GetAllSignupWithClassID(_class.ClassId);
+            List<SignupDTO> signupDTOs = signupDAL.GetAllSignupClass(_class.ClassId);
             dgvReport.DataSource = signupDTOs;
             ProgramDAL programDAL = new ProgramDAL();
             programDAL.ConnectToDatabase();

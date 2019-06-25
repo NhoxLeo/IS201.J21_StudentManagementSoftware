@@ -35,7 +35,7 @@ namespace DAL
             return listSignup;
         }
 
-        public List<SignupDTO> GetAllSignup(string _studentId)
+        public List<SignupDTO> GetAllSignupStudent(string _studentId)
         {
             List<SignupDTO> listSignup = new List<SignupDTO>();
 
