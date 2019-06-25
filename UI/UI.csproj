@@ -71,6 +71,12 @@
     <Compile Include="AddPotentialStudentForm.Designer.cs">
       <DependentUpon>AddPotentialStudentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddProgramForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProgramForm.Designer.cs">
+      <DependentUpon>AddProgramForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddStudentToClassForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,12 @@
     </Compile>
     <Compile Include="EditOfficalStudentForm.Designer.cs">
       <DependentUpon>EditOfficalStudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditProgramForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditProgramForm.Designer.cs">
+      <DependentUpon>EditProgramForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -178,6 +190,9 @@
     <EmbeddedResource Include="AddPotentialStudentForm.resx">
       <DependentUpon>AddPotentialStudentForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddProgramForm.resx">
+      <DependentUpon>AddProgramForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddStudentToClassForm.resx">
       <DependentUpon>AddStudentToClassForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditOfficalStudentForm.resx">
       <DependentUpon>EditOfficalStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditProgramForm.resx">
+      <DependentUpon>EditProgramForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
