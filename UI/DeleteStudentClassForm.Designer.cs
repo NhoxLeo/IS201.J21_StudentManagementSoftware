@@ -1,6 +1,6 @@
 ﻿namespace UI
 {
-    partial class DeleteStudentClassForm
+    partial class DeleteStudentToClassForm
     {
         /// <summary>
         /// Required designer variable.
@@ -37,8 +37,8 @@
             this.btnConfirm = new System.Windows.Forms.Button();
             this.dgvListStudent = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lb3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -135,12 +135,23 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.lb3);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Location = new System.Drawing.Point(3, 54);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(822, 54);
             this.panel5.TabIndex = 5;
+            // 
+            // lb3
+            // 
+            this.lb3.AutoSize = true;
+            this.lb3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lb3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb3.Location = new System.Drawing.Point(3, 25);
+            this.lb3.Name = "lb3";
+            this.lb3.Size = new System.Drawing.Size(76, 25);
+            this.lb3.TabIndex = 1;
+            this.lb3.Text = "label3";
             // 
             // label2
             // 
@@ -150,18 +161,7 @@
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 0;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 25);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "label3";
-            // 
-            // DeleteStudentClassForm
+            // DeleteStudentToClassForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -169,7 +169,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel5);
-            this.Name = "DeleteStudentClassForm";
+            this.Name = "DeleteStudentToClassForm";
             this.Text = "RemoveStudentClassForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -195,6 +195,6 @@
         private System.Windows.Forms.DataGridView dgvListStudent;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lb3;
     }
 }

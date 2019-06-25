@@ -20,7 +20,7 @@ namespace UI
         {
             InitializeComponent();
             InitClassData();
-            getNameClass();
+          
         }
         
         void InitClassData()
@@ -102,20 +102,12 @@ namespace UI
             ClassDAL classDAL = new ClassDAL();
             classDAL.ConnectToDatabase();
             ClassDTO currentObject = (ClassDTO)dgvListClass.CurrentRow.DataBoundItem;
-            AddStudentToClassForm f = new AddStudentToClassForm(currentObject.ClassId);
             nameClass = currentObject.ClassId.ToUpperInvariant();
-            DialogResult dialogRe = MessageBox.Show("Bạn muốn thêm học sinh vào lớp: " + nameClass, "Thông báo", MessageBoxButtons.YesNo);
-                if (dialogRe == DialogResult.Yes)
-            {
+            AddStudentToClassForm f = new AddStudentToClassForm(currentObject.ClassId,nameClass);          
                 this.Hide();
                 f.ShowDialog();
-                this.Show();
-            }
+                this.Show();           
         }
-          public string getNameClass()
-          {
-             return nameClass;
-          }
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             Bitmap bmp = new Bitmap(this.dgvListClass.Height + 750, this.dgvListClass.Width + 650);
@@ -130,15 +122,12 @@ namespace UI
             ClassDAL classDAL = new ClassDAL();
             classDAL.ConnectToDatabase();
             ClassDTO currentObject = (ClassDTO)dgvListClass.CurrentRow.DataBoundItem;
-            DeleteStudentClassForm f = new DeleteStudentClassForm(currentObject.ClassId);
             nameClass = currentObject.ClassId.ToUpperInvariant();
-            DialogResult dialogRe = MessageBox.Show("Bạn muốn xoá học viên khỏi lớp: " + nameClass, "Thông báo", MessageBoxButtons.YesNo);
-            if (dialogRe == DialogResult.Yes)
-            {
+            DeleteStudentToClassForm f = new DeleteStudentToClassForm(currentObject.ClassId,nameClass);
+            
                 this.Hide();
                 f.ShowDialog();
-                this.Show();
-            }
+                this.Show();            
         }
     }
 }

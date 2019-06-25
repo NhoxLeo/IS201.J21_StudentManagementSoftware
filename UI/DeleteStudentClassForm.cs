@@ -12,31 +12,42 @@ using System.Windows.Forms;
 
 namespace UI
 {
-    public partial class DeleteStudentClassForm : Form
+    public partial class DeleteStudentToClassForm : Form
     {
+    
         string classId;
-        public DeleteStudentClassForm()
+        public DeleteStudentToClassForm()
         {
             InitializeComponent();
             InitOfficialStudentData();
         }
-        public DeleteStudentClassForm(string _classId)
+        public DeleteStudentToClassForm(string _classId)
         {
             InitializeComponent();
             InitOfficialStudentData();
             classId = _classId;
+           
+            
         }
-        void InitOfficialStudentData()
+        public DeleteStudentToClassForm(string _classId,String nameClass)
         {
-            ClassForm f = new ClassForm();
+            InitializeComponent();
+            InitOfficialStudentData();
+            classId = _classId;
+            lb3.Text = "Xoá học viên khỏi lớp: " + nameClass;                     
             SignupDAL studentDAL = new SignupDAL();
             studentDAL.ConnectToDatabase();
-            List<SignupDTO> studentDTOs = studentDAL.GetAllSignupClass("LS1");
+            List<SignupDTO> studentDTOs = studentDAL.GetAllSignupClass(nameClass);
             dgvListStudent.DataSource = studentDTOs;
             DataGridViewCheckBoxColumn deleteConfirm = new DataGridViewCheckBoxColumn() { HeaderText = "Delete" };
             dgvListStudent.Columns.Add(deleteConfirm);
-            label3.Text = f.getNameClass(); 
         }
+        void InitOfficialStudentData()
+        {
+            
+            
+        }
+ 
 
         private void btnClose_Click(object sender, EventArgs e)
         {

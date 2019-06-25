@@ -25,6 +25,16 @@ namespace UI
             InitializeComponent();
             InitOfficialStudentData();
             classId = _classId;
+        
+        }
+        public AddStudentToClassForm(string _classId,String nameClass)
+        {
+            InitializeComponent();
+            InitOfficialStudentData();
+            classId = _classId;
+            //Set nameclass vào text
+            label3.Text ="Thêm học viên vào lớp: "+ nameClass;
+
         }
         void InitOfficialStudentData()
         {
@@ -34,8 +44,8 @@ namespace UI
             dgvListStudent.DataSource = studentDTOs;
             DataGridViewCheckBoxColumn addConfirm = new DataGridViewCheckBoxColumn() { HeaderText = "Add"};
             dgvListStudent.Columns.Add(addConfirm);
-            ClassForm f = new ClassForm();
-            label3.Text = f.getNameClass();
+           
+           
            
         }
 
