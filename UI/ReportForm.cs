@@ -84,21 +84,6 @@ namespace UI
 
         }
 
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-            label6.Enabled = true;
-            label5.Enabled = true;
-            IDtext.Enabled = true;
-            textBox5.Enabled = true;
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            label6.Enabled = false;
-            label5.Enabled = false;
-            IDtext.Enabled = false;
-            textBox5.Enabled = false;
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
