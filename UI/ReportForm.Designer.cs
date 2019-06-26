@@ -58,8 +58,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Báo cáo Thông tin Học viên",
-            "Báo cáo Kế toán Lớp học",
-            "Báo cáo kết quả học tập"});
+            "Báo cáo Kế toán Lớp học"});
             this.comboBox1.Location = new System.Drawing.Point(442, 39);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox1.Name = "comboBox1";
