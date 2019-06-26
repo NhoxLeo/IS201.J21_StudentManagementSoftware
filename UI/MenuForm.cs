@@ -12,10 +12,16 @@ namespace UI
 {
     public partial class MenuForm : Form
     {
+        LoginForm loginForm;
         public MenuForm()
         {
             InitializeComponent();
-
+        }
+        public MenuForm(LoginForm _loginForm)
+        {
+            InitializeComponent();
+            //_loginForm.Hide();
+            loginForm = _loginForm;
         }
 
         private void buttonProgram_Click(object sender, EventArgs e)
@@ -60,8 +66,8 @@ namespace UI
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
-            LoginForm f = new LoginForm();
-            f.Show();
+            loginForm.ResetUser();
+            loginForm.Show();
         }
 
     }

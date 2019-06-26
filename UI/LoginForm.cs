@@ -19,16 +19,16 @@ namespace UI
 
         private void button1_Click(object sender, EventArgs e)
         {
-     
+
             this.Show();
             string userName = tbUsername.Text;
             string passWord = tbPassword.Text;
-            if (userName=="admin"&&passWord=="admin")
+            if (userName == "admin" && passWord == "admin")
             {
-                MenuForm f = new MenuForm();
+                MenuForm f = new MenuForm(this);
+                f.Show();
                 this.Hide();
-                f.ShowDialog();
-              
+
             }
             else
             {
@@ -36,10 +36,11 @@ namespace UI
 
             }
         }
-      
+
         private void button2_Click(object sender, EventArgs e)
         {
-           this.Close();
+            this.Close();
+           this.Dispose();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -50,6 +51,11 @@ namespace UI
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        public void ResetUser()
+        {
+            tbUsername.Text = "";
+            tbPassword.Text = "";
         }
     }
 }
