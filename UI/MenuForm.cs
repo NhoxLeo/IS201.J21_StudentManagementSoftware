@@ -45,9 +45,9 @@ namespace UI
         private void buttonOfficialStudent_Click(object sender, EventArgs e)
         {
             OfficalStudentForm f = new OfficalStudentForm();
+
             this.Hide();
-            f.ShowDialog();
-            this.Show();
+            f.Show();
         }
 
         private void buttonClass_Click(object sender, EventArgs e)

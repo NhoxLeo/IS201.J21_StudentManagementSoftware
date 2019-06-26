@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnRemoveStudent = new System.Windows.Forms.Button();
             this.btnAddStudentToClass = new System.Windows.Forms.Button();
             this.dgvListClass = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,7 +42,7 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btAddClass = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.btnRemoveStudent = new System.Windows.Forms.Button();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListClass)).BeginInit();
@@ -77,6 +78,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(935, 302);
             this.panel2.TabIndex = 7;
+            // 
+            // btnRemoveStudent
+            // 
+            this.btnRemoveStudent.Location = new System.Drawing.Point(578, 10);
+            this.btnRemoveStudent.Name = "btnRemoveStudent";
+            this.btnRemoveStudent.Size = new System.Drawing.Size(158, 23);
+            this.btnRemoveStudent.TabIndex = 6;
+            this.btnRemoveStudent.Text = "Xoá học viên khỏi lớp";
+            this.btnRemoveStudent.UseVisualStyleBackColor = true;
+            this.btnRemoveStudent.Click += new System.EventHandler(this.btnRemoveStudent_Click);
             // 
             // btnAddStudentToClass
             // 
@@ -203,15 +214,9 @@
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
-            // btnRemoveStudent
+            // printDialog1
             // 
-            this.btnRemoveStudent.Location = new System.Drawing.Point(578, 10);
-            this.btnRemoveStudent.Name = "btnRemoveStudent";
-            this.btnRemoveStudent.Size = new System.Drawing.Size(158, 23);
-            this.btnRemoveStudent.TabIndex = 6;
-            this.btnRemoveStudent.Text = "Xoá học viên khỏi lớp";
-            this.btnRemoveStudent.UseVisualStyleBackColor = true;
-            this.btnRemoveStudent.Click += new System.EventHandler(this.btnRemoveStudent_Click);
+            this.printDialog1.UseEXDialog = true;
             // 
             // ClassForm
             // 
@@ -250,5 +255,6 @@
         private System.Windows.Forms.Button btnAddStudentToClass;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.Button btnRemoveStudent;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }

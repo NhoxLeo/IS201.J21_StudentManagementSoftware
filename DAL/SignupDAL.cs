@@ -143,12 +143,22 @@ namespace DAL
             this.Close();
             return true;
         }
+        public bool DeleteSignupStudent(string studentId)
+        {
+            this.ConnectToDatabase();
+            string Query = "delete from SIGNUP where STUDENT_ID='" + studentId + "'";
+            MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
+            command.ExecuteNonQuery();
+            this.Close();
+            return true;
+        }
         public bool DeleteSignup(string classId)
         {
             this.ConnectToDatabase();
             string Query = "delete from SIGNUP where CLASS_ID=" + "'" + classId + "'";
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
             command.ExecuteNonQuery();
+            this.Close();
             return true;
         }
     }

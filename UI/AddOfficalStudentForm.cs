@@ -27,16 +27,33 @@ namespace UI
         {
             StudentDAL studentDAL = new StudentDAL();
             studentDAL.ConnectToDatabase();
-            if(studentDAL.InsertStudent(textboxStudentID.Text, textboxStudentName.Text, textboxStudentMail.Text, textboxStudentAddress.Text, textboxStudentPhoneNumber.Text, birthDateTimePicker.Value))
+            try
             {
-                MessageBox.Show("Success");
-                this.Close();
+                if ((studentDAL.InsertStudent(textboxStudentID.Text, textboxStudentName.Text, textboxStudentMail.Text, textboxStudentAddress.Text, textboxStudentPhoneNumber.Text, birthDateTimePicker.Value))
+                    &&textboxStudentName.Text!="")
+                {
+                    MessageBox.Show("Thêm học viên thành công!!!");
+                    this.Close();
+                    OfficalStudentForm f = new OfficalStudentForm();
+                    f.Show();
+                }
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Thêm học viên thất bại, vui lòng kiểm tra lại dữ liệu!!!");
             }
         }
 
         private void textboxStudentID_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            OfficalStudentForm f = new OfficalStudentForm();
+            f.Show();
         }
     }
 }
