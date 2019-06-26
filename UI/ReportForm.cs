@@ -51,19 +51,19 @@ namespace UI
                 case "Báo cáo Thông tin Học viên":
                     BaocaoTTHV.Show();
                     BaocaoKTLH.Hide();
-                    BaocaoKQHT.Hide();
+                    //BaocaoKQHT.Hide();
                     break;
                 case "Báo cáo Kế toán Lớp học":
                     LoadComboBoxClass();
                     BaocaoTTHV.Hide();
                     BaocaoKTLH.Show();
-                    BaocaoKQHT.Hide();
+                    //BaocaoKQHT.Hide();
                     break;
-                case "Báo cáo kết quả học tập":
-                    BaocaoTTHV.Hide();
-                    BaocaoKTLH.Hide();
-                    BaocaoKQHT.Show();
-                    break;
+                //case "Báo cáo kết quả học tập":
+                //    BaocaoTTHV.Hide();
+                //    BaocaoKTLH.Hide();
+                //    BaocaoKQHT.Show();
+                //    break;
                 default:
                     break;
             };
@@ -78,7 +78,7 @@ namespace UI
         {
             label6.Enabled = true;
             label5.Enabled = true;
-            textBox4.Enabled = true;
+            IDtext.Enabled = true;
             textBox5.Enabled = true;
         }
 
@@ -86,7 +86,7 @@ namespace UI
         {
             label6.Enabled = false;
             label5.Enabled = false;
-            textBox4.Enabled = false;
+            IDtext.Enabled = false;
             textBox5.Enabled = false;
         }
 
@@ -112,12 +112,13 @@ namespace UI
                     f.Text = "Báo cáo Kế toán Lớp học";
                     f.ShowDialog();
                     break;
-                case "Báo cáo kết quả học tập":
-                    //
-                    f = new ReportDetailForm();
-                    f.Text = "Báo cáo kết quả học tập";
-                    f.ShowDialog();
-                    break;
+                //case "Báo cáo kết quả học tập":
+                //    //
+                //    if (radioButton3.Checked == true) f = new ReportDetailForm();
+                //    else f = new ReportDetailForm(IDtext.Text);
+                //    f.Text = "Báo cáo kết quả học tập";
+                //    f.ShowDialog();
+                //    break;
                 default: break;
             }
         }

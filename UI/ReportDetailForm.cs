@@ -30,6 +30,18 @@ namespace UI
             int totalFee = programDAL.GetProgram(_class.ProgramId).Fee * signupDTOs.Count;
         }
 
+        //public ReportDetailForm(string ID)
+        //{
+        //    InitializeComponent();
+        //    MarkDAL markDAL = new MarkDAL();
+        //    markDAL.ConnectToDatabase();
+        //    List<MarkDTO> markDTOs = markDAL.GetAllMark(ID);
+        //    dgvReport.DataSource = markDTOs;
+        //    StudentDAL studentDAL = new StudentDAL();
+        //    studentDAL.ConnectToDatabase();
+        //    string name = studentDAL.GetStudent(ID).StudentName;
+        //}
+
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
