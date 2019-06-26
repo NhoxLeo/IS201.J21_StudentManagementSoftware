@@ -29,54 +29,72 @@ namespace UI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            
             AddOfficalStudentForm f = new AddOfficalStudentForm();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            this.Close();
+            f.Show();
+            //this.Show();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
             StudentDTO currentObject = (StudentDTO)dgvListStudent.CurrentRow.DataBoundItem;
             EditOfficalStudentForm f = new EditOfficalStudentForm(currentObject);
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            this.Close();
+            f.Show();
+            
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (this.dgvListStudent.SelectedRows.Count > 0)
-            {
+           
+            
                 StudentDAL potentialStudentDAL = new StudentDAL();
+            SignupDAL sgDAL = new SignupDAL();
                 potentialStudentDAL.ConnectToDatabase();
                 StudentDTO currentObject = (StudentDTO)dgvListStudent.CurrentRow.DataBoundItem;
-                if (potentialStudentDAL.DeleteStudent(currentObject.StudentId))
+            DialogResult rs = MessageBox.Show("Bạn muốn xoá học viên: " + currentObject.StudentId, "Thông báo", MessageBoxButtons.YesNo);
+            if (rs == DialogResult.Yes)
+            {
+                try
                 {
-                    potentialStudentDAL = new StudentDAL();
-                    potentialStudentDAL.ConnectToDatabase();
-                    dgvListStudent.DataSource = potentialStudentDAL.GetAllStudent();
-                    dgvListStudent.Update();
-                    dgvListStudent.Refresh();
+
+                    if (sgDAL.DeleteSignupStudent(currentObject.StudentId) && potentialStudentDAL.DeleteStudent(currentObject.StudentId))
+                    {
+                        MessageBox.Show("Xoá học viên thành công!!!");
+                        this.Close();
+                        OfficalStudentForm f = new OfficalStudentForm();
+                        f.Show();
+                    }
                 }
+                catch (Exception)
+                {
+                    MessageBox.Show("Xoá học viên thất bại!!!");
+                }
+
             }
-            //DeleteOfficalStudenForm f = new DeleteOfficalStudenForm();
-            //this.Hide();
-            //f.ShowDialog();
-            //this.Show();
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            //AddOfficalStudentForm f = new AddOfficalStudentForm();
-            //this.Hide();
-            //f.ShowDialog();
-            //this.Show();
+            printDocument1.Print();
+            MessageBox.Show("In thành công");
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            MenuForm f = new MenuForm();
+            f.Show();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap bmp = new Bitmap(this.dgvListStudent.Height + 750, this.dgvListStudent.Width + 650);
+            dgvListStudent.DrawToBitmap(bmp, new Rectangle(0, 0, dgvListStudent.Width, dgvListStudent.Height));
+            e.Graphics.DrawImage(bmp, 0, 120);
+            e.Graphics.DrawString("TRUNG TÂM ANH NGỮ G&M", new Font("Verdana", 25, FontStyle.Bold), Brushes.Red, new Point(150, 30));
+            e.Graphics.DrawString("DANH SÁCH HỌC VIÊN CHÍNH THỨC", new Font("Verdana", 20, FontStyle.Bold), Brushes.Black, new Point(130, 70));
         }
     }
 }

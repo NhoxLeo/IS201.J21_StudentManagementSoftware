@@ -33,8 +33,28 @@ namespace UI
         {
             StudentDAL studentDAL = new StudentDAL();
             studentDAL.ConnectToDatabase();
-            StudentDTO studentDTO = new StudentDTO(textboxStudentID.Text, textboxStudentName.Text, textboxStudentMail.Text, textboxStudentAddress.Text, textboxStudentPhoneNumber.Text, birthDateTimePicker.Value);
-            studentDAL.UpdateStudent(studentDTO);
+            try
+            {
+               StudentDTO studentDTO = new StudentDTO(textboxStudentID.Text, textboxStudentName.Text, textboxStudentMail.Text, textboxStudentAddress.Text, textboxStudentPhoneNumber.Text, birthDateTimePicker.Value);
+               if( studentDAL.UpdateStudent(studentDTO))
+                {
+                    MessageBox.Show("Thay đổi thông tin học viên thành công!!!");
+                    this.Close();
+                    OfficalStudentForm f = new OfficalStudentForm();
+                    f.Show();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Thay đổi thất bại, kiểm tra lại thông tin!!!");
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            OfficalStudentForm f = new OfficalStudentForm();
+            f.Show();
         }
     }
 }

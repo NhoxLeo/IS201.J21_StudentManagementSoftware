@@ -107,7 +107,7 @@ namespace UI
             Bitmap bmp = new Bitmap(this.dgvListPotentialStudent.Height+750, this.dgvListPotentialStudent.Width+650);
             dgvListPotentialStudent.DrawToBitmap(bmp, new Rectangle(0, 0, dgvListPotentialStudent.Width, dgvListPotentialStudent.Height));
             e.Graphics.DrawImage(bmp, 0, 120);
-            e.Graphics.DrawString("TRUNG TÂM ANH NGỮ A&Z", new Font("Verdana", 25, FontStyle.Bold), Brushes.Red, new Point(150, 30));
+            e.Graphics.DrawString("TRUNG TÂM ANH NGỮ G&M", new Font("Verdana", 25, FontStyle.Bold), Brushes.Red, new Point(150, 30));
             e.Graphics.DrawString("DANH SÁCH HỌC VIÊN TIỀM NĂNG", new Font("Verdana", 20, FontStyle.Bold), Brushes.Black, new Point(130, 70));
         }
     }
