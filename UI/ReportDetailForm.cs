@@ -35,6 +35,7 @@ namespace UI
 
         public ReportDetailForm(StudentDTO _student)
         {
+            int fees = 0;
             InitializeComponent();
 
             List<StudentDTO> a = new List<StudentDTO>();
@@ -42,8 +43,11 @@ namespace UI
             dgvReport.DataSource = a;
             SignupDAL signupDAL = new SignupDAL();
             signupDAL.ConnectToDatabase();
-            List<SignupDTO> signupDTOs = signupDAL.GetAllSignupClass(_student.StudentId);
-            
+            List<SignupDTO> signupDTOs = signupDAL.GetAllSignupStudent(_student.StudentId);
+
+            TotalFee = (250 * signupDTOs.Count).ToString();
+            labelType.Text = "Tổng số tiền đã đóng (USD): ";
+            labelInfo.Text = TotalFee;
         }
 
 

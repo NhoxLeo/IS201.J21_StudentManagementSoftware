@@ -30,17 +30,17 @@
         {
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.BaocaoTTHV = new System.Windows.Forms.GroupBox();
+            this.groupBoxClassing = new System.Windows.Forms.GroupBox();
+            this.comboBoxClass = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.comboBoxListStudent = new System.Windows.Forms.ComboBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.BaocaoKTLH = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.comboBoxListClassIDs = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.BaocaoTTHV.SuspendLayout();
-            this.BaocaoKTLH.SuspendLayout();
+            this.groupBoxClassing.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -61,12 +61,9 @@
             // BaocaoTTHV
             // 
             this.BaocaoTTHV.Controls.Add(this.comboBoxListStudent);
-            this.BaocaoTTHV.Controls.Add(this.radioButton2);
-            this.BaocaoTTHV.Controls.Add(this.radioButton1);
-            this.BaocaoTTHV.Controls.Add(this.BaocaoKTLH);
             this.BaocaoTTHV.Controls.Add(this.label2);
             this.BaocaoTTHV.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BaocaoTTHV.Location = new System.Drawing.Point(7, 110);
+            this.BaocaoTTHV.Location = new System.Drawing.Point(8, 110);
             this.BaocaoTTHV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BaocaoTTHV.Name = "BaocaoTTHV";
             this.BaocaoTTHV.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -75,6 +72,39 @@
             this.BaocaoTTHV.TabStop = false;
             this.BaocaoTTHV.Text = "Báo cáo Thông tin Học viên";
             this.BaocaoTTHV.Visible = false;
+            // 
+            // groupBoxClassing
+            // 
+            this.groupBoxClassing.Controls.Add(this.comboBoxClass);
+            this.groupBoxClassing.Controls.Add(this.label5);
+            this.groupBoxClassing.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxClassing.Location = new System.Drawing.Point(8, 110);
+            this.groupBoxClassing.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBoxClassing.Name = "groupBoxClassing";
+            this.groupBoxClassing.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBoxClassing.Size = new System.Drawing.Size(1214, 448);
+            this.groupBoxClassing.TabIndex = 7;
+            this.groupBoxClassing.TabStop = false;
+            this.groupBoxClassing.Text = "Báo cáo kế toán Lớp";
+            this.groupBoxClassing.Visible = false;
+            // 
+            // comboBoxClass
+            // 
+            this.comboBoxClass.FormattingEnabled = true;
+            this.comboBoxClass.Location = new System.Drawing.Point(511, 122);
+            this.comboBoxClass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxClass.Name = "comboBoxClass";
+            this.comboBoxClass.Size = new System.Drawing.Size(583, 45);
+            this.comboBoxClass.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(101, 122);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 38);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Lớp *";
             // 
             // comboBoxListStudent
             // 
@@ -85,45 +115,14 @@
             this.comboBoxListStudent.Size = new System.Drawing.Size(583, 45);
             this.comboBoxListStudent.TabIndex = 6;
             // 
-            // radioButton2
+            // label2
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(623, 314);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(278, 42);
-            this.radioButton2.TabIndex = 5;
-            this.radioButton2.Text = "Báo cáo kế toán";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(225, 314);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(294, 42);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Bác cáo ghi danh";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // BaocaoKTLH
-            // 
-            this.BaocaoKTLH.Controls.Add(this.comboBoxListClassIDs);
-            this.BaocaoKTLH.Controls.Add(this.label4);
-            this.BaocaoKTLH.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BaocaoKTLH.Location = new System.Drawing.Point(619, 344);
-            this.BaocaoKTLH.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.BaocaoKTLH.Name = "BaocaoKTLH";
-            this.BaocaoKTLH.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BaocaoKTLH.Size = new System.Drawing.Size(1214, 464);
-            this.BaocaoKTLH.TabIndex = 4;
-            this.BaocaoKTLH.TabStop = false;
-            this.BaocaoKTLH.Text = "Báo cáo Kế toán Lớp học (Tổng tiền lớp)";
-            this.BaocaoKTLH.Visible = false;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(101, 122);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(167, 38);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Học viên *";
             // 
             // comboBoxListClassIDs
             // 
@@ -131,7 +130,7 @@
             this.comboBoxListClassIDs.Location = new System.Drawing.Point(480, 185);
             this.comboBoxListClassIDs.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxListClassIDs.Name = "comboBoxListClassIDs";
-            this.comboBoxListClassIDs.Size = new System.Drawing.Size(443, 45);
+            this.comboBoxListClassIDs.Size = new System.Drawing.Size(443, 28);
             this.comboBoxListClassIDs.TabIndex = 6;
             // 
             // label4
@@ -143,15 +142,6 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Mã Lớp :";
             this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(101, 122);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 38);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Học viên *";
             // 
             // label3
             // 
@@ -180,6 +170,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1234, 786);
+            this.Controls.Add(this.groupBoxClassing);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox1);
@@ -190,8 +181,8 @@
             this.Load += new System.EventHandler(this.ReportForm_Load);
             this.BaocaoTTHV.ResumeLayout(false);
             this.BaocaoTTHV.PerformLayout();
-            this.BaocaoKTLH.ResumeLayout(false);
-            this.BaocaoKTLH.PerformLayout();
+            this.groupBoxClassing.ResumeLayout(false);
+            this.groupBoxClassing.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,14 +192,14 @@
 
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.GroupBox BaocaoTTHV;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox BaocaoKTLH;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboBoxListClassIDs;
         private System.Windows.Forms.ComboBox comboBoxListStudent;
+        private System.Windows.Forms.GroupBox groupBoxClassing;
+        private System.Windows.Forms.ComboBox comboBoxClass;
+        private System.Windows.Forms.Label label5;
     }
 }

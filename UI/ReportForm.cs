@@ -23,9 +23,9 @@ namespace UI
             ClassDAL classDAL = new ClassDAL();
             classDAL.ConnectToDatabase();
             List<ClassDTO> classDTOs = classDAL.GetAllClass();
-            comboBoxListClassIDs.DataSource = classDTOs;
-            comboBoxListClassIDs.DisplayMember = "ClassName";
-            comboBoxListClassIDs.ValueMember = "ClassId";
+            comboBoxClass.DataSource = classDTOs;
+            comboBoxClass.DisplayMember = "ClassName";
+            comboBoxClass.ValueMember = "ClassId";
         }
         void LoadComboBoxStudent()
         {
@@ -60,13 +60,13 @@ namespace UI
                 case "Báo cáo Thông tin Học viên":
                     LoadComboBoxStudent();
                     BaocaoTTHV.Show();
-                    BaocaoKTLH.Hide();
+                    groupBoxClassing.Hide();
                     //BaocaoKQHT.Hide();
                     break;
                 case "Báo cáo Kế toán Lớp học":
                     LoadComboBoxClass();
                     BaocaoTTHV.Hide();
-                    BaocaoKTLH.Show();
+                    groupBoxClassing.Show();
                     //BaocaoKQHT.Hide();
                     break;
                 //case "Báo cáo kết quả học tập":
@@ -102,7 +102,7 @@ namespace UI
                     break;
                 case "Báo cáo Kế toán Lớp học":
                     //
-                    f = new ReportDetailForm((ClassDTO)comboBoxListClassIDs.SelectedItem);
+                    f = new ReportDetailForm((ClassDTO)comboBoxClass.SelectedItem);
                     //f = new ReportDetailForm();
                     f.Text = "Báo cáo Kế toán Lớp học";
                     f.ShowDialog();
