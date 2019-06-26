@@ -36,8 +36,8 @@ namespace UI
         {
             this.Close();
           
-            PotentialStudentForm f = new PotentialStudentForm();
-            f.Show();
+            //PotentialStudentForm f = new PotentialStudentForm();
+            //f.Show();
         }
 
         private void btConfim_Click(object sender, EventArgs e)

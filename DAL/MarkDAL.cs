@@ -105,5 +105,19 @@ namespace DAL
             this.Close();
             return true;
         }
+        public bool DeleteMark(string _studentId, string _TestId)
+        {
+            this.ConnectToDatabase();
+
+            string Query = "DELETE FROM MARK WHERE STUDENT_ID='" + _studentId + "' AND TEST_ID = '" + _TestId + "'";
+
+            //This is command class which will handle the query and connection object.  
+            MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
+
+            command.ExecuteNonQuery();
+
+            this.Close();
+            return true;
+        }
     }
 }

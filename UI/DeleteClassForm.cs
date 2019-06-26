@@ -45,5 +45,10 @@ namespace UI
                 MessageBox.Show("Xoá lớp thất bại!!!");
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

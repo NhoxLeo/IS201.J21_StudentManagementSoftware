@@ -92,7 +92,7 @@ namespace DAL
         {
             this.ConnectToDatabase();
 
-            string Query = "insert into TEST values('" + test.TestId + "','" + test.ClassId + "','" + test.TestDate + "','" + test.TestHour + "');";
+            string Query = "insert into TEST values('" + test.TestId + "','" + test.ClassId + "','" + test.TestDate.ToString("yyyy'-'MM'-'dd") + "','" + test.TestHour + "');";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
@@ -108,7 +108,7 @@ namespace DAL
         {
             this.ConnectToDatabase();
 
-            string Query = "insert into TEST(TEST_ID,TEST_DATE) values('" + testId + "','" + classId + "','" + testDate + "','" + testHour + "');";
+            string Query = "insert into TEST(TEST_ID,TEST_DATE) values('" + testId + "','" + classId + "','" + testDate.ToString("yyyy'-'MM'-'dd") + "','" + testHour + "');";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
@@ -123,7 +123,7 @@ namespace DAL
         {
             this.ConnectToDatabase();
 
-            string Query = "update TEST set TEST_ID='" + test.TestId + "',CLASS_ID = '" + test.TestDate + "',TEST_DATE = '" + test.TestDate + "',TEST_HOUR = '" + test.TestDate + "'";
+            string Query = "update TEST set TEST_ID='" + test.TestId + "',CLASS_ID = '" + test.ClassId + "',TEST_DATE = '" + test.TestDate.ToString("yyyy'-'MM'-'dd") + "',TEST_HOUR = '" + test.TestHour + "'";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
@@ -132,6 +132,14 @@ namespace DAL
 
 
             this.Close();
+            return true;
+        }
+        public bool DeleteSignup(string testId)
+        {
+            this.ConnectToDatabase();
+            string Query = "delete from TEST where TEST_ID=" + "'" + testId + "'";
+            MySqlCommand command = new MySqlCommand(Query, mySQLConnection);
+            command.ExecuteNonQuery();
             return true;
         }
     }

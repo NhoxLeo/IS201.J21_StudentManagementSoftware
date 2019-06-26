@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DTO;
 using DAL;
+using DTO;
 
 namespace UI
 {
-    public partial class AddMarkForm : Form
+    public partial class EditMarkForm : Form
     {
-        public AddMarkForm()
+        public EditMarkForm()
+        {
+            InitializeComponent();
+            LoadComboBoxStudentAndClass();
+        }
+        public EditMarkForm(string _studnentId,string _testId)
         {
             InitializeComponent();
             LoadComboBoxStudentAndClass();
@@ -41,16 +46,7 @@ namespace UI
         {
             MarkDAL markDAL = new MarkDAL();
             markDAL.ConnectToDatabase();
-            markDAL.InsertMark(((StudentDTO)comboBoxListDtudentId.SelectedItem).StudentId,((TestDTO)comboBoxListTestId.SelectedItem).ClassId,float.Parse(textBoxMark.Text));
-        }
-
-        private void comboBoxListDtudentId_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void comboBoxListClassId_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            markDAL.InsertMark(((StudentDTO)comboBoxListDtudentId.SelectedItem).StudentId, ((TestDTO)comboBoxListTestId.SelectedItem).ClassId, float.Parse(textBoxMark.Text));
         }
     }
 }

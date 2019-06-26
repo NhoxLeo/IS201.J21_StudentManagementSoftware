@@ -64,5 +64,11 @@ namespace UI
             f.Show();
         }
 
+        private void buttonTest_Click(object sender, EventArgs e)
+        {
+            TestForm f = new TestForm();
+            f.Show();
+            this.Hide();
+        }
     }
 }

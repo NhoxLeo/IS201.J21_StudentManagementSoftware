@@ -34,5 +34,10 @@ namespace UI
             potentialStudentDAL.ConnectToDatabase();
             potentialStudentDAL.DeleteStudent(currentObject.StudentId);
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

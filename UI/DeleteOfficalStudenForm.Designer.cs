@@ -44,18 +44,20 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.IndianRed;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-25, -4);
+            this.panel1.Location = new System.Drawing.Point(-38, -6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1101, 68);
+            this.panel1.Size = new System.Drawing.Size(1652, 105);
             this.panel1.TabIndex = 11;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(363, 12);
+            this.label1.Location = new System.Drawing.Point(544, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(436, 33);
+            this.label1.Size = new System.Drawing.Size(649, 52);
             this.label1.TabIndex = 0;
             this.label1.Text = "XOÁ HỌC VIÊN CHÍNH THỨC";
             // 
@@ -63,9 +65,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1, 80);
+            this.label2.Location = new System.Drawing.Point(2, 123);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(275, 24);
+            this.label2.Size = new System.Drawing.Size(420, 33);
             this.label2.TabIndex = 14;
             this.label2.Text = "Danh sách học viên chính thức:";
             // 
@@ -73,18 +76,20 @@
             // 
             this.dgvListStudent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListStudent.Location = new System.Drawing.Point(5, 107);
+            this.dgvListStudent.Location = new System.Drawing.Point(8, 165);
+            this.dgvListStudent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvListStudent.Name = "dgvListStudent";
-            this.dgvListStudent.Size = new System.Drawing.Size(1044, 284);
+            this.dgvListStudent.Size = new System.Drawing.Size(1566, 437);
             this.dgvListStudent.TabIndex = 13;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.btnClose);
             this.panel3.Controls.Add(this.btnConfirm);
-            this.panel3.Location = new System.Drawing.Point(15, 397);
+            this.panel3.Location = new System.Drawing.Point(22, 611);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1034, 86);
+            this.panel3.Size = new System.Drawing.Size(1551, 132);
             this.panel3.TabIndex = 12;
             // 
             // btnClose
@@ -94,13 +99,15 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.Black;
-            this.btnClose.Location = new System.Drawing.Point(878, 0);
+            this.btnClose.Location = new System.Drawing.Point(1317, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(153, 80);
+            this.btnClose.Size = new System.Drawing.Size(230, 123);
             this.btnClose.TabIndex = 5;
             this.btnClose.Text = "Trở về";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnConfirm
             // 
@@ -109,9 +116,10 @@
             this.btnConfirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.Black;
-            this.btnConfirm.Location = new System.Drawing.Point(-10, 0);
+            this.btnConfirm.Location = new System.Drawing.Point(-15, 0);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(153, 80);
+            this.btnConfirm.Size = new System.Drawing.Size(230, 123);
             this.btnConfirm.TabIndex = 1;
             this.btnConfirm.Text = "Xác nhận";
             this.btnConfirm.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -120,13 +128,14 @@
             // 
             // DeleteOfficalStudenForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1051, 479);
+            this.ClientSize = new System.Drawing.Size(1576, 737);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvListStudent);
             this.Controls.Add(this.panel3);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "DeleteOfficalStudenForm";
             this.Text = "DeleteOfficalStudenForm";
             this.panel1.ResumeLayout(false);
