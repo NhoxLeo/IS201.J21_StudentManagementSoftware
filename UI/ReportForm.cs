@@ -27,6 +27,15 @@ namespace UI
             comboBoxListClassIDs.DisplayMember = "ClassName";
             comboBoxListClassIDs.ValueMember = "ClassId";
         }
+        void LoadComboBoxStudent()
+        {
+            StudentDAL studentDAL = new StudentDAL();
+            studentDAL.ConnectToDatabase();
+            List<StudentDTO> classDTOs = studentDAL.GetAllStudent();
+            comboBoxListStudent.DataSource = classDTOs;
+            comboBoxListStudent.DisplayMember = "StudentName";
+            comboBoxListStudent.ValueMember = "StudentId";
+        }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
@@ -49,6 +58,7 @@ namespace UI
             switch (s)
             {
                 case "Báo cáo Thông tin Học viên":
+                    LoadComboBoxStudent();
                     BaocaoTTHV.Show();
                     BaocaoKTLH.Hide();
                     BaocaoKQHT.Hide();
@@ -101,7 +111,7 @@ namespace UI
                     break;
                 case "Báo cáo Thông tin Học viên":
                     //
-                    f = new ReportDetailForm();
+                    f = new ReportDetailForm((StudentDTO)comboBoxListClassIDs.SelectedItem);
                     f.Text = "Báo cáo Thông tin Học viên";
                     f.ShowDialog();
                     break;

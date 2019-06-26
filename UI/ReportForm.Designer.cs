@@ -32,12 +32,10 @@
             this.BaocaoTTHV = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.BaocaoKTLH = new System.Windows.Forms.GroupBox();
+            this.comboBoxListClassIDs = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.BaocaoKQHT = new System.Windows.Forms.GroupBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -47,7 +45,7 @@
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.button2 = new System.Windows.Forms.Button();
-            this.comboBoxListClassIDs = new System.Windows.Forms.ComboBox();
+            this.comboBoxListStudent = new System.Windows.Forms.ComboBox();
             this.BaocaoTTHV.SuspendLayout();
             this.BaocaoKTLH.SuspendLayout();
             this.BaocaoKQHT.SuspendLayout();
@@ -71,12 +69,11 @@
             // 
             // BaocaoTTHV
             // 
+            this.BaocaoTTHV.Controls.Add(this.comboBoxListStudent);
             this.BaocaoTTHV.Controls.Add(this.radioButton2);
             this.BaocaoTTHV.Controls.Add(this.radioButton1);
-            this.BaocaoTTHV.Controls.Add(this.textBox2);
+            this.BaocaoTTHV.Controls.Add(this.BaocaoKTLH);
             this.BaocaoTTHV.Controls.Add(this.label2);
-            this.BaocaoTTHV.Controls.Add(this.label1);
-            this.BaocaoTTHV.Controls.Add(this.textBox1);
             this.BaocaoTTHV.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BaocaoTTHV.Location = new System.Drawing.Point(7, 110);
             this.BaocaoTTHV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -113,39 +110,14 @@
             this.radioButton1.Text = "Bác cáo ghi danh";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(550, 209);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(562, 44);
-            this.textBox2.TabIndex = 3;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(96, 212);
+            this.label2.Location = new System.Drawing.Point(90, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(221, 38);
+            this.label2.Size = new System.Drawing.Size(167, 38);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Mã Học viên *";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(96, 144);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(316, 38);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Họ và tên Học viên *";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(550, 140);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(562, 44);
-            this.textBox1.TabIndex = 0;
+            this.label2.Text = "Học viên *";
             // 
             // label3
             // 
@@ -163,7 +135,7 @@
             this.BaocaoKTLH.Controls.Add(this.label4);
             this.BaocaoKTLH.Controls.Add(this.BaocaoKQHT);
             this.BaocaoKTLH.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BaocaoKTLH.Location = new System.Drawing.Point(7, 110);
+            this.BaocaoKTLH.Location = new System.Drawing.Point(550, 275);
             this.BaocaoKTLH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BaocaoKTLH.Name = "BaocaoKTLH";
             this.BaocaoKTLH.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -172,6 +144,14 @@
             this.BaocaoKTLH.TabStop = false;
             this.BaocaoKTLH.Text = "Báo cáo Kế toán Lớp học (Tổng tiền lớp)";
             this.BaocaoKTLH.Visible = false;
+            // 
+            // comboBoxListClassIDs
+            // 
+            this.comboBoxListClassIDs.FormattingEnabled = true;
+            this.comboBoxListClassIDs.Location = new System.Drawing.Point(427, 148);
+            this.comboBoxListClassIDs.Name = "comboBoxListClassIDs";
+            this.comboBoxListClassIDs.Size = new System.Drawing.Size(394, 45);
+            this.comboBoxListClassIDs.TabIndex = 6;
             // 
             // label4
             // 
@@ -192,7 +172,7 @@
             this.BaocaoKQHT.Controls.Add(this.radioButton4);
             this.BaocaoKQHT.Controls.Add(this.radioButton3);
             this.BaocaoKQHT.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BaocaoKQHT.Location = new System.Drawing.Point(6, 0);
+            this.BaocaoKQHT.Location = new System.Drawing.Point(588, 101);
             this.BaocaoKQHT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BaocaoKQHT.Name = "BaocaoKQHT";
             this.BaocaoKQHT.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -279,13 +259,13 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // comboBoxListClassIDs
+            // comboBoxListStudent
             // 
-            this.comboBoxListClassIDs.FormattingEnabled = true;
-            this.comboBoxListClassIDs.Location = new System.Drawing.Point(427, 148);
-            this.comboBoxListClassIDs.Name = "comboBoxListClassIDs";
-            this.comboBoxListClassIDs.Size = new System.Drawing.Size(394, 45);
-            this.comboBoxListClassIDs.TabIndex = 6;
+            this.comboBoxListStudent.FormattingEnabled = true;
+            this.comboBoxListStudent.Location = new System.Drawing.Point(454, 98);
+            this.comboBoxListStudent.Name = "comboBoxListStudent";
+            this.comboBoxListStudent.Size = new System.Drawing.Size(519, 45);
+            this.comboBoxListStudent.TabIndex = 6;
             // 
             // ReportForm
             // 
@@ -295,7 +275,6 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.BaocaoKTLH);
             this.Controls.Add(this.BaocaoTTHV);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ReportForm";
@@ -318,10 +297,7 @@
         private System.Windows.Forms.GroupBox BaocaoTTHV;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox BaocaoKTLH;
         private System.Windows.Forms.Label label4;
@@ -334,5 +310,6 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboBoxListClassIDs;
+        private System.Windows.Forms.ComboBox comboBoxListStudent;
     }
 }

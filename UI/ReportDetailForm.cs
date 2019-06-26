@@ -30,6 +30,13 @@ namespace UI
             int totalFee = programDAL.GetProgram(_class.ProgramId).Fee * signupDTOs.Count;
         }
 
+        public ReportDetailForm(StudentDTO _class)
+        {
+            InitializeComponent();
+            
+        }
+
+
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
