@@ -72,7 +72,6 @@
             this.BaocaoTTHV.Controls.Add(this.comboBoxListStudent);
             this.BaocaoTTHV.Controls.Add(this.radioButton2);
             this.BaocaoTTHV.Controls.Add(this.radioButton1);
-            this.BaocaoTTHV.Controls.Add(this.BaocaoKTLH);
             this.BaocaoTTHV.Controls.Add(this.label2);
             this.BaocaoTTHV.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BaocaoTTHV.Location = new System.Drawing.Point(7, 110);
@@ -135,7 +134,7 @@
             this.BaocaoKTLH.Controls.Add(this.label4);
             this.BaocaoKTLH.Controls.Add(this.BaocaoKQHT);
             this.BaocaoKTLH.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BaocaoKTLH.Location = new System.Drawing.Point(550, 275);
+            this.BaocaoKTLH.Location = new System.Drawing.Point(7, 110);
             this.BaocaoKTLH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BaocaoKTLH.Name = "BaocaoKTLH";
             this.BaocaoKTLH.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -172,7 +171,7 @@
             this.BaocaoKQHT.Controls.Add(this.radioButton4);
             this.BaocaoKQHT.Controls.Add(this.radioButton3);
             this.BaocaoKQHT.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BaocaoKQHT.Location = new System.Drawing.Point(588, 101);
+            this.BaocaoKQHT.Location = new System.Drawing.Point(1, 0);
             this.BaocaoKQHT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BaocaoKQHT.Name = "BaocaoKQHT";
             this.BaocaoKQHT.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -275,6 +274,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.BaocaoKTLH);
             this.Controls.Add(this.BaocaoTTHV);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ReportForm";
