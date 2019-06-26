@@ -63,7 +63,6 @@
             this.BaocaoTTHV.Controls.Add(this.comboBoxListStudent);
             this.BaocaoTTHV.Controls.Add(this.radioButton2);
             this.BaocaoTTHV.Controls.Add(this.radioButton1);
-            this.BaocaoTTHV.Controls.Add(this.BaocaoKTLH);
             this.BaocaoTTHV.Controls.Add(this.label2);
             this.BaocaoTTHV.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BaocaoTTHV.Location = new System.Drawing.Point(6, 88);
@@ -121,7 +120,7 @@
             this.BaocaoKTLH.Controls.Add(this.comboBoxListClassIDs);
             this.BaocaoKTLH.Controls.Add(this.label4);
             this.BaocaoKTLH.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BaocaoKTLH.Location = new System.Drawing.Point(550, 275);
+            this.BaocaoKTLH.Location = new System.Drawing.Point(7, 110);
             this.BaocaoKTLH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BaocaoKTLH.Name = "BaocaoKTLH";
             this.BaocaoKTLH.Size = new System.Drawing.Size(1079, 371);
@@ -236,6 +235,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.BaocaoKQHT);
             this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.BaocaoKTLH);
             this.Controls.Add(this.BaocaoTTHV);
             this.Name = "ReportForm";
             this.Text = "Báo Cáo";
