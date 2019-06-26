@@ -52,8 +52,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Báo cáo Thông tin Học viên",
             "Báo cáo Kế toán Lớp học"});
-            this.comboBox1.Location = new System.Drawing.Point(442, 39);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBox1.Location = new System.Drawing.Point(393, 31);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(479, 33);
             this.comboBox1.TabIndex = 0;
