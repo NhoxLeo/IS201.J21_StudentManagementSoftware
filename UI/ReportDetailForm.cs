@@ -30,10 +30,19 @@ namespace UI
             int totalFee = programDAL.GetProgram(_class.ProgramId).Fee * signupDTOs.Count;
         }
 
-        public ReportDetailForm(StudentDTO _class)
+        public ReportDetailForm(StudentDTO _student)
         {
             InitializeComponent();
-            
+
+            List<StudentDTO> a = new List<StudentDTO>();
+            a.Add(_student);
+            dgvReport.DataSource = a;
+            SignupDAL signupDAL = new SignupDAL();
+            signupDAL.ConnectToDatabase();
+            List<SignupDTO> signupDTOs = signupDAL.GetAllSignupClass(_student.StudentId);
+            //DataGridViewTextBoxColumn addConfirm = new DataGridViewTextBoxColumn() { HeaderText = "Tổng số tiền đã đóng"};
+            //dgvReport.Rows[0].Cells("Tổng số tiền đã đóng").Value = qty * rate;
+            //dgvReport.Columns.Add(addConfirm);
         }
 
 

@@ -73,7 +73,7 @@ namespace DAL
             this.ConnectToDatabase();
 
             MySqlCommand command = this.mySQLConnection.CreateCommand();
-            command.CommandText = "SELECT * FROM STUDENT WHERE STUDENT_ID = " + id;
+            command.CommandText = "SELECT * FROM STUDENT WHERE STUDENT_ID = '" + id+"'";
 
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())

@@ -111,7 +111,7 @@ namespace UI
                     break;
                 case "Báo cáo Thông tin Học viên":
                     //
-                    f = new ReportDetailForm((StudentDTO)comboBoxListClassIDs.SelectedItem);
+                    f = new ReportDetailForm((StudentDTO)comboBoxListStudent.SelectedItem);
                     f.Text = "Báo cáo Thông tin Học viên";
                     f.ShowDialog();
                     break;

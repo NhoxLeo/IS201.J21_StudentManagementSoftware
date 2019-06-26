@@ -29,8 +29,8 @@ namespace UI
             classDAL.ConnectToDatabase();
             List<ClassDTO> classDTOs = classDAL.GetAllClass();
             dgvListClass.DataSource = classDTOs;
-            DataGridViewButtonColumn addConfirm = new DataGridViewButtonColumn() { HeaderText = "Thông tin lớp",Text = "Add" };
-            dgvListClass.Columns.Add(addConfirm);
+            //DataGridViewButtonColumn addConfirm = new DataGridViewButtonColumn() { HeaderText = "Thông tin lớp",Text = "Add" };
+            //dgvListClass.Columns.Add(addConfirm);
            
         }
         void MyButtonHandler(object sender, EventArgs e)
