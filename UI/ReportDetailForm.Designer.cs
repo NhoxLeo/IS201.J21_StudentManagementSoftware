@@ -28,21 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dgvReport = new System.Windows.Forms.DataGridView();
+            this.labelType = new System.Windows.Forms.Label();
+            this.labelInfo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(340, 591);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(204, 57);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Xuất báo cáo";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -61,17 +52,34 @@
             this.dgvReport.Location = new System.Drawing.Point(12, 12);
             this.dgvReport.Name = "dgvReport";
             this.dgvReport.RowTemplate.Height = 28;
-            this.dgvReport.Size = new System.Drawing.Size(746, 573);
+            this.dgvReport.Size = new System.Drawing.Size(746, 422);
             this.dgvReport.TabIndex = 4;
+            // 
+            // labelType
+            // 
+            this.labelType.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelType.Location = new System.Drawing.Point(13, 467);
+            this.labelType.Name = "labelType";
+            this.labelType.Size = new System.Drawing.Size(480, 66);
+            this.labelType.TabIndex = 5;
+            // 
+            // labelInfo
+            // 
+            this.labelInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInfo.Location = new System.Drawing.Point(528, 467);
+            this.labelInfo.Name = "labelInfo";
+            this.labelInfo.Size = new System.Drawing.Size(196, 66);
+            this.labelInfo.TabIndex = 6;
             // 
             // ReportDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 663);
+            this.Controls.Add(this.labelInfo);
+            this.Controls.Add(this.labelType);
             this.Controls.Add(this.dgvReport);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Name = "ReportDetailForm";
             this.Text = "ReportDetailForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).EndInit();
@@ -80,8 +88,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dgvReport;
+        private System.Windows.Forms.Label labelType;
+        private System.Windows.Forms.Label labelInfo;
     }
 }

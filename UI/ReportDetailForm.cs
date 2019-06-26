@@ -14,6 +14,7 @@ namespace UI
 {
     public partial class ReportDetailForm : Form
     {
+        string TotalFee;
         public ReportDetailForm()
         {
             InitializeComponent();
@@ -27,7 +28,9 @@ namespace UI
             dgvReport.DataSource = signupDTOs;
             ProgramDAL programDAL = new ProgramDAL();
             programDAL.ConnectToDatabase();
-            int totalFee = programDAL.GetProgram(_class.ProgramId).Fee * signupDTOs.Count;
+            TotalFee = (programDAL.GetProgram(_class.ProgramId).Fee * signupDTOs.Count).ToString();
+            labelType.Text = "Tổng số tiền thu được (USD): ";
+            labelInfo.Text = TotalFee;
         }
 
         public ReportDetailForm(StudentDTO _student)
@@ -40,9 +43,7 @@ namespace UI
             SignupDAL signupDAL = new SignupDAL();
             signupDAL.ConnectToDatabase();
             List<SignupDTO> signupDTOs = signupDAL.GetAllSignupClass(_student.StudentId);
-            //DataGridViewTextBoxColumn addConfirm = new DataGridViewTextBoxColumn() { HeaderText = "Tổng số tiền đã đóng"};
-            //dgvReport.Rows[0].Cells("Tổng số tiền đã đóng").Value = qty * rate;
-            //dgvReport.Columns.Add(addConfirm);
+            
         }
 
 
