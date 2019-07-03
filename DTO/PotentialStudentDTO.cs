@@ -35,7 +35,6 @@ namespace DTO
         public int DateCount { get => dateCount; set => dateCount = value; }
         public string Status { get => status; set => status = value; }
         public string Address { get => address; set => status = value; }
-
         public string Gender { get => gender; set => gender = value; }
     }
 }

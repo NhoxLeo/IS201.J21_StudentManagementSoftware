@@ -66,6 +66,11 @@ namespace UI
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            //if(loginForm!=null)
+            //{
+            //    loginForm.ResetUser();
+            //    loginForm.Show();
+            //}
             loginForm.ResetUser();
             loginForm.Show();
         }

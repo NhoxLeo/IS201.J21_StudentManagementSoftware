@@ -10,17 +10,15 @@ namespace DTO
     {
         string classId;
         string className;
-        string teacherId;
         string startHour;
         DateTime startDate;
         DateTime endDate;
         string programId;
 
-        public ClassDTO(string classId, string className, string teacherId, string startHour, DateTime startDate, DateTime endDate, string programId)
+        public ClassDTO(string classId, string className, string startHour, DateTime startDate, DateTime endDate, string programId)
         {
             this.classId = classId;
             this.className = className;
-            this.teacherId = teacherId;
             this.startHour = startHour;
             this.startDate = startDate;
             this.endDate = endDate;
@@ -29,7 +27,6 @@ namespace DTO
 
         public string ClassId { get => classId; set => classId = value; }
         public string ClassName { get => className; set => className = value; }
-        public string TeacherId { get => teacherId; set => teacherId = value; }
         public string StartHour { get => startHour; set => startHour = value; }
         public DateTime StartDate { get => startDate; set => startDate = value; }
         public DateTime EndDate { get => endDate; set => endDate = value; }

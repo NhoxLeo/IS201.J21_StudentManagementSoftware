@@ -41,9 +41,9 @@ namespace UI
             try
             {
                 
-                if (textboxClassID.Text!="" &&textboxClassName.Text  != "" && textboxTeacher.Text != ""&& textboxStartingHour.Text != "")
+                if (textboxClassID.Text!="" &&textboxClassName.Text  != "" && textboxStartingHour.Text != "")
                 {
-                    if (classDAL.InsertClass(textboxClassID.Text, textboxClassName.Text, textboxTeacher.Text, textboxStartingHour.Text, startDate.Value, endDate.Value, ((ProgramDTO)comboBoxProgram.SelectedItem).ProgramId.ToString()))
+                    if (classDAL.InsertClass(textboxClassID.Text, textboxClassName.Text, textboxStartingHour.Text, startDate.Value, endDate.Value, ((ProgramDTO)comboBoxProgram.SelectedItem).ProgramId.ToString()))
                     {
                         MessageBox.Show("Thêm lớp thành công!!!");
                         this.Close();

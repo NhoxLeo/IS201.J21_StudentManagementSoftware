@@ -142,132 +142,132 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddClassForm.cs">
+    <Compile Include="Add\AddClassForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddClassForm.Designer.cs">
+    <Compile Include="Add\AddClassForm.Designer.cs">
       <DependentUpon>AddClassForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddMarkForm.cs">
+    <Compile Include="Add\AddMarkForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddMarkForm.Designer.cs">
+    <Compile Include="Add\AddMarkForm.Designer.cs">
       <DependentUpon>AddMarkForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddOfficalStudentForm.cs">
+    <Compile Include="Add\AddOfficalStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddOfficalStudentForm.Designer.cs">
+    <Compile Include="Add\AddOfficalStudentForm.Designer.cs">
       <DependentUpon>AddOfficalStudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddPotentialStudentForm.cs">
+    <Compile Include="Add\AddPotentialStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddPotentialStudentForm.Designer.cs">
+    <Compile Include="Add\AddPotentialStudentForm.Designer.cs">
       <DependentUpon>AddPotentialStudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddProgramForm.cs">
+    <Compile Include="Add\AddProgramForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddProgramForm.Designer.cs">
+    <Compile Include="Add\AddProgramForm.Designer.cs">
       <DependentUpon>AddProgramForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddStudentToClassForm.cs">
+    <Compile Include="Add\AddStudentToClassForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddStudentToClassForm.Designer.cs">
+    <Compile Include="Add\AddStudentToClassForm.Designer.cs">
       <DependentUpon>AddStudentToClassForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClassForm.cs">
+    <Compile Include="IndividualForms\ClassForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClassForm.Designer.cs">
+    <Compile Include="IndividualForms\ClassForm.Designer.cs">
       <DependentUpon>ClassForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DeleteClassForm.cs">
+    <Compile Include="Delete\DeleteClassForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeleteClassForm.Designer.cs">
+    <Compile Include="Delete\DeleteClassForm.Designer.cs">
       <DependentUpon>DeleteClassForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DeleteOfficalStudenForm.cs">
+    <Compile Include="Delete\DeleteOfficalStudenForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeleteOfficalStudenForm.Designer.cs">
+    <Compile Include="Delete\DeleteOfficalStudenForm.Designer.cs">
       <DependentUpon>DeleteOfficalStudenForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DeletePotentialStudentForm.cs">
+    <Compile Include="Delete\DeletePotentialStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeletePotentialStudentForm.Designer.cs">
+    <Compile Include="Delete\DeletePotentialStudentForm.Designer.cs">
       <DependentUpon>DeletePotentialStudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditClassForm.cs">
+    <Compile Include="Edit\EditClassForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditClassForm.Designer.cs">
+    <Compile Include="Edit\EditClassForm.Designer.cs">
       <DependentUpon>EditClassForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditInforPotentialForm.cs">
+    <Compile Include="Edit\EditInforPotentialForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditInforPotentialForm.Designer.cs">
+    <Compile Include="Edit\EditInforPotentialForm.Designer.cs">
       <DependentUpon>EditInforPotentialForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditOfficalStudentForm.cs">
+    <Compile Include="Edit\EditOfficalStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditOfficalStudentForm.Designer.cs">
+    <Compile Include="Edit\EditOfficalStudentForm.Designer.cs">
       <DependentUpon>EditOfficalStudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditProgramForm.cs">
+    <Compile Include="Edit\EditProgramForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditProgramForm.Designer.cs">
+    <Compile Include="Edit\EditProgramForm.Designer.cs">
       <DependentUpon>EditProgramForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="IndividualForms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="IndividualForms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MarkForm.cs">
+    <Compile Include="IndividualForms\MarkForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MarkForm.Designer.cs">
+    <Compile Include="IndividualForms\MarkForm.Designer.cs">
       <DependentUpon>MarkForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuForm.cs">
+    <Compile Include="IndividualForms\MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuForm.Designer.cs">
+    <Compile Include="IndividualForms\MenuForm.Designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="OfficalStudentForm.cs">
+    <Compile Include="IndividualForms\OfficalStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OfficalStudentForm.Designer.cs">
+    <Compile Include="IndividualForms\OfficalStudentForm.Designer.cs">
       <DependentUpon>OfficalStudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PotentialStudentForm.cs">
+    <Compile Include="IndividualForms\PotentialStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PotentialStudentForm.Designer.cs">
+    <Compile Include="IndividualForms\PotentialStudentForm.Designer.cs">
       <DependentUpon>PotentialStudentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="ProgramForm.cs">
+    <Compile Include="IndividualForms\ProgramForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProgramForm.Designer.cs">
+    <Compile Include="IndividualForms\ProgramForm.Designer.cs">
       <DependentUpon>ProgramForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DeleteStudentClassForm.cs">
+    <Compile Include="Delete\DeleteStudentClassForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeleteStudentClassForm.Designer.cs">
+    <Compile Include="Delete\DeleteStudentClassForm.Designer.cs">
       <DependentUpon>DeleteStudentClassForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ReportDetailForm.cs">
@@ -295,67 +295,67 @@
       <DependentUpon>TestReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="AddClassForm.resx">
+    <EmbeddedResource Include="Add\AddClassForm.resx">
       <DependentUpon>AddClassForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddMarkForm.resx">
+    <EmbeddedResource Include="Add\AddMarkForm.resx">
       <DependentUpon>AddMarkForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddOfficalStudentForm.resx">
+    <EmbeddedResource Include="Add\AddOfficalStudentForm.resx">
       <DependentUpon>AddOfficalStudentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddPotentialStudentForm.resx">
+    <EmbeddedResource Include="Add\AddPotentialStudentForm.resx">
       <DependentUpon>AddPotentialStudentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddProgramForm.resx">
+    <EmbeddedResource Include="Add\AddProgramForm.resx">
       <DependentUpon>AddProgramForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddStudentToClassForm.resx">
+    <EmbeddedResource Include="Add\AddStudentToClassForm.resx">
       <DependentUpon>AddStudentToClassForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClassForm.resx">
+    <EmbeddedResource Include="IndividualForms\ClassForm.resx">
       <DependentUpon>ClassForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeleteClassForm.resx">
+    <EmbeddedResource Include="Delete\DeleteClassForm.resx">
       <DependentUpon>DeleteClassForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeleteOfficalStudenForm.resx">
+    <EmbeddedResource Include="Delete\DeleteOfficalStudenForm.resx">
       <DependentUpon>DeleteOfficalStudenForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeletePotentialStudentForm.resx">
+    <EmbeddedResource Include="Delete\DeletePotentialStudentForm.resx">
       <DependentUpon>DeletePotentialStudentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeleteStudentClassForm.resx">
+    <EmbeddedResource Include="Delete\DeleteStudentClassForm.resx">
       <DependentUpon>DeleteStudentClassForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditClassForm.resx">
+    <EmbeddedResource Include="Edit\EditClassForm.resx">
       <DependentUpon>EditClassForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditInforPotentialForm.resx">
+    <EmbeddedResource Include="Edit\EditInforPotentialForm.resx">
       <DependentUpon>EditInforPotentialForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditOfficalStudentForm.resx">
+    <EmbeddedResource Include="Edit\EditOfficalStudentForm.resx">
       <DependentUpon>EditOfficalStudentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditProgramForm.resx">
+    <EmbeddedResource Include="Edit\EditProgramForm.resx">
       <DependentUpon>EditProgramForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="IndividualForms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MarkForm.resx">
+    <EmbeddedResource Include="IndividualForms\MarkForm.resx">
       <DependentUpon>MarkForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuForm.resx">
+    <EmbeddedResource Include="IndividualForms\MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OfficalStudentForm.resx">
+    <EmbeddedResource Include="IndividualForms\OfficalStudentForm.resx">
       <DependentUpon>OfficalStudentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PotentialStudentForm.resx">
+    <EmbeddedResource Include="IndividualForms\PotentialStudentForm.resx">
       <DependentUpon>PotentialStudentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProgramForm.resx">
+    <EmbeddedResource Include="IndividualForms\ProgramForm.resx">
       <DependentUpon>ProgramForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
