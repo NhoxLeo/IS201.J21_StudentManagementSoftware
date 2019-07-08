@@ -31,7 +31,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAddMark = new System.Windows.Forms.Button();
             this.dgvListStudent = new System.Windows.Forms.DataGridView();
+            this.btnEditMark = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnPrint = new System.Windows.Forms.Button();
@@ -67,12 +69,24 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnAddMark);
             this.panel2.Controls.Add(this.dgvListStudent);
+            this.panel2.Controls.Add(this.btnEditMark);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(0, 65);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(935, 302);
             this.panel2.TabIndex = 4;
+            // 
+            // btnAddMark
+            // 
+            this.btnAddMark.Location = new System.Drawing.Point(573, 8);
+            this.btnAddMark.Name = "btnAddMark";
+            this.btnAddMark.Size = new System.Drawing.Size(158, 23);
+            this.btnAddMark.TabIndex = 8;
+            this.btnAddMark.Text = "Thêm điểm Học viên";
+            this.btnAddMark.UseVisualStyleBackColor = true;
+            this.btnAddMark.Click += new System.EventHandler(this.btnAddMark_Click);
             // 
             // dgvListStudent
             // 
@@ -82,6 +96,16 @@
             this.dgvListStudent.Name = "dgvListStudent";
             this.dgvListStudent.Size = new System.Drawing.Size(910, 262);
             this.dgvListStudent.TabIndex = 4;
+            // 
+            // btnEditMark
+            // 
+            this.btnEditMark.Location = new System.Drawing.Point(751, 8);
+            this.btnEditMark.Name = "btnEditMark";
+            this.btnEditMark.Size = new System.Drawing.Size(158, 23);
+            this.btnEditMark.TabIndex = 7;
+            this.btnEditMark.Text = "Sửa điểm học viên";
+            this.btnEditMark.UseVisualStyleBackColor = true;
+            this.btnEditMark.Click += new System.EventHandler(this.btnEditMark_Click);
             // 
             // label2
             // 
@@ -223,5 +247,7 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Button btnAddMark;
+        private System.Windows.Forms.Button btnEditMark;
     }
 }

@@ -52,9 +52,9 @@
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.OliveDrab;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(2, -4);
+            this.panel1.Location = new System.Drawing.Point(2, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(934, 58);
+            this.panel1.Size = new System.Drawing.Size(789, 53);
             this.panel1.TabIndex = 6;
             // 
             // label1
@@ -169,7 +169,7 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(133, 65);
             this.btnDelete.TabIndex = 2;
-            this.btnDelete.Text = "Xoá học viên";
+            this.btnDelete.Text = "Xoá điểm học viên";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
@@ -184,7 +184,7 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(133, 65);
             this.btnEdit.TabIndex = 1;
-            this.btnEdit.Text = "Sửa thông tin học viên";
+            this.btnEdit.Text = "Sửa thông tin điểm học viên";
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEdit.UseVisualStyleBackColor = false;
             // 
@@ -199,7 +199,7 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(133, 65);
             this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Thêm học viên";
+            this.btnAdd.Text = "Thêm điểm học viên";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAdd.UseVisualStyleBackColor = false;
             // 

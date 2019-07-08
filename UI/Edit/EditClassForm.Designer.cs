@@ -34,19 +34,14 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.textboxStartingHour = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.textboxFee = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.endDate = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.startDate = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.textboxTeacher = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.comboBoxProgram = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.textboxClassName = new System.Windows.Forms.TextBox();
@@ -57,14 +52,11 @@
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textboxProgram = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -93,10 +85,8 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.panel8);
-            this.panel2.Controls.Add(this.panel12);
             this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.panel9);
-            this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel4);
@@ -111,7 +101,7 @@
             this.panel8.Controls.Add(this.label6);
             this.panel8.Location = new System.Drawing.Point(3, 131);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(461, 53);
+            this.panel8.Size = new System.Drawing.Size(464, 53);
             this.panel8.TabIndex = 5;
             // 
             // textboxStartingHour
@@ -133,39 +123,11 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Thời gian học:";
             // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.textboxFee);
-            this.panel12.Controls.Add(this.label10);
-            this.panel12.Location = new System.Drawing.Point(6, 190);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(461, 53);
-            this.panel12.TabIndex = 7;
-            // 
-            // textboxFee
-            // 
-            this.textboxFee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textboxFee.Location = new System.Drawing.Point(154, 13);
-            this.textboxFee.Multiline = true;
-            this.textboxFee.Name = "textboxFee";
-            this.textboxFee.Size = new System.Drawing.Size(279, 25);
-            this.textboxFee.TabIndex = 1;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(3, 15);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 25);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Học phí:";
-            // 
             // panel11
             // 
             this.panel11.Controls.Add(this.endDate);
             this.panel11.Controls.Add(this.label9);
-            this.panel11.Location = new System.Drawing.Point(470, 190);
+            this.panel11.Location = new System.Drawing.Point(470, 131);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(410, 53);
             this.panel11.TabIndex = 8;
@@ -193,7 +155,7 @@
             // 
             this.panel9.Controls.Add(this.startDate);
             this.panel9.Controls.Add(this.label7);
-            this.panel9.Location = new System.Drawing.Point(470, 131);
+            this.panel9.Location = new System.Drawing.Point(470, 72);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(410, 53);
             this.panel9.TabIndex = 6;
@@ -217,42 +179,28 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Ngày bắt đầu:";
             // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.textboxTeacher);
-            this.panel7.Controls.Add(this.label5);
-            this.panel7.Location = new System.Drawing.Point(470, 72);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(410, 53);
-            this.panel7.TabIndex = 3;
-            // 
-            // textboxTeacher
-            // 
-            this.textboxTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textboxTeacher.Location = new System.Drawing.Point(158, 15);
-            this.textboxTeacher.Multiline = true;
-            this.textboxTeacher.Name = "textboxTeacher";
-            this.textboxTeacher.Size = new System.Drawing.Size(243, 25);
-            this.textboxTeacher.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 15);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 25);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Giảng viên:";
-            // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.textboxProgram);
+            this.panel6.Controls.Add(this.comboBoxProgram);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Location = new System.Drawing.Point(3, 72);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(464, 53);
             this.panel6.TabIndex = 2;
+            // 
+            // comboBoxProgram
+            // 
+            this.comboBoxProgram.FormattingEnabled = true;
+            this.comboBoxProgram.Items.AddRange(new object[] {
+            "LR",
+            "PR",
+            "WR",
+            "SP",
+            "RD"});
+            this.comboBoxProgram.Location = new System.Drawing.Point(157, 15);
+            this.comboBoxProgram.Name = "comboBoxProgram";
+            this.comboBoxProgram.Size = new System.Drawing.Size(279, 21);
+            this.comboBoxProgram.TabIndex = 1;
             // 
             // label4
             // 
@@ -362,20 +310,6 @@
             this.panel3.Size = new System.Drawing.Size(880, 85);
             this.panel3.TabIndex = 11;
             // 
-            // textboxProgram
-            // 
-            this.textboxProgram.FormattingEnabled = true;
-            this.textboxProgram.Items.AddRange(new object[] {
-            "LR",
-            "PR",
-            "WR",
-            "SP",
-            "RD"});
-            this.textboxProgram.Location = new System.Drawing.Point(157, 15);
-            this.textboxProgram.Name = "textboxProgram";
-            this.textboxProgram.Size = new System.Drawing.Size(279, 21);
-            this.textboxProgram.TabIndex = 1;
-            // 
             // EditClassForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,14 +325,10 @@
             this.panel2.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -417,18 +347,12 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox textboxStartingHour;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.TextBox textboxFee;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.DateTimePicker endDate;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.DateTimePicker startDate;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textboxTeacher;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel5;
@@ -440,6 +364,6 @@
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ComboBox textboxProgram;
+        private System.Windows.Forms.ComboBox comboBoxProgram;
     }
 }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
+using DAL;
 
 namespace UI
 {
@@ -15,6 +17,11 @@ namespace UI
         public MarkForm()
         {
             InitializeComponent();
+        }
+        public MarkForm(StudentDTO _studentDTO)
+        {
+            InitializeComponent();
+
         }
     }
 }

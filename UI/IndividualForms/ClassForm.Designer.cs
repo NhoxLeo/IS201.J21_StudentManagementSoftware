@@ -53,20 +53,18 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(2, 3);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(1, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1401, 89);
+            this.panel1.Size = new System.Drawing.Size(934, 58);
             this.panel1.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(584, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(389, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 55);
+            this.label1.Size = new System.Drawing.Size(168, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "LỚP HỌC";
             // 
@@ -76,18 +74,16 @@
             this.panel2.Controls.Add(this.btnAddStudentToClass);
             this.panel2.Controls.Add(this.dgvListClass);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(0, 102);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Location = new System.Drawing.Point(0, 66);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1402, 465);
+            this.panel2.Size = new System.Drawing.Size(935, 302);
             this.panel2.TabIndex = 7;
             // 
             // btnRemoveStudent
             // 
-            this.btnRemoveStudent.Location = new System.Drawing.Point(867, 15);
-            this.btnRemoveStudent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRemoveStudent.Location = new System.Drawing.Point(668, 8);
             this.btnRemoveStudent.Name = "btnRemoveStudent";
-            this.btnRemoveStudent.Size = new System.Drawing.Size(237, 35);
+            this.btnRemoveStudent.Size = new System.Drawing.Size(121, 23);
             this.btnRemoveStudent.TabIndex = 6;
             this.btnRemoveStudent.Text = "Xoá học viên khỏi lớp";
             this.btnRemoveStudent.UseVisualStyleBackColor = true;
@@ -95,10 +91,9 @@
             // 
             // btnAddStudentToClass
             // 
-            this.btnAddStudentToClass.Location = new System.Drawing.Point(1134, 15);
-            this.btnAddStudentToClass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAddStudentToClass.Location = new System.Drawing.Point(795, 8);
             this.btnAddStudentToClass.Name = "btnAddStudentToClass";
-            this.btnAddStudentToClass.Size = new System.Drawing.Size(237, 35);
+            this.btnAddStudentToClass.Size = new System.Drawing.Size(127, 23);
             this.btnAddStudentToClass.TabIndex = 5;
             this.btnAddStudentToClass.Text = "Thêm học viên vào lớp";
             this.btnAddStudentToClass.UseVisualStyleBackColor = true;
@@ -108,20 +103,18 @@
             // 
             this.dgvListClass.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListClass.Location = new System.Drawing.Point(20, 57);
-            this.dgvListClass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvListClass.Location = new System.Drawing.Point(13, 37);
             this.dgvListClass.Name = "dgvListClass";
-            this.dgvListClass.Size = new System.Drawing.Size(1365, 403);
+            this.dgvListClass.Size = new System.Drawing.Size(910, 262);
             this.dgvListClass.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 15);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(13, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(264, 33);
+            this.label2.Size = new System.Drawing.Size(173, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "Danh sách lớp học:";
             // 
@@ -132,10 +125,9 @@
             this.panel3.Controls.Add(this.btnDelete);
             this.panel3.Controls.Add(this.btnEdit);
             this.panel3.Controls.Add(this.btAddClass);
-            this.panel3.Location = new System.Drawing.Point(2, 575);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel3.Location = new System.Drawing.Point(1, 374);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1401, 134);
+            this.panel3.Size = new System.Drawing.Size(934, 87);
             this.panel3.TabIndex = 8;
             // 
             // btnPrint
@@ -145,10 +137,9 @@
             this.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.ForeColor = System.Drawing.Color.Black;
-            this.btnPrint.Location = new System.Drawing.Point(866, 6);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnPrint.Location = new System.Drawing.Point(577, 4);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(261, 123);
+            this.btnPrint.Size = new System.Drawing.Size(174, 80);
             this.btnPrint.TabIndex = 3;
             this.btnPrint.Text = "In ";
             this.btnPrint.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -162,10 +153,9 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.Black;
-            this.btnClose.Location = new System.Drawing.Point(1154, 5);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnClose.Location = new System.Drawing.Point(769, 3);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(230, 123);
+            this.btnClose.Size = new System.Drawing.Size(153, 80);
             this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Trở về";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -179,10 +169,9 @@
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(579, 6);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDelete.Location = new System.Drawing.Point(386, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(256, 123);
+            this.btnDelete.Size = new System.Drawing.Size(171, 80);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Xoá lớp học";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -196,10 +185,9 @@
             this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.Black;
-            this.btnEdit.Location = new System.Drawing.Point(282, 6);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEdit.Location = new System.Drawing.Point(188, 4);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(268, 123);
+            this.btnEdit.Size = new System.Drawing.Size(179, 80);
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Sửa thông tin lớp học";
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -213,10 +201,9 @@
             this.btAddClass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btAddClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAddClass.ForeColor = System.Drawing.Color.Black;
-            this.btAddClass.Location = new System.Drawing.Point(18, 6);
-            this.btAddClass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btAddClass.Location = new System.Drawing.Point(12, 4);
             this.btAddClass.Name = "btAddClass";
-            this.btAddClass.Size = new System.Drawing.Size(230, 123);
+            this.btAddClass.Size = new System.Drawing.Size(153, 80);
             this.btAddClass.TabIndex = 0;
             this.btAddClass.Text = "Thêm lớp";
             this.btAddClass.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -233,13 +220,12 @@
             // 
             // ClassForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1401, 717);
+            this.ClientSize = new System.Drawing.Size(934, 466);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ClassForm";
             this.Text = "ClassForm";
             this.Shown += new System.EventHandler(this.ClassForm_Shown);
