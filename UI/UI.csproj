@@ -178,6 +178,18 @@
     <Compile Include="Add\AddStudentToClassForm.Designer.cs">
       <DependentUpon>AddStudentToClassForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Add\AddTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add\AddTestForm.Designer.cs">
+      <DependentUpon>AddTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\EditTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\EditTestForm.Designer.cs">
+      <DependentUpon>EditTestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="IndividualForms\ClassForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +268,12 @@
     <Compile Include="IndividualForms\PotentialStudentForm.Designer.cs">
       <DependentUpon>PotentialStudentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="IndividualForms\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IndividualForms\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="IndividualForms\ProgramForm.cs">
       <SubType>Form</SubType>
@@ -313,6 +331,12 @@
     <EmbeddedResource Include="Add\AddStudentToClassForm.resx">
       <DependentUpon>AddStudentToClassForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Add\AddTestForm.resx">
+      <DependentUpon>AddTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\EditTestForm.resx">
+      <DependentUpon>EditTestForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IndividualForms\ClassForm.resx">
       <DependentUpon>ClassForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -357,6 +381,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IndividualForms\ProgramForm.resx">
       <DependentUpon>ProgramForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IndividualForms\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

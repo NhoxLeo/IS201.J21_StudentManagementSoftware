@@ -7,20 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DTO;
-using DAL;
 
 namespace UI
 {
-    public partial class MarkForm : Form
+    public partial class EditTestForm : Form
     {
-        public MarkForm()
+        public EditTestForm()
         {
             InitializeComponent();
         }
-        public MarkForm(StudentDTO _studentDTO)
+
+        private void cbClassId_SelectedIndexChanged(object sender, EventArgs e)
         {
-            InitializeComponent();
 
         }
     }

@@ -34,7 +34,6 @@ namespace UI
             classDAL.ConnectToDatabase();
             try
             {
-
                 if(classDAL.DeleteClass(currentObject.ClassId))
                 {
                     MessageBox.Show("Xoá lớp thành công!!!");

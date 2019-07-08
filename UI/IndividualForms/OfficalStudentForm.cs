@@ -42,7 +42,6 @@ namespace UI
             EditOfficalStudentForm f = new EditOfficalStudentForm(currentObject);
             this.Close();
             f.Show();
-            
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -95,6 +94,16 @@ namespace UI
             e.Graphics.DrawImage(bmp, 0, 120);
             e.Graphics.DrawString("TRUNG TÂM ANH NGỮ G&M", new Font("Verdana", 25, FontStyle.Bold), Brushes.Red, new Point(150, 30));
             e.Graphics.DrawString("DANH SÁCH HỌC VIÊN CHÍNH THỨC", new Font("Verdana", 20, FontStyle.Bold), Brushes.Black, new Point(130, 70));
+        }
+
+        private void btnAddMark_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditMark_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -41,7 +41,6 @@ namespace UI
             AddClassForm f = new AddClassForm();
             this.Hide();
             f.Show();
-            
         }
         
         private void btnEdit_Click(object sender, EventArgs e)

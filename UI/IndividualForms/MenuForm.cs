@@ -51,7 +51,6 @@ namespace UI
         private void buttonOfficialStudent_Click(object sender, EventArgs e)
         {
             OfficalStudentForm f = new OfficalStudentForm();
-
             this.Hide();
             f.Show();
         }
@@ -75,5 +74,11 @@ namespace UI
             loginForm.Show();
         }
 
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            TestForm f = new TestForm();
+            this.Hide();
+            f.Show();
+        }
     }
 }

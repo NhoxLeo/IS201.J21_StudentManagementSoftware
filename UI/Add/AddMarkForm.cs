@@ -20,7 +20,6 @@ namespace UI
         }
         void LoadComboBoxStudentAndClass()
         {
-
             TestDAL testDAL = new TestDAL();
             testDAL.ConnectToDatabase();
             List<TestDTO> testDTOs = testDAL.GetAllTest();
