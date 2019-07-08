@@ -1,6 +1,6 @@
 ﻿namespace UI
 {
-    partial class AddMarkForm
+    partial class EditMarkForm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,13 +35,12 @@
             this.textboxMark = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBoxStudent = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.comboBoxListTestId = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -54,10 +53,10 @@
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.OliveDrab;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(2, 3);
+            this.panel1.Location = new System.Drawing.Point(3, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(528, 68);
-            this.panel1.TabIndex = 8;
+            this.panel1.TabIndex = 10;
             // 
             // label1
             // 
@@ -66,22 +65,21 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(343, 33);
+            this.label1.Size = new System.Drawing.Size(319, 33);
             this.label1.TabIndex = 0;
-            this.label1.Text = "THÊM ĐIỂM HỌC VIÊN";
+            this.label1.Text = "SỬA ĐIỂM HỌC VIÊN";
             // 
             // panel2
             // 
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel2.Controls.Add(this.btnClose);
             this.panel2.Controls.Add(this.btnConfirm);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel4);
-            this.panel2.Location = new System.Drawing.Point(2, 69);
+            this.panel2.Location = new System.Drawing.Point(3, 78);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(528, 220);
-            this.panel2.TabIndex = 9;
+            this.panel2.TabIndex = 11;
             // 
             // panel3
             // 
@@ -117,22 +115,22 @@
             // panel5
             // 
             this.panel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel5.Controls.Add(this.textBoxStudent);
+            this.panel5.Controls.Add(this.textBox1);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Location = new System.Drawing.Point(131, 42);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(311, 19);
             this.panel5.TabIndex = 1;
             // 
-            // textBoxStudent
+            // textBox1
             // 
-            this.textBoxStudent.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBoxStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxStudent.Location = new System.Drawing.Point(151, 0);
-            this.textBoxStudent.Multiline = true;
-            this.textBoxStudent.Name = "textBoxStudent";
-            this.textBoxStudent.Size = new System.Drawing.Size(160, 19);
-            this.textBoxStudent.TabIndex = 2;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(151, 0);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(160, 19);
+            this.textBox1.TabIndex = 2;
             // 
             // label3
             // 
@@ -164,7 +162,6 @@
             this.comboBoxListTestId.Name = "comboBoxListTestId";
             this.comboBoxListTestId.Size = new System.Drawing.Size(160, 21);
             this.comboBoxListTestId.TabIndex = 1;
-            this.comboBoxListTestId.SelectedIndexChanged += new System.EventHandler(this.comboBoxListClassId_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -184,41 +181,23 @@
             this.btnConfirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.Black;
-            this.btnConfirm.Location = new System.Drawing.Point(48, 187);
+            this.btnConfirm.Location = new System.Drawing.Point(220, 181);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(91, 33);
+            this.btnConfirm.Size = new System.Drawing.Size(99, 33);
             this.btnConfirm.TabIndex = 3;
             this.btnConfirm.Text = "Xác nhận";
             this.btnConfirm.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnConfirm.UseVisualStyleBackColor = false;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImage = global::UI.Properties.Resources.back;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.Black;
-            this.btnClose.Location = new System.Drawing.Point(342, 187);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(100, 30);
-            this.btnClose.TabIndex = 5;
-            this.btnClose.Text = "Trở về";
-            this.btnClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // AddMarkForm
+            // EditMarkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.ClientSize = new System.Drawing.Size(540, 303);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "AddMarkForm";
-            this.Text = "AddMarkForm";
+            this.Name = "EditMarkForm";
+            this.Text = "EditMarkForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -236,16 +215,15 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textboxMark;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox comboBoxListTestId;
-        private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.TextBox textBoxStudent;
-        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label2;
     }
 }

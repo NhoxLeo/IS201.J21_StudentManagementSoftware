@@ -14,32 +14,40 @@ namespace UI
 {
     public partial class AddMarkForm : Form
     {
+        string StudentId;
         public AddMarkForm()
         {
             InitializeComponent();
         }
-        void LoadComboBoxStudentAndClass()
+        public AddMarkForm(StudentDTO _studentDTO)
+        {
+            InitializeComponent();
+            StudentId = _studentDTO.StudentId;
+            LoadComboBoxTest();
+            textBoxStudent.Text = _studentDTO.StudentName;
+        }
+        void LoadComboBoxTest()
         {
             TestDAL testDAL = new TestDAL();
             testDAL.ConnectToDatabase();
             List<TestDTO> testDTOs = testDAL.GetAllTest();
-            comboBoxListClassId.DataSource = testDTOs;
-            comboBoxListClassId.DisplayMember = "TestName";
-            comboBoxListClassId.ValueMember = "TestId";
+            comboBoxListTestId.DataSource = testDTOs;
+            comboBoxListTestId.DisplayMember = "TestName";
+            comboBoxListTestId.ValueMember = "TestId";
 
-            StudentDAL studentDAL = new StudentDAL();
-            studentDAL.ConnectToDatabase();
-            List<StudentDTO> studentDTOs = studentDAL.GetAllStudent();
-            comboBoxListDtudentId.DataSource = studentDTOs;
-            comboBoxListDtudentId.DisplayMember = "StudentName";
-            comboBoxListDtudentId.ValueMember = "StudentId";
+            //StudentDAL studentDAL = new StudentDAL();
+            //studentDAL.ConnectToDatabase();
+            //List<StudentDTO> studentDTOs = studentDAL.GetAllStudent();
+            //comboBoxListDtudentId.DataSource = studentDTOs;
+            //comboBoxListDtudentId.DisplayMember = "StudentName";
+            //comboBoxListDtudentId.ValueMember = "StudentId";
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             MarkDAL markDAL = new MarkDAL();
             markDAL.ConnectToDatabase();
-            markDAL.InsertMark(((StudentDTO)comboBoxListDtudentId.SelectedItem).StudentId,((TestDTO)comboBoxListClassId.SelectedItem).ClassId,float.Parse(textBoxMark.Text));
+            markDAL.InsertMark(StudentId, ((TestDTO)comboBoxListTestId.SelectedItem).TestId, float.Parse(textboxMark.Text));
         }
 
         private void comboBoxListDtudentId_SelectedIndexChanged(object sender, EventArgs e)
@@ -50,6 +58,11 @@ namespace UI
         private void comboBoxListClassId_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
