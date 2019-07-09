@@ -23,11 +23,19 @@ namespace UI
         public StudentReportForm(StudentDTO _studentDTO)
         {
             InitializeComponent();
-            //TextObject moneyText =
-                ((TextObject)StudentInfoReport1.Section4.ReportObjects["txtMoney"]).Text = "Tổng số tiền thu được: ";
+
+            string TotalFee ="";
+            List<StudentDTO> a = new List<StudentDTO>();
+            a.Add(_studentDTO);
+            SignupDAL signupDAL = new SignupDAL();
+            signupDAL.ConnectToDatabase();
+            List<SignupDTO> signupDTOs = signupDAL.GetAllSignupStudent(_studentDTO.StudentId);
+
+            TotalFee = (250 * signupDTOs.Count).ToString();
+            //StudentInfoReport1.SetDataSource();
+            ((TextObject)StudentInfoReport1.Section4.ReportObjects["txtMoney"]).Text = "Tổng số tiền đã đóng (USD): " + TotalFee;
+            //((TextObject)StudentInfoReport1.Section4.ReportObjects["txtMoney"]).Text = "Tổng số tiền đã đóng (USD): " + TotalFee;
             //if (StudentInfoReport1!=null)                StudentInfoReport1.SetParameterValue("txtMoney",new TextBox() { Text = "asd"});
-            //crystalReportViewerStudent
-            //StudentInfoReport1.ReportDefinition.Sections[3].ReportObjects[1].Text = "asd";
         }
     }
 }
