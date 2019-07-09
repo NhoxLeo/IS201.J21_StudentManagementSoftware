@@ -88,7 +88,7 @@ namespace UI
         private void button2_Click(object sender, EventArgs e)
         {
             string s = comboBox1.Text;
-            ReportDetailForm f/* = new ReportDetailForm()*/;
+           
             switch (s)
             {
                 case "":
@@ -96,12 +96,14 @@ namespace UI
                     break;
                 case "Báo cáo Thông tin Học viên":
                     //
-                    f = new ReportDetailForm((StudentDTO)comboBoxListStudent.SelectedItem);
-                    f.Text = "Báo cáo Thông tin Học viên";
-                    f.ShowDialog();
+                    //f = new ReportDetailForm((StudentDTO)comboBoxListStudent.SelectedItem);
+                    StudentReportForm reportForm = new StudentReportForm((StudentDTO)comboBoxListStudent.SelectedItem);
+                    reportForm.Text = "Báo cáo Thông tin Học viên";
+                    reportForm.ShowDialog();
                     break;
                 case "Báo cáo Kế toán Lớp học":
                     //
+                    ReportDetailForm f/* = new ReportDetailForm()*/;
                     f = new ReportDetailForm((ClassDTO)comboBoxClass.SelectedItem);
                     //f = new ReportDetailForm();
                     f.Text = "Báo cáo Kế toán Lớp học";
