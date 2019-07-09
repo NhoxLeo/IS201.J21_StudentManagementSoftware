@@ -80,5 +80,13 @@ namespace UI
             this.Hide();
             f.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RegisterAccForm f = new RegisterAccForm();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }

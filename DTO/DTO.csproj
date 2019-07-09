@@ -56,6 +56,7 @@
     <Compile Include="SignupDTO.cs" />
     <Compile Include="StudentDTO.cs" />
     <Compile Include="TestDTO.cs" />
+    <Compile Include="UserDTO.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
