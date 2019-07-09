@@ -98,12 +98,16 @@ namespace UI
 
         private void btnAddMark_Click(object sender, EventArgs e)
         {
-
+            AddMarkForm f = new AddMarkForm((StudentDTO)dgvListStudent.CurrentRow.DataBoundItem);
+            this.Close();
+            f.Show();
         }
 
         private void btnEditMark_Click(object sender, EventArgs e)
         {
-
+            EditMarkForm f = new EditMarkForm();
+            this.Hide();
+            f.Show();
         }
     }
 }

@@ -79,7 +79,7 @@ namespace DAL
         {
             this.ConnectToDatabase();
 
-            string Query = "insert into MARK(STUDENT_ID,TEST_DATE,GRADE) values('" + studentId + "','" + testId + "','" + grade + "');";
+            string Query = "insert into MARK(STUDENT_ID,TEST_ID,GRADE) values('" + studentId + "','" + testId + "','" + grade + "');";
 
             //This is command class which will handle the query and connection object.  
             MySqlCommand command = new MySqlCommand(Query, mySQLConnection);

@@ -16,14 +16,14 @@ namespace UI {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class TestReport : ReportClass {
+    public class StudentInfoReport : ReportClass {
         
-        public TestReport() {
+        public StudentInfoReport() {
         }
         
         public override string ResourceName {
             get {
-                return "TestReport.rpt";
+                return "StudentInfoReport.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace UI {
         
         public override string FullResourceName {
             get {
-                return "UI.TestReport.rpt";
+                return "UI.StudentInfoReport.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace UI {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedTestReport : Component, ICachedReport {
+    public class CachedStudentInfoReport : Component, ICachedReport {
         
-        public CachedTestReport() {
+        public CachedStudentInfoReport() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace UI {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            TestReport rpt = new TestReport();
+            StudentInfoReport rpt = new StudentInfoReport();
             rpt.Site = this.Site;
             return rpt;
         }
