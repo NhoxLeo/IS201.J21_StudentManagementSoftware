@@ -11,6 +11,7 @@ namespace UI
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        public static string UserDepartment = "";
         [STAThread]
         static void Main()
         {

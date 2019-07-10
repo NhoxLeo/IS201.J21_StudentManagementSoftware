@@ -80,9 +80,9 @@
             // btnTest
             // 
             this.btnTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTest.Location = new System.Drawing.Point(3, 247);
+            this.btnTest.Location = new System.Drawing.Point(451, 3);
             this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(170, 85);
+            this.btnTest.Size = new System.Drawing.Size(135, 90);
             this.btnTest.TabIndex = 7;
             this.btnTest.Text = "Kì thi";
             this.btnTest.UseVisualStyleBackColor = true;
@@ -107,9 +107,9 @@
             // btnReport
             // 
             this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.Location = new System.Drawing.Point(737, 5);
+            this.btnReport.Location = new System.Drawing.Point(756, 3);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(167, 82);
+            this.btnReport.Size = new System.Drawing.Size(135, 90);
             this.btnReport.TabIndex = 4;
             this.btnReport.Text = "Báo cáo";
             this.btnReport.UseVisualStyleBackColor = true;
@@ -118,9 +118,9 @@
             // btnPrograms
             // 
             this.btnPrograms.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrograms.Location = new System.Drawing.Point(546, 3);
+            this.btnPrograms.Location = new System.Drawing.Point(603, 3);
             this.btnPrograms.Name = "btnPrograms";
-            this.btnPrograms.Size = new System.Drawing.Size(185, 85);
+            this.btnPrograms.Size = new System.Drawing.Size(135, 90);
             this.btnPrograms.TabIndex = 3;
             this.btnPrograms.Text = "Chương trình học";
             this.btnPrograms.UseVisualStyleBackColor = true;
@@ -129,9 +129,9 @@
             // btnClass
             // 
             this.btnClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClass.Location = new System.Drawing.Point(370, 3);
+            this.btnClass.Location = new System.Drawing.Point(310, 3);
             this.btnClass.Name = "btnClass";
-            this.btnClass.Size = new System.Drawing.Size(170, 85);
+            this.btnClass.Size = new System.Drawing.Size(135, 90);
             this.btnClass.TabIndex = 2;
             this.btnClass.Text = "Lớp học";
             this.btnClass.UseVisualStyleBackColor = true;
@@ -140,9 +140,9 @@
             // btnOfficialStudent
             // 
             this.btnOfficialStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOfficialStudent.Location = new System.Drawing.Point(196, 3);
+            this.btnOfficialStudent.Location = new System.Drawing.Point(159, 3);
             this.btnOfficialStudent.Name = "btnOfficialStudent";
-            this.btnOfficialStudent.Size = new System.Drawing.Size(168, 85);
+            this.btnOfficialStudent.Size = new System.Drawing.Size(135, 90);
             this.btnOfficialStudent.TabIndex = 1;
             this.btnOfficialStudent.Text = "Học viên chính thức";
             this.btnOfficialStudent.UseVisualStyleBackColor = true;
@@ -151,9 +151,9 @@
             // btnPotentialStudent
             // 
             this.btnPotentialStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPotentialStudent.Location = new System.Drawing.Point(3, 1);
+            this.btnPotentialStudent.Location = new System.Drawing.Point(6, 3);
             this.btnPotentialStudent.Name = "btnPotentialStudent";
-            this.btnPotentialStudent.Size = new System.Drawing.Size(187, 85);
+            this.btnPotentialStudent.Size = new System.Drawing.Size(135, 90);
             this.btnPotentialStudent.TabIndex = 0;
             this.btnPotentialStudent.Text = "Học viên tiềm năng";
             this.btnPotentialStudent.UseVisualStyleBackColor = true;

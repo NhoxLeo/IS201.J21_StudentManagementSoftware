@@ -66,7 +66,7 @@
             this.tbID.Location = new System.Drawing.Point(351, 45);
             this.tbID.Multiline = true;
             this.tbID.Name = "tbID";
-            this.tbID.PasswordChar = '*';
+            this.tbID.ReadOnly = true;
             this.tbID.Size = new System.Drawing.Size(298, 21);
             this.tbID.TabIndex = 5;
             this.tbID.TextChanged += new System.EventHandler(this.tbID_TextChanged);
@@ -77,7 +77,6 @@
             this.tbName.Location = new System.Drawing.Point(351, 100);
             this.tbName.Multiline = true;
             this.tbName.Name = "tbName";
-            this.tbName.PasswordChar = '*';
             this.tbName.Size = new System.Drawing.Size(298, 21);
             this.tbName.TabIndex = 6;
             // 
@@ -90,7 +89,6 @@
             this.tbPwd.PasswordChar = '*';
             this.tbPwd.Size = new System.Drawing.Size(298, 21);
             this.tbPwd.TabIndex = 7;
-            this.tbPwd.UseSystemPasswordChar = true;
             this.tbPwd.TextChanged += new System.EventHandler(this.tbUsername_TextChanged);
             // 
             // label1
@@ -107,7 +105,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(351, 271);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 41);
             this.button1.TabIndex = 9;
@@ -119,7 +117,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(524, 271);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 41);
             this.button2.TabIndex = 10;
@@ -165,7 +163,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbPwd);
             this.Controls.Add(this.tbName);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RegisterAccForm";
             this.Text = "Thêm tài khoản";
             this.ResumeLayout(false);

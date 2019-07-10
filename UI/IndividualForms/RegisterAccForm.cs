@@ -14,10 +14,15 @@ namespace UI
 {
     public partial class RegisterAccForm : Form
     {
+        string UserPrefix = "USER";
+        string finalId = "";
         public RegisterAccForm()
         {
             InitializeComponent();
             comboBoxDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            UserDAL userDAL = new UserDAL();
+            userDAL.ConnectToDatabase();
+            tbID.Text = UserPrefix + (userDAL.GetAllUser().Count).ToString();
         }
 
         private void tbUsername_TextChanged(object sender, EventArgs e)
@@ -36,9 +41,9 @@ namespace UI
             userDAL.ConnectToDatabase();
             try
             {
-                UserDTO userDTO = new UserDTO(tbID.Text, tbName.Text, tbPwd.Text, comboBoxDepartment.SelectedItem.ToString());
-                if (userDAL.InsertUser(userDTO))
+                if (userDAL.InsertUser(tbID.Text, tbName.Text, tbPwd.Text, comboBoxDepartment.SelectedItem.ToString()))
                 {
+                    Program.UserDepartment = comboBoxDepartment.SelectedItem.ToString();
                     MessageBox.Show("Thêm tài khoản thành công!!!");
                     this.Close();
                 }

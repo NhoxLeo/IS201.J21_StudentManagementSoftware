@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAL;
+using DTO;
 
 namespace UI
 {
@@ -23,18 +25,26 @@ namespace UI
             this.Show();
             string userName = tbUsername.Text;
             string passWord = tbPassword.Text;
-            if (userName == "admin" && passWord == "admin")
-            {
-                MenuForm f = new MenuForm(this);
-                f.Show();
-                this.Hide();
 
-            }
+            UserDAL userDAL = new UserDAL();
+            userDAL.ConnectToDatabase();
+
+            UserDTO mainUser = userDAL.GetUser(userName);
+
+            if(mainUser == null) MessageBox.Show("Không có tài khoản!");
             else
             {
-                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu");
-
+                if (passWord == mainUser.Password)
+                {
+                    Program.UserDepartment = mainUser.Department;
+                    MenuForm f = new MenuForm(this);
+                    f.Show();
+                    this.Hide();
+                }
+                else MessageBox.Show("Sai tên tài khoản hoặc mật khẩu");
             }
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
