@@ -190,10 +190,10 @@
       <DependentUpon>ClassInfoReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ClassReportForm.cs">
+    <Compile Include="Reporting\ClassReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClassReportForm.Designer.cs">
+    <Compile Include="Reporting\ClassReportForm.Designer.cs">
       <DependentUpon>ClassReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Edit\EditMarkForm.cs">
@@ -362,7 +362,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ClassInfoReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClassReportForm.resx">
+    <EmbeddedResource Include="IndividualForms\RegisterAccForm.resx">
+      <DependentUpon>RegisterAccForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\ClassReportForm.resx">
       <DependentUpon>ClassReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edit\EditMarkForm.resx">

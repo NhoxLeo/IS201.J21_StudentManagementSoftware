@@ -95,19 +95,15 @@ namespace UI
                     MessageBox.Show("Vui lòng chọn loại báo cáo và nhập thông tin!");
                     break;
                 case "Báo cáo Thông tin Học viên":
-                    //
-                    //f = new ReportDetailForm((StudentDTO)comboBoxListStudent.SelectedItem);
                     StudentReportForm reportForm = new StudentReportForm((StudentDTO)comboBoxListStudent.SelectedItem);
                     reportForm.Text = "Báo cáo Thông tin Học viên";
                     reportForm.ShowDialog();
                     break;
                 case "Báo cáo Kế toán Lớp học":
                     //
-                    ReportDetailForm f/* = new ReportDetailForm()*/;
-                    f = new ReportDetailForm((ClassDTO)comboBoxClass.SelectedItem);
-                    //f = new ReportDetailForm();
-                    f.Text = "Báo cáo Kế toán Lớp học";
-                    f.ShowDialog();
+                    ClassReportForm classReportForm = new ClassReportForm((ClassDTO)comboBoxClass.SelectedItem);
+                    classReportForm.Text = "Báo cáo Kế toán Lớp học";
+                    classReportForm.ShowDialog();
                     break;
                 //case "Báo cáo kết quả học tập":
                 //    //

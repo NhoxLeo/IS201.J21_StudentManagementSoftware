@@ -17,6 +17,7 @@ namespace UI
         public RegisterAccForm()
         {
             InitializeComponent();
+            comboBoxDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         }
 
         private void tbUsername_TextChanged(object sender, EventArgs e)
@@ -35,7 +36,7 @@ namespace UI
             userDAL.ConnectToDatabase();
             try
             {
-                UserDTO userDTO = new UserDTO(tbID.Text, tbName.Text, tbPwd.Text, tbDp.Text);
+                UserDTO userDTO = new UserDTO(tbID.Text, tbName.Text, tbPwd.Text, comboBoxDepartment.SelectedItem.ToString());
                 if (userDAL.InsertUser(userDTO))
                 {
                     MessageBox.Show("Thêm tài khoản thành công!!!");

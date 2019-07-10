@@ -57,5 +57,13 @@ namespace UI
             tbUsername.Text = "";
             tbPassword.Text = "";
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            RegisterAccForm f = new RegisterAccForm();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }
