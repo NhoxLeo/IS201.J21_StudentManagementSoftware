@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserDAL.cs" />
     <Compile Include="ClassDAL.cs" />
     <Compile Include="DatabaseAccess.cs" />
     <Compile Include="Dataprovide.cs" />

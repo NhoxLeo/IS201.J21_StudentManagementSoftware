@@ -184,6 +184,18 @@
     <Compile Include="Add\AddTestForm.Designer.cs">
       <DependentUpon>AddTestForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClassInfoReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClassInfoReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporting\ClassReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\ClassReportForm.Designer.cs">
+      <DependentUpon>ClassReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Edit\EditMarkForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +306,12 @@
     <Compile Include="Delete\DeleteStudentClassForm.Designer.cs">
       <DependentUpon>DeleteStudentClassForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="IndividualForms\RegisterAccForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IndividualForms\RegisterAccForm.Designer.cs">
+      <DependentUpon>RegisterAccForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reporting\ReportDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -313,10 +331,10 @@
       <DependentUpon>StudentInfoReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="StudentReportForm.cs">
+    <Compile Include="Reporting\StudentReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentReportForm.Designer.cs">
+    <Compile Include="Reporting\StudentReportForm.Designer.cs">
       <DependentUpon>StudentReportForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Add\AddClassForm.resx">
@@ -339,6 +357,16 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Add\AddTestForm.resx">
       <DependentUpon>AddTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassInfoReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ClassInfoReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IndividualForms\RegisterAccForm.resx">
+      <DependentUpon>RegisterAccForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\ClassReportForm.resx">
+      <DependentUpon>ClassReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edit\EditMarkForm.resx">
       <DependentUpon>EditMarkForm.cs</DependentUpon>
@@ -414,7 +442,7 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>StudentInfoReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentReportForm.resx">
+    <EmbeddedResource Include="Reporting\StudentReportForm.resx">
       <DependentUpon>StudentReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

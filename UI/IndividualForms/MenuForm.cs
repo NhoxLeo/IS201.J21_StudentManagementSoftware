@@ -22,6 +22,24 @@ namespace UI
             InitializeComponent();
             //_loginForm.Hide();
             loginForm = _loginForm;
+            string a = Program.UserDepartment;
+            switch (Program.UserDepartment)
+            {
+                case "Kế Toán":
+                    btnClass.Hide();
+                    btnOfficialStudent.Hide();
+                    btnPotentialStudent.Hide();
+                    btnPrograms.Hide();
+                    btnTest.Hide();
+                    break;
+                case "Nhân Viên":
+                    btnTest.Hide();
+                    btnPrograms.Hide();
+                    btnReport.Hide();
+                    break;
+                case "Quản Lí":
+                    break;
+            }
         }
 
         private void buttonProgram_Click(object sender, EventArgs e)
@@ -79,6 +97,11 @@ namespace UI
             TestForm f = new TestForm();
             this.Hide();
             f.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
